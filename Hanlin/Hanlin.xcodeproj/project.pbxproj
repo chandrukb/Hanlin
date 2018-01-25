@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CB275B9201A4FBF0033BD8C /* HNBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB275B8201A4FBF0033BD8C /* HNBaseViewController.m */; };
+		2CB275BD201A550F0033BD8C /* HNUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB275BC201A550F0033BD8C /* HNUtility.m */; };
+		2CB275C3201A59DE0033BD8C /* HNProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB275C2201A59DE0033BD8C /* HNProfileViewController.m */; };
+		2CB275C7201A5A080033BD8C /* HNNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB275C6201A5A080033BD8C /* HNNotificationViewController.m */; };
+		2CB275CB201A5A410033BD8C /* HNContactUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB275CA201A5A410033BD8C /* HNContactUSViewController.m */; };
 		AC4F3A4F2017AF2800965050 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4F3A4E2017AF2800965050 /* AppDelegate.m */; };
 		AC4F3A522017AF2800965050 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4F3A512017AF2800965050 /* ViewController.m */; };
 		AC4F3A552017AF2800965050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F3A532017AF2800965050 /* Main.storyboard */; };
@@ -16,6 +21,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CB275AE201A4F410033BD8C /* Montserrat-Hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Hairline.otf"; sourceTree = "<group>"; };
+		2CB275AF201A4F410033BD8C /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		2CB275B0201A4F410033BD8C /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		2CB275B1201A4F410033BD8C /* Montserrat-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-UltraLight.otf"; sourceTree = "<group>"; };
+		2CB275B2201A4F410033BD8C /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		2CB275B3201A4F420033BD8C /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		2CB275B4201A4F420033BD8C /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		2CB275B5201A4F420033BD8C /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
+		2CB275B7201A4FBF0033BD8C /* HNBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNBaseViewController.h; sourceTree = "<group>"; };
+		2CB275B8201A4FBF0033BD8C /* HNBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNBaseViewController.m; sourceTree = "<group>"; };
+		2CB275BB201A550F0033BD8C /* HNUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNUtility.h; sourceTree = "<group>"; };
+		2CB275BC201A550F0033BD8C /* HNUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNUtility.m; sourceTree = "<group>"; };
+		2CB275BF201A58FC0033BD8C /* HNConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNConstants.h; sourceTree = "<group>"; };
+		2CB275C1201A59DE0033BD8C /* HNProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNProfileViewController.h; sourceTree = "<group>"; };
+		2CB275C2201A59DE0033BD8C /* HNProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNProfileViewController.m; sourceTree = "<group>"; };
+		2CB275C5201A5A080033BD8C /* HNNotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNNotificationViewController.h; sourceTree = "<group>"; };
+		2CB275C6201A5A080033BD8C /* HNNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNNotificationViewController.m; sourceTree = "<group>"; };
+		2CB275C9201A5A410033BD8C /* HNContactUSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNContactUSViewController.h; sourceTree = "<group>"; };
+		2CB275CA201A5A410033BD8C /* HNContactUSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNContactUSViewController.m; sourceTree = "<group>"; };
 		AC4F3A4A2017AF2800965050 /* Hanlin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanlin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4F3A4D2017AF2800965050 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AC4F3A4E2017AF2800965050 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +63,129 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CB275A7201A4DD00033BD8C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				AC4F3A4D2017AF2800965050 /* AppDelegate.h */,
+				AC4F3A4E2017AF2800965050 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2CB275A8201A4E3D0033BD8C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2CB275AD201A4EA70033BD8C /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2CB275A9201A4E470033BD8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2CB275AA201A4E510033BD8C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC4F3A502017AF2800965050 /* ViewController.h */,
+				AC4F3A512017AF2800965050 /* ViewController.m */,
+				2CB275B6201A4F8D0033BD8C /* HNBaseViewController */,
+				2CB275C0201A59B40033BD8C /* HNProfileViewController */,
+				2CB275C4201A59E50033BD8C /* HNNotificationViewController */,
+				2CB275C8201A5A0F0033BD8C /* HNContactUSViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2CB275AB201A4E620033BD8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC4F3A582017AF2800965050 /* LaunchScreen.storyboard */,
+				AC4F3A532017AF2800965050 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2CB275AC201A4E840033BD8C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2CB275BE201A589D0033BD8C /* HNConstants */,
+				2CB275BA201A54EA0033BD8C /* HNUtility */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2CB275AD201A4EA70033BD8C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2CB275B2201A4F410033BD8C /* Montserrat-Black.otf */,
+				2CB275B3201A4F420033BD8C /* Montserrat-Bold.otf */,
+				2CB275B5201A4F420033BD8C /* Montserrat-ExtraBold.otf */,
+				2CB275AE201A4F410033BD8C /* Montserrat-Hairline.otf */,
+				2CB275AF201A4F410033BD8C /* Montserrat-Light.otf */,
+				2CB275B0201A4F410033BD8C /* Montserrat-Regular.otf */,
+				2CB275B4201A4F420033BD8C /* Montserrat-SemiBold.otf */,
+				2CB275B1201A4F410033BD8C /* Montserrat-UltraLight.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2CB275B6201A4F8D0033BD8C /* HNBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2CB275B7201A4FBF0033BD8C /* HNBaseViewController.h */,
+				2CB275B8201A4FBF0033BD8C /* HNBaseViewController.m */,
+			);
+			path = HNBaseViewController;
+			sourceTree = "<group>";
+		};
+		2CB275BA201A54EA0033BD8C /* HNUtility */ = {
+			isa = PBXGroup;
+			children = (
+				2CB275BB201A550F0033BD8C /* HNUtility.h */,
+				2CB275BC201A550F0033BD8C /* HNUtility.m */,
+			);
+			path = HNUtility;
+			sourceTree = "<group>";
+		};
+		2CB275BE201A589D0033BD8C /* HNConstants */ = {
+			isa = PBXGroup;
+			children = (
+				2CB275BF201A58FC0033BD8C /* HNConstants.h */,
+			);
+			path = HNConstants;
+			sourceTree = "<group>";
+		};
+		2CB275C0201A59B40033BD8C /* HNProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2CB275C1201A59DE0033BD8C /* HNProfileViewController.h */,
+				2CB275C2201A59DE0033BD8C /* HNProfileViewController.m */,
+			);
+			path = HNProfileViewController;
+			sourceTree = "<group>";
+		};
+		2CB275C4201A59E50033BD8C /* HNNotificationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2CB275C5201A5A080033BD8C /* HNNotificationViewController.h */,
+				2CB275C6201A5A080033BD8C /* HNNotificationViewController.m */,
+			);
+			path = HNNotificationViewController;
+			sourceTree = "<group>";
+		};
+		2CB275C8201A5A0F0033BD8C /* HNContactUSViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2CB275C9201A5A410033BD8C /* HNContactUSViewController.h */,
+				2CB275CA201A5A410033BD8C /* HNContactUSViewController.m */,
+			);
+			path = HNContactUSViewController;
+			sourceTree = "<group>";
+		};
 		AC4F3A412017AF2800965050 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +205,13 @@
 		AC4F3A4C2017AF2800965050 /* Hanlin */ = {
 			isa = PBXGroup;
 			children = (
-				AC4F3A4D2017AF2800965050 /* AppDelegate.h */,
-				AC4F3A4E2017AF2800965050 /* AppDelegate.m */,
-				AC4F3A502017AF2800965050 /* ViewController.h */,
-				AC4F3A512017AF2800965050 /* ViewController.m */,
-				AC4F3A532017AF2800965050 /* Main.storyboard */,
+				2CB275A7201A4DD00033BD8C /* AppDelegate */,
+				2CB275AA201A4E510033BD8C /* Controller */,
+				2CB275A9201A4E470033BD8C /* Model */,
+				2CB275AB201A4E620033BD8C /* View */,
+				2CB275AC201A4E840033BD8C /* Helper */,
+				2CB275A8201A4E3D0033BD8C /* Resources */,
 				AC4F3A562017AF2800965050 /* Assets.xcassets */,
-				AC4F3A582017AF2800965050 /* LaunchScreen.storyboard */,
 				AC4F3A5B2017AF2800965050 /* Info.plist */,
 				AC4F3A5C2017AF2800965050 /* main.m */,
 			);
@@ -143,8 +290,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC4F3A522017AF2800965050 /* ViewController.m in Sources */,
+				2CB275BD201A550F0033BD8C /* HNUtility.m in Sources */,
+				2CB275C3201A59DE0033BD8C /* HNProfileViewController.m in Sources */,
+				2CB275B9201A4FBF0033BD8C /* HNBaseViewController.m in Sources */,
 				AC4F3A5D2017AF2800965050 /* main.m in Sources */,
+				2CB275C7201A5A080033BD8C /* HNNotificationViewController.m in Sources */,
 				AC4F3A4F2017AF2800965050 /* AppDelegate.m in Sources */,
+				2CB275CB201A5A410033BD8C /* HNContactUSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
