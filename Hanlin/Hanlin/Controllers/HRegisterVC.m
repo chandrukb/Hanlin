@@ -1,18 +1,18 @@
 //
-//  HNNotificationViewController.m
+//  HRegisterVC.m
 //  Hanlin
 //
-//  Created by Selvam M on 1/26/18.
+//  Created by BALACHANDRAN K on 26/01/18.
 //  Copyright © 2018 Balachandran Kaliyamoorthy. All rights reserved.
 //
 
-#import "HNNotificationViewController.h"
+#import "HRegisterVC.h"
 
-@interface HNNotificationViewController ()
+@interface HRegisterVC ()
 
 @end
 
-@implementation HNNotificationViewController
+@implementation HRegisterVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

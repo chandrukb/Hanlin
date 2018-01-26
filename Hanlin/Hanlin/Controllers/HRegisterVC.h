@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  HRegisterVC.h
 //  Hanlin
 //
-//  Created by Balachandran on 23/01/18.
+//  Created by BALACHANDRAN K on 26/01/18.
 //  Copyright © 2018 Balachandran Kaliyamoorthy. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HRegisterVC : UIViewController
 
 @end
-

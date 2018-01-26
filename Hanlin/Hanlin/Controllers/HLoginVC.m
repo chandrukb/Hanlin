@@ -1,18 +1,18 @@
 //
-//  HNBaseViewController.m
+//  HLoginVC.m
 //  Hanlin
 //
-//  Created by Selvam M on 1/25/18.
+//  Created by BALACHANDRAN K on 26/01/18.
 //  Copyright © 2018 Balachandran Kaliyamoorthy. All rights reserved.
 //
 
-#import "HNBaseViewController.h"
+#import "HLoginVC.h"
 
-@interface HNBaseViewController ()
+@interface HLoginVC ()<UITextFieldDelegate>
 
 @end
 
-@implementation HNBaseViewController
+@implementation HLoginVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,4 +34,21 @@
 }
 */
 
+- (IBAction)onLoginClicked:(id)sender {
+}
+
+- (IBAction)onRegisterClicked:(id)sender {
+}
+
+#pragma mark- Textfield delegate methods
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return  true;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+//    [textField resignFirstResponder];
+}
 @end
