@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC46C3F8201BDCC300E6775E /* HNMenuVC.m */; };
 		CCAEC5A4201BC8CC0053A70A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5A3201BC8CC0053A70A /* Assets.xcassets */; };
 		CCAEC5AA201BC8CC0053A70A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5A9201BC8CC0053A70A /* main.m */; };
 		CCAEC5D7201BC9A40053A70A /* HanlinAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5B0201BC9A40053A70A /* HanlinAssets.xcassets */; };
@@ -16,7 +17,6 @@
 		CCAEC5DB201BC9A40053A70A /* HNWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5B9201BC9A40053A70A /* HNWebVC.m */; };
 		CCAEC5DC201BC9A40053A70A /* HRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5BB201BC9A40053A70A /* HRegisterVC.m */; };
 		CCAEC5DD201BC9A40053A70A /* HNUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5C1201BC9A40053A70A /* HNUtility.m */; };
-		CCAEC5DE201BC9A40053A70A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5C2201BC9A40053A70A /* Assets.xcassets */; };
 		CCAEC5DF201BC9A40053A70A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5C5201BC9A40053A70A /* AppDelegate.m */; };
 		CCAEC5E0201BC9A40053A70A /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5C8201BC9A40053A70A /* Montserrat-Black.otf */; };
 		CCAEC5E1201BC9A40053A70A /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5C9201BC9A40053A70A /* Montserrat-Bold.otf */; };
@@ -32,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC46C3F7201BDCC300E6775E /* HNMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNMenuVC.h; sourceTree = "<group>"; };
+		CC46C3F8201BDCC300E6775E /* HNMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNMenuVC.m; sourceTree = "<group>"; };
 		CCAEC597201BC8CC0053A70A /* Hanlin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanlin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAEC5A3201BC8CC0053A70A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCAEC5A8201BC8CC0053A70A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 		CCAEC5BE201BC9A40053A70A /* HNConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNConstants.h; sourceTree = "<group>"; };
 		CCAEC5C0201BC9A40053A70A /* HNUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNUtility.h; sourceTree = "<group>"; };
 		CCAEC5C1201BC9A40053A70A /* HNUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNUtility.m; sourceTree = "<group>"; };
-		CCAEC5C2201BC9A40053A70A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCAEC5C4201BC9A40053A70A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCAEC5C5201BC9A40053A70A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CCAEC5C8201BC9A40053A70A /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 			children = (
 				CCAEC5C3201BC9A40053A70A /* AppDelegate */,
 				CCAEC5A3201BC8CC0053A70A /* Assets.xcassets */,
-				CCAEC5C2201BC9A40053A70A /* Assets.xcassets */,
 				CCAEC5B1201BC9A40053A70A /* Controllers */,
 				CCAEC5B0201BC9A40053A70A /* HanlinAssets.xcassets */,
 				CCAEC5BC201BC9A40053A70A /* Helper */,
@@ -124,6 +124,8 @@
 				CCAEC5B9201BC9A40053A70A /* HNWebVC.m */,
 				CCAEC5BA201BC9A40053A70A /* HRegisterVC.h */,
 				CCAEC5BB201BC9A40053A70A /* HRegisterVC.m */,
+				CC46C3F7201BDCC300E6775E /* HNMenuVC.h */,
+				CC46C3F8201BDCC300E6775E /* HNMenuVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -261,7 +263,6 @@
 				CCAEC5E3201BC9A40053A70A /* Montserrat-Hairline.otf in Resources */,
 				CCAEC5E0201BC9A40053A70A /* Montserrat-Black.otf in Resources */,
 				CCAEC5D7201BC9A40053A70A /* HanlinAssets.xcassets in Resources */,
-				CCAEC5DE201BC9A40053A70A /* Assets.xcassets in Resources */,
 				CCAEC5E9201BC9A40053A70A /* Main.storyboard in Resources */,
 				CCAEC5A4201BC8CC0053A70A /* Assets.xcassets in Resources */,
 				CCAEC5E4201BC9A40053A70A /* Montserrat-Light.otf in Resources */,
@@ -287,6 +288,7 @@
 				CCAEC5D9201BC9A40053A70A /* HNContactUSVC.m in Sources */,
 				CCAEC5AA201BC8CC0053A70A /* main.m in Sources */,
 				CCAEC5D8201BC9A40053A70A /* HLoginVC.m in Sources */,
+				CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
