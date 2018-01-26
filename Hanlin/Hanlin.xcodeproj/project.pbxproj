@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C694E1E201AF98E000A08C8 /* HNWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C694E1D201AF98E000A08C8 /* HNWebViewController.m */; };
 		2CB275B9201A4FBF0033BD8C /* HNBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB275B8201A4FBF0033BD8C /* HNBaseViewController.m */; };
 		2CB275BD201A550F0033BD8C /* HNUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB275BC201A550F0033BD8C /* HNUtility.m */; };
 		2CB275C3201A59DE0033BD8C /* HNProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB275C2201A59DE0033BD8C /* HNProfileViewController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C694E1C201AF98E000A08C8 /* HNWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNWebViewController.h; sourceTree = "<group>"; };
+		2C694E1D201AF98E000A08C8 /* HNWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNWebViewController.m; sourceTree = "<group>"; };
 		2CB275AE201A4F410033BD8C /* Montserrat-Hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Hairline.otf"; sourceTree = "<group>"; };
 		2CB275AF201A4F410033BD8C /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
 		2CB275B0201A4F410033BD8C /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
@@ -65,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C694E1B201AF962000A08C8 /* HNWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C694E1C201AF98E000A08C8 /* HNWebViewController.h */,
+				2C694E1D201AF98E000A08C8 /* HNWebViewController.m */,
+			);
+			path = HNWebViewController;
+			sourceTree = "<group>";
+		};
 		2CB275A7201A4DD00033BD8C /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +110,7 @@
 				2CB275C0201A59B40033BD8C /* HNProfileViewController */,
 				2CB275C4201A59E50033BD8C /* HNNotificationViewController */,
 				2CB275C8201A5A0F0033BD8C /* HNContactUSViewController */,
+				2C694E1B201AF962000A08C8 /* HNWebViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,6 +226,7 @@
 				2CB275AB201A4E620033BD8C /* View */,
 				2CB275AC201A4E840033BD8C /* Helper */,
 				2CB275A8201A4E3D0033BD8C /* Resources */,
+				AC4F3A732019092B00965050 /* HanlinAssets.xcassets */,
 				AC4F3A562017AF2800965050 /* Assets.xcassets */,
 				AC4F3A5B2017AF2800965050 /* Info.plist */,
 				AC4F3A5C2017AF2800965050 /* main.m */,
@@ -297,6 +311,7 @@
 				2CB275C3201A59DE0033BD8C /* HNProfileViewController.m in Sources */,
 				2CB275B9201A4FBF0033BD8C /* HNBaseViewController.m in Sources */,
 				AC4F3A5D2017AF2800965050 /* main.m in Sources */,
+				2C694E1E201AF98E000A08C8 /* HNWebViewController.m in Sources */,
 				2CB275C7201A5A080033BD8C /* HNNotificationViewController.m in Sources */,
 				AC4F3A4F2017AF2800965050 /* AppDelegate.m in Sources */,
 				2CB275CB201A5A410033BD8C /* HNContactUSViewController.m in Sources */,

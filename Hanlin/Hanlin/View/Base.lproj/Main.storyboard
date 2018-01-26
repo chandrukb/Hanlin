@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login screen-->
         <scene sceneID="tne-QT-ifu">
@@ -156,6 +161,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="37.600000000000001" y="33.733133433283363"/>
+        </scene>
+        <!--ContactUS View Controller-->
+        <scene sceneID="9pX-Tt-SbT">
+            <objects>
+                <viewController id="dZa-VW-v0s" customClass="HNContactUSViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BHj-jC-TOQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="M4i-jw-ya8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TjW-CY-hUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="33"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="U2X-8X-HLt">
+            <objects>
+                <viewController id="7Jj-xG-UGj" customClass="HNProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cq7-Z1-a2t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="AfC-is-c1L">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aI-F0-oN0">
+                                <rect key="frame" x="16" y="507" width="288" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.21568627450980393" green="0.32941176470588235" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <state key="normal" title="Update Profile"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AfC-is-c1L" secondAttribute="bottom" id="4Cg-Kr-kQQ"/>
+                            <constraint firstItem="AfC-is-c1L" firstAttribute="top" secondItem="Cq7-Z1-a2t" secondAttribute="top" id="Jv7-8O-REv"/>
+                            <constraint firstItem="AfC-is-c1L" firstAttribute="trailing" secondItem="JUP-De-lh9" secondAttribute="trailing" id="Nkq-Lc-bTW"/>
+                            <constraint firstItem="AfC-is-c1L" firstAttribute="leading" secondItem="JUP-De-lh9" secondAttribute="leading" id="YCK-sC-fOn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JUP-De-lh9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6r-hP-iGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772.5" y="696.12676056338034"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="N3H-dw-vxg">
+            <objects>
+                <viewController id="Gwf-O0-D8N" customClass="HNWebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Gc-1g-CnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Or-HF-jjt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Or-HF-jjt" firstAttribute="top" secondItem="8Gc-1g-CnJ" secondAttribute="top" id="BSz-cl-CgM"/>
+                            <constraint firstItem="9Or-HF-jjt" firstAttribute="leading" secondItem="8tz-cP-NxM" secondAttribute="leading" id="UO9-JK-Rsr"/>
+                            <constraint firstItem="9Or-HF-jjt" firstAttribute="bottom" secondItem="8tz-cP-NxM" secondAttribute="bottom" id="eB2-JP-v6P"/>
+                            <constraint firstItem="9Or-HF-jjt" firstAttribute="trailing" secondItem="8tz-cP-NxM" secondAttribute="trailing" id="fID-Ql-Y06"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8tz-cP-NxM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNi-5l-ZuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501.875" y="695.07042253521126"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="3pc-EL-mt8">
+            <objects>
+                <viewController id="iWt-pd-7Bq" customClass="HNNotificationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jkt-BO-e4W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="4fn-Pe-9nN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qg-pd-u48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502" y="33"/>
         </scene>
     </scenes>
     <resources>
