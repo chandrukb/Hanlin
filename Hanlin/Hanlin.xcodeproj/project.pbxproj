@@ -7,26 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C694E1E201AF98E000A08C8 /* HNWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C694E1D201AF98E000A08C8 /* HNWebViewController.m */; };
-		2CB275B9201A4FBF0033BD8C /* HNBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB275B8201A4FBF0033BD8C /* HNBaseViewController.m */; };
 		2CB275BD201A550F0033BD8C /* HNUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB275BC201A550F0033BD8C /* HNUtility.m */; };
 		AC4F3A572017AF2800965050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4F3A562017AF2800965050 /* Assets.xcassets */; };
 		AC4F3A5D2017AF2800965050 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4F3A5C2017AF2800965050 /* main.m */; };
 		AC4F3A742019092B00965050 /* HanlinAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4F3A732019092B00965050 /* HanlinAssets.xcassets */; };
-		CCAFF780201B25990042053D /* HLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF77E201B25980042053D /* HLoginVC.m */; };
-		CCAFF784201B25E40042053D /* HRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF783201B25E40042053D /* HRegisterVC.m */; };
-		CCAFF788201B685D0042053D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF787201B685D0042053D /* AppDelegate.m */; };
-		CCAFF7A8201B68E90042053D /* HNProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF79E201B68E90042053D /* HNProfileViewController.m */; };
-		CCAFF7A9201B68E90042053D /* HNNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7A1201B68E90042053D /* HNNotificationViewController.m */; };
-		CCAFF7AA201B68E90042053D /* HNBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7A4201B68E90042053D /* HNBaseViewController.m */; };
-		CCAFF7AB201B68E90042053D /* HNContactUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7A7201B68E90042053D /* HNContactUSViewController.m */; };
 		CCE9EF48201B6D76001778D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE9EF44201B6D76001778D8 /* Main.storyboard */; };
 		CCE9EF49201B6D76001778D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE9EF46201B6D76001778D8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C694E1C201AF98E000A08C8 /* HNWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNWebViewController.h; sourceTree = "<group>"; };
-		2C694E1D201AF98E000A08C8 /* HNWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNWebViewController.m; sourceTree = "<group>"; };
 		2CB275AE201A4F410033BD8C /* Montserrat-Hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Hairline.otf"; sourceTree = "<group>"; };
 		2CB275AF201A4F410033BD8C /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
 		2CB275B0201A4F410033BD8C /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
@@ -53,14 +42,6 @@
 		CCAFF783201B25E40042053D /* HRegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRegisterVC.m; sourceTree = "<group>"; };
 		CCAFF786201B685D0042053D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCAFF787201B685D0042053D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CCAFF79D201B68E90042053D /* HNProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNProfileViewController.h; sourceTree = "<group>"; };
-		CCAFF79E201B68E90042053D /* HNProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNProfileViewController.m; sourceTree = "<group>"; };
-		CCAFF7A0201B68E90042053D /* HNNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNNotificationViewController.h; sourceTree = "<group>"; };
-		CCAFF7A1201B68E90042053D /* HNNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNNotificationViewController.m; sourceTree = "<group>"; };
-		CCAFF7A3201B68E90042053D /* HNBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNBaseViewController.h; sourceTree = "<group>"; };
-		CCAFF7A4201B68E90042053D /* HNBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNBaseViewController.m; sourceTree = "<group>"; };
-		CCAFF7A6201B68E90042053D /* HNContactUSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNContactUSViewController.h; sourceTree = "<group>"; };
-		CCAFF7A7201B68E90042053D /* HNContactUSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNContactUSViewController.m; sourceTree = "<group>"; };
 		CCE9EF45201B6D76001778D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCE9EF47201B6D76001778D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,15 +57,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C694E1B201AF962000A08C8 /* HNWebViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2C694E1C201AF98E000A08C8 /* HNWebViewController.h */,
-				2C694E1D201AF98E000A08C8 /* HNWebViewController.m */,
-			);
-			path = HNWebViewController;
-			sourceTree = "<group>";
-		};
 		2CB275A7201A4DD00033BD8C /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,27 +72,6 @@
 				2CB275AD201A4EA70033BD8C /* Font */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		2CB275A9201A4E470033BD8C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2CB275AA201A4E510033BD8C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				AC4F3A502017AF2800965050 /* ViewController.h */,
-				AC4F3A512017AF2800965050 /* ViewController.m */,
-				2CB275B6201A4F8D0033BD8C /* HNBaseViewController */,
-				2CB275C0201A59B40033BD8C /* HNProfileViewController */,
-				2CB275C4201A59E50033BD8C /* HNNotificationViewController */,
-				2CB275C8201A5A0F0033BD8C /* HNContactUSViewController */,
-				2C694E1B201AF962000A08C8 /* HNWebViewController */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		2CB275AB201A4E620033BD8C /* View */ = {
@@ -210,10 +161,6 @@
 		CCAFF781201B259F0042053D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CCAFF7A2201B68E90042053D /* HNBaseViewController */,
-				CCAFF7A5201B68E90042053D /* HNContactUSViewController */,
-				CCAFF79F201B68E90042053D /* HNNotificationViewController */,
-				CCAFF79C201B68E90042053D /* HNProfileViewController */,
 				CCAFF77F201B25990042053D /* HLoginVC.h */,
 				CCAFF77E201B25980042053D /* HLoginVC.m */,
 				CCAFF782201B25E40042053D /* HRegisterVC.h */,
@@ -231,50 +178,6 @@
 				2CB275CA201A5A410033BD8C /* HNContactUSViewController.m */,
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		CCAFF79C201B68E90042053D /* HNProfileViewController */ = {
-			isa = PBXGroup;
-			children = (
-				CCAFF79D201B68E90042053D /* HNProfileViewController.h */,
-				CCAFF79E201B68E90042053D /* HNProfileViewController.m */,
-			);
-			path = HNProfileViewController;
-			sourceTree = "<group>";
-		};
-		CCAFF79F201B68E90042053D /* HNNotificationViewController */ = {
-			isa = PBXGroup;
-			children = (
-				CCAFF7A0201B68E90042053D /* HNNotificationViewController.h */,
-				CCAFF7A1201B68E90042053D /* HNNotificationViewController.m */,
-			);
-			path = HNNotificationViewController;
-			sourceTree = "<group>";
-		};
-		CCAFF7A2201B68E90042053D /* HNBaseViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2CB275A7201A4DD00033BD8C /* AppDelegate */,
-				2CB275AA201A4E510033BD8C /* Controller */,
-				2CB275A9201A4E470033BD8C /* Model */,
-				2CB275AB201A4E620033BD8C /* View */,
-				2CB275AC201A4E840033BD8C /* Helper */,
-				2CB275A8201A4E3D0033BD8C /* Resources */,
-				AC4F3A732019092B00965050 /* HanlinAssets.xcassets */,
-				AC4F3A562017AF2800965050 /* Assets.xcassets */,
-				AC4F3A5B2017AF2800965050 /* Info.plist */,
-				AC4F3A5C2017AF2800965050 /* main.m */,
-			);
-			path = HNBaseViewController;
-			sourceTree = "<group>";
-		};
-		CCAFF7A5201B68E90042053D /* HNContactUSViewController */ = {
-			isa = PBXGroup;
-			children = (
-				CCAFF7A6201B68E90042053D /* HNContactUSViewController.h */,
-				CCAFF7A7201B68E90042053D /* HNContactUSViewController.m */,
-			);
-			path = HNContactUSViewController;
 			sourceTree = "<group>";
 		};
 		CCAFF7AC201B69430042053D /* Model */ = {
@@ -357,12 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CB275BD201A550F0033BD8C /* HNUtility.m in Sources */,
-				CCAFF7AB201B68E90042053D /* HNContactUSViewController.m in Sources */,
 				AC4F3A5D2017AF2800965050 /* main.m in Sources */,
-				2C694E1E201AF98E000A08C8 /* HNWebViewController.m in Sources */,
-				2CB275C7201A5A080033BD8C /* HNNotificationViewController.m in Sources */,
-				AC4F3A4F2017AF2800965050 /* AppDelegate.m in Sources */,
-				2CB275CB201A5A410033BD8C /* HNContactUSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
