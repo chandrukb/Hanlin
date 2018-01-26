@@ -13,6 +13,7 @@
 		AC4F3A572017AF2800965050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4F3A562017AF2800965050 /* Assets.xcassets */; };
 		AC4F3A5A2017AF2800965050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4F3A582017AF2800965050 /* LaunchScreen.storyboard */; };
 		AC4F3A5D2017AF2800965050 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4F3A5C2017AF2800965050 /* main.m */; };
+		AC4F3A742019092B00965050 /* HanlinAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4F3A732019092B00965050 /* HanlinAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AC4F3A592017AF2800965050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC4F3A5B2017AF2800965050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC4F3A5C2017AF2800965050 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC4F3A732019092B00965050 /* HanlinAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HanlinAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				AC4F3A502017AF2800965050 /* ViewController.h */,
 				AC4F3A512017AF2800965050 /* ViewController.m */,
 				AC4F3A532017AF2800965050 /* Main.storyboard */,
+				AC4F3A732019092B00965050 /* HanlinAssets.xcassets */,
 				AC4F3A562017AF2800965050 /* Assets.xcassets */,
 				AC4F3A582017AF2800965050 /* LaunchScreen.storyboard */,
 				AC4F3A5B2017AF2800965050 /* Info.plist */,
@@ -131,6 +134,7 @@
 			files = (
 				AC4F3A5A2017AF2800965050 /* LaunchScreen.storyboard in Resources */,
 				AC4F3A572017AF2800965050 /* Assets.xcassets in Resources */,
+				AC4F3A742019092B00965050 /* HanlinAssets.xcassets in Resources */,
 				AC4F3A552017AF2800965050 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
