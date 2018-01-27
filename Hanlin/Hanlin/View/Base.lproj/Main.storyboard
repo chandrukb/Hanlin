@@ -477,7 +477,6 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="35"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
                                                 <real key="value" value="35"/>
@@ -701,13 +700,12 @@
                                             <constraint firstAttribute="height" constant="60" id="RaD-Ow-FzG"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="35"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
-                                                <real key="value" value="35"/>
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadious">
+                                                <integer key="value" value="30"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -853,7 +851,7 @@
         <!--Event screen-->
         <scene sceneID="4W2-2r-CH6">
             <objects>
-                <viewController title="Event screen" id="uuX-6B-3cN" customClass="HNMenuVC" sceneMemberID="viewController">
+                <viewController title="Event screen" id="uuX-6B-3cN" customClass="HNNotificationVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Vr-mF-eSi"/>
                         <viewControllerLayoutGuide type="bottom" id="nPC-mm-OAn"/>
@@ -865,19 +863,51 @@
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="PH9-QZ-bSq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TQ0-tG-Xvp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="9pP-Dy-Qgk">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9pP-Dy-Qgk" id="X09-IC-dNu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_nottification_event" translatesAutoresizingMaskIntoConstraints="NO" id="TOe-RZ-8mF">
+                                                    <rect key="frame" x="25" y="20" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="EFn-8d-eT7"/>
+                                                        <constraint firstAttribute="height" constant="40" id="fjS-Ub-cSd"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TOe-RZ-8mF" firstAttribute="leading" secondItem="X09-IC-dNu" secondAttribute="leading" constant="25" id="1rk-0f-V9d"/>
+                                                <constraint firstItem="TOe-RZ-8mF" firstAttribute="centerY" secondItem="X09-IC-dNu" secondAttribute="centerY" id="27M-rt-rmN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.2156862745" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="PH9-QZ-bSq" secondAttribute="bottom" id="0GO-2m-AiE"/>
+                            <constraint firstAttribute="bottom" secondItem="TQ0-tG-Xvp" secondAttribute="bottom" id="71g-eK-c9n"/>
                             <constraint firstItem="PH9-QZ-bSq" firstAttribute="leading" secondItem="e8D-Yu-ik8" secondAttribute="leading" id="CQX-4L-3Mh"/>
                             <constraint firstItem="PH9-QZ-bSq" firstAttribute="top" secondItem="e8D-Yu-ik8" secondAttribute="top" id="IGm-MR-HEx"/>
+                            <constraint firstAttribute="trailing" secondItem="TQ0-tG-Xvp" secondAttribute="trailing" id="fm9-Of-n9D"/>
                             <constraint firstItem="PH9-QZ-bSq" firstAttribute="trailing" secondItem="e8D-Yu-ik8" secondAttribute="trailing" id="gty-Nm-f1M"/>
+                            <constraint firstItem="TQ0-tG-Xvp" firstAttribute="top" secondItem="e8D-Yu-ik8" secondAttribute="top" id="xyh-47-Qgd"/>
+                            <constraint firstItem="TQ0-tG-Xvp" firstAttribute="leading" secondItem="e8D-Yu-ik8" secondAttribute="leading" id="yaV-JQ-drg"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehy-0k-KKY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="872"/>
+            <point key="canvasLocation" x="-50.399999999999999" y="871.21439280359823"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ic6-ip-GhC">
@@ -1283,7 +1313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2T1-tI-IqS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="872"/>
+            <point key="canvasLocation" x="-698" y="871"/>
         </scene>
     </scenes>
     <resources>
@@ -1302,9 +1332,10 @@
         <image name="icon_male" width="30" height="30"/>
         <image name="icon_membersince" width="15" height="15"/>
         <image name="icon_nottification" width="21" height="20"/>
+        <image name="icon_nottification_event" width="21" height="16"/>
         <image name="icon_phone" width="15" height="15"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Faa-ip-eQ4"/>
+        <segue reference="0ON-LI-Crc"/>
     </inferredMetricsTieBreakers>
 </document>

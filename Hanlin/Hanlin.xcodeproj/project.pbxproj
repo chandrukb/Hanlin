@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CF852A1201C60A300D1F01F /* HNNotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF852A0201C60A300D1F01F /* HNNotificationVC.m */; };
 		CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC46C3F8201BDCC300E6775E /* HNMenuVC.m */; };
 		CCAEC5A4201BC8CC0053A70A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5A3201BC8CC0053A70A /* Assets.xcassets */; };
 		CCAEC5AA201BC8CC0053A70A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5A9201BC8CC0053A70A /* main.m */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CF8529F201C60A300D1F01F /* HNNotificationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNNotificationVC.h; sourceTree = "<group>"; };
+		2CF852A0201C60A300D1F01F /* HNNotificationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNNotificationVC.m; sourceTree = "<group>"; };
 		CC46C3F7201BDCC300E6775E /* HNMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNMenuVC.h; sourceTree = "<group>"; };
 		CC46C3F8201BDCC300E6775E /* HNMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNMenuVC.m; sourceTree = "<group>"; };
 		CCAEC597201BC8CC0053A70A /* Hanlin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanlin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +129,8 @@
 				CCAEC5BB201BC9A40053A70A /* HRegisterVC.m */,
 				CC46C3F7201BDCC300E6775E /* HNMenuVC.h */,
 				CC46C3F8201BDCC300E6775E /* HNMenuVC.m */,
+				2CF8529F201C60A300D1F01F /* HNNotificationVC.h */,
+				2CF852A0201C60A300D1F01F /* HNNotificationVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				CCAEC5D9201BC9A40053A70A /* HNContactUSVC.m in Sources */,
 				CCAEC5AA201BC8CC0053A70A /* main.m in Sources */,
 				CCAEC5D8201BC9A40053A70A /* HLoginVC.m in Sources */,
+				2CF852A1201C60A300D1F01F /* HNNotificationVC.m in Sources */,
 				CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
