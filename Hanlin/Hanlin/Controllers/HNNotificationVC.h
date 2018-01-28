@@ -10,4 +10,5 @@
 
 @interface HNNotificationVC : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *notificationTableView;
 @end
