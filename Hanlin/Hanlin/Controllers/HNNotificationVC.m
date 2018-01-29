@@ -54,8 +54,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier:MyIdentifier];
     }
-    
-    
     //cell.textLabel.text = @"My Text";
     return cell;
 }
