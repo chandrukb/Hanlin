@@ -503,7 +503,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUa-hH-9B4">
                                 <rect key="frame" x="0.0" y="108" width="375" height="384"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qo1-ay-GyH" customClass="HNRoundedImageView">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="Qo1-ay-GyH" customClass="HNRoundedImageView">
                                         <rect key="frame" x="25" y="40" width="70" height="70"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -511,9 +511,6 @@
                                             <constraint firstAttribute="width" constant="70" id="xqN-51-YGC"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="35"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
                                                 <real key="value" value="35"/>
@@ -728,7 +725,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yse-cS-9hS">
                                 <rect key="frame" x="0.0" y="107" width="375" height="100"/>
                                 <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ay0-oI-Sie" customClass="HNRoundedImageView" customModule="Hanlin">
+                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="Ay0-oI-Sie" customClass="HNRoundedImageView">
                                         <rect key="frame" x="15" y="20" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
@@ -737,13 +734,10 @@
                                             <constraint firstAttribute="height" constant="60" id="RaD-Ow-FzG"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="30"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadious">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="ERb-ZJ-BEc" appends="YES" id="Cxd-hd-N8V"/>
@@ -823,6 +817,9 @@
                                         <state key="normal" title="Files" image="MenuFiles">
                                             <color key="titleColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="G7H-Jk-VUw" kind="show" id="vkw-wu-m25"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeR-3g-M5Z">
                                         <rect key="frame" x="185" y="200" width="100" height="105"/>
@@ -1373,17 +1370,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="aW4-db-gTY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZMl-HW-694">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EventImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZMl-HW-694">
                                 <rect key="frame" x="0.0" y="62" width="375" height="206"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="206" id="If7-4i-rFb"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTc-Pb-UNx">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTc-Pb-UNx">
                                 <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="hoQ-Lb-7Wv"/>
                                     <constraint firstAttribute="height" constant="40" id="iTQ-DV-eHz"/>
                                 </constraints>
                                 <state key="normal" title="REGISTERED EVENTS"/>
@@ -1400,12 +1396,12 @@
                                 </segments>
                                 <color key="tintColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="G7H-Jk-VUw" kind="show" id="II9-4b-xk6"/>
+                                    <action selector="segmentButtonValueChanged:" destination="e3A-on-77Q" eventType="valueChanged" id="Pka-JK-ITa"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xi8-fK-kfY">
                                 <rect key="frame" x="0.0" y="314" width="375" height="313"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zVG-OQ-DtS">
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
@@ -1414,7 +1410,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D59-ZE-kK3" customClass="HNRoundedImageView">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="D59-ZE-kK3" customClass="HNRoundedImageView">
                                                     <rect key="frame" x="15" y="12.5" width="50" height="50"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -1422,12 +1418,9 @@
                                                         <constraint firstAttribute="height" constant="50" id="k4X-qa-VQb"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="35"/>
-                                                        </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
-                                                            <real key="value" value="35"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="25"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
@@ -1459,6 +1452,7 @@
                                                 <constraint firstItem="D59-ZE-kK3" firstAttribute="leading" secondItem="box-ol-gKb" secondAttribute="leading" constant="15" id="yR3-fU-Dc4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -1488,6 +1482,10 @@
                             <constraint firstItem="zq3-De-Hdc" firstAttribute="leading" secondItem="k08-yb-cM1" secondAttribute="leading" constant="15" id="wcz-j0-o5P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnRegisteredEventsHeightConstraint" destination="iTQ-DV-eHz" id="Rai-Ci-gM1"/>
+                        <outlet property="ivEventsPromotions" destination="ZMl-HW-694" id="wuM-qh-9mb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2T1-tI-IqS" sceneMemberID="firstResponder"/>
             </objects>
@@ -1551,10 +1549,10 @@
             </objects>
             <point key="canvasLocation" x="678" y="2041"/>
         </scene>
-        <!--Promotions-->
+        <!--Files-->
         <scene sceneID="SsV-vX-WNM">
             <objects>
-                <viewController title="Promotions" id="G7H-Jk-VUw" customClass="HNMenuVC" sceneMemberID="viewController">
+                <viewController title="Files" id="G7H-Jk-VUw" customClass="HNMenuVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IGa-Dh-s8J"/>
                         <viewControllerLayoutGuide type="bottom" id="BDU-hf-hyd"/>
@@ -1579,67 +1577,91 @@
                                     <constraint firstAttribute="height" constant="30" id="rWq-uR-PYT"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="EVENTS"/>
-                                    <segment title="PROMOTIONS"/>
+                                    <segment title="FILES"/>
+                                    <segment title="YOUTUBE LINKS"/>
                                 </segments>
                                 <color key="tintColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="abq-YY-QX6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="abq-YY-QX6">
                                 <rect key="frame" x="0.0" y="314" width="375" height="353"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="blr-HN-dTc">
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="blr-HN-dTc" id="2m1-Ew-ATd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M3N-cg-UNS" customClass="HNRoundedImageView">
-                                                    <rect key="frame" x="15" y="12.5" width="50" height="50"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzL-e5-Tg5" customClass="HNShadowView">
+                                                    <rect key="frame" x="10" y="5" width="360" height="64.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="M3N-cg-UNS" customClass="HNRoundedImageView">
+                                                            <rect key="frame" x="20" y="7.5" width="50" height="50"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="81N-a7-cyN"/>
+                                                                <constraint firstAttribute="height" constant="50" id="8wL-d7-pHo"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                                                                    <real key="value" value="25"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="johndoe@hanlin.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNX-6f-5rh">
+                                                            <rect key="frame" x="80" y="36" width="182" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="gUy-yc-OxB"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJY-Ng-cKk">
+                                                            <rect key="frame" x="80" y="15" width="81" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="QXN-cE-qKD"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="81N-a7-cyN"/>
-                                                        <constraint firstAttribute="height" constant="50" id="8wL-d7-pHo"/>
+                                                        <constraint firstItem="M3N-cg-UNS" firstAttribute="centerY" secondItem="SzL-e5-Tg5" secondAttribute="centerY" id="4wJ-dn-lom"/>
+                                                        <constraint firstItem="lNX-6f-5rh" firstAttribute="top" secondItem="kJY-Ng-cKk" secondAttribute="bottom" id="CSG-V9-un2"/>
+                                                        <constraint firstItem="M3N-cg-UNS" firstAttribute="leading" secondItem="SzL-e5-Tg5" secondAttribute="leading" constant="20" id="XFs-jU-AyY"/>
+                                                        <constraint firstItem="lNX-6f-5rh" firstAttribute="leading" secondItem="M3N-cg-UNS" secondAttribute="trailing" constant="10" id="bPY-vK-CuT"/>
+                                                        <constraint firstItem="kJY-Ng-cKk" firstAttribute="top" secondItem="SzL-e5-Tg5" secondAttribute="top" constant="15" id="c6C-1l-ogU"/>
+                                                        <constraint firstItem="kJY-Ng-cKk" firstAttribute="leading" secondItem="M3N-cg-UNS" secondAttribute="trailing" constant="10" id="rsO-9z-lBT"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="35"/>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="1" height="1"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
-                                                            <real key="value" value="35"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="johndoe@hanlin.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNX-6f-5rh">
-                                                    <rect key="frame" x="75" y="36.5" width="182" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="gUy-yc-OxB"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJY-Ng-cKk">
-                                                    <rect key="frame" x="75" y="15.5" width="81" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="QXN-cE-qKD"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
-                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="kJY-Ng-cKk" firstAttribute="top" secondItem="2m1-Ew-ATd" secondAttribute="top" constant="15.5" id="9m1-uN-Z5P"/>
-                                                <constraint firstItem="lNX-6f-5rh" firstAttribute="top" secondItem="kJY-Ng-cKk" secondAttribute="bottom" id="9vG-WE-U1D"/>
-                                                <constraint firstItem="M3N-cg-UNS" firstAttribute="centerY" secondItem="2m1-Ew-ATd" secondAttribute="centerY" id="Vdk-wZ-Hb7"/>
-                                                <constraint firstItem="lNX-6f-5rh" firstAttribute="leading" secondItem="M3N-cg-UNS" secondAttribute="trailing" constant="10" id="cLs-hC-n7k"/>
-                                                <constraint firstItem="M3N-cg-UNS" firstAttribute="leading" secondItem="2m1-Ew-ATd" secondAttribute="leading" constant="15" id="d37-AL-LlN"/>
-                                                <constraint firstItem="kJY-Ng-cKk" firstAttribute="leading" secondItem="M3N-cg-UNS" secondAttribute="trailing" constant="10" id="ddd-hY-b82"/>
+                                                <constraint firstAttribute="trailing" secondItem="SzL-e5-Tg5" secondAttribute="trailing" constant="5" id="0Jg-XM-9cm"/>
+                                                <constraint firstAttribute="bottom" secondItem="SzL-e5-Tg5" secondAttribute="bottom" constant="5" id="D6N-LU-Yqg"/>
+                                                <constraint firstItem="SzL-e5-Tg5" firstAttribute="leading" secondItem="2m1-Ew-ATd" secondAttribute="leading" constant="10" id="ZwV-FP-xJF"/>
+                                                <constraint firstItem="SzL-e5-Tg5" firstAttribute="top" secondItem="2m1-Ew-ATd" secondAttribute="top" constant="5" id="mMo-MC-Opf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -1672,6 +1694,7 @@
     <resources>
         <image name="AppLogo" width="206" height="36"/>
         <image name="Background" width="375" height="675"/>
+        <image name="EventImage" width="375" height="199"/>
         <image name="MenuBellIcon" width="21" height="20"/>
         <image name="MenuCalendar" width="78" height="78"/>
         <image name="MenuContact" width="70" height="70"/>
@@ -1688,8 +1711,9 @@
         <image name="icon_nottification" width="21" height="20"/>
         <image name="icon_nottification_event" width="21" height="16"/>
         <image name="icon_phone" width="15" height="15"/>
+        <image name="profile_image" width="240" height="263"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0ON-LI-Crc"/>
+        <segue reference="Faa-ip-eQ4"/>
     </inferredMetricsTieBreakers>
 </document>

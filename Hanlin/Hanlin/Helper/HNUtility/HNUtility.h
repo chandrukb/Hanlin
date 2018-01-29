@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface HNUtility : NSObject
-
+//-(void)addShadowToView:(UIView *) inView;
 @end
