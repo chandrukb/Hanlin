@@ -251,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1502" y="174"/>
+            <point key="canvasLocation" x="-1588" y="172"/>
         </scene>
         <!--Contact Us-->
         <scene sceneID="9pX-Tt-SbT">
@@ -434,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TjW-CY-hUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733.60000000000002" y="626.53673163418296"/>
+            <point key="canvasLocation" x="1111" y="720"/>
         </scene>
         <!--Profile -->
         <scene sceneID="U2X-8X-HLt">
@@ -675,7 +675,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6r-hP-iGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733.60000000000002" y="-70.614692653673174"/>
+            <point key="canvasLocation" x="1111" y="-41"/>
         </scene>
         <!--WebVC-->
         <scene sceneID="N3H-dw-vxg">
@@ -705,7 +705,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNi-5l-ZuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="-71"/>
+            <point key="canvasLocation" x="2665" y="-43"/>
         </scene>
         <!--Menu screen-->
         <scene sceneID="DFx-Ix-324">
@@ -976,7 +976,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehy-0k-KKY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="-71"/>
+            <point key="canvasLocation" x="1878" y="-42"/>
         </scene>
         <!-- -->
         <scene sceneID="Ic6-ip-GhC">
@@ -1353,7 +1353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhA-SJ-q7L" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1503" y="896"/>
+            <point key="canvasLocation" x="-1588" y="940"/>
         </scene>
         <!--Events-->
         <scene sceneID="lTI-ch-cn2">
@@ -1489,7 +1489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2T1-tI-IqS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="1364"/>
+            <point key="canvasLocation" x="1110" y="-853"/>
         </scene>
         <!--Menu Screen-->
         <scene sceneID="BgD-tL-tcp">
@@ -1518,7 +1518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0I-V0-Ign" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="678" y="1363"/>
+            <point key="canvasLocation" x="1878" y="719"/>
         </scene>
         <!--Menu screen-->
         <scene sceneID="ykY-4S-c5h">
@@ -1547,7 +1547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxf-Ty-WDG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="678" y="2041"/>
+            <point key="canvasLocation" x="2665" y="718"/>
         </scene>
         <!--Files-->
         <scene sceneID="SsV-vX-WNM">
@@ -1564,7 +1564,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="RmP-ZA-BO5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2D1-K2-ERZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FileImage" translatesAutoresizingMaskIntoConstraints="NO" id="2D1-K2-ERZ">
                                 <rect key="frame" x="0.0" y="62" width="375" height="206"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="206" id="cUB-Mv-YEi"/>
@@ -1688,13 +1688,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jWq-86-k1K" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50.399999999999999" y="2071.2143928035985"/>
+            <point key="canvasLocation" x="1111" y="1529"/>
         </scene>
     </scenes>
     <resources>
         <image name="AppLogo" width="206" height="36"/>
         <image name="Background" width="375" height="675"/>
         <image name="EventImage" width="375" height="199"/>
+        <image name="FileImage" width="375" height="199"/>
         <image name="MenuBellIcon" width="21" height="20"/>
         <image name="MenuCalendar" width="78" height="78"/>
         <image name="MenuContact" width="70" height="70"/>
