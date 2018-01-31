@@ -11,6 +11,10 @@
 		AC169ABA2020EA590027B562 /* HNEventPromotionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC169AB92020EA590027B562 /* HNEventPromotionVC.m */; };
 		AC169ABD2020EBFE0027B562 /* HNEventPromotionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC169ABC2020EBFE0027B562 /* HNEventPromotionCell.m */; };
 		AC3ACFBC201F39E8009F4324 /* HNShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3ACFBB201F39E8009F4324 /* HNShadowView.m */; };
+		AC76AC212022431600DFD270 /* HNFilesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76AC202022431600DFD270 /* HNFilesVC.m */; };
+		AC76AC242022467300DFD270 /* HNContentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76AC232022467300DFD270 /* HNContentsTableViewCell.m */; };
+		AC76AC272022574600DFD270 /* HNEventPromoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76AC262022574600DFD270 /* HNEventPromoDetailVC.m */; };
+		AC76AC2A20226D3400DFD270 /* HNRegisteredEventsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76AC2920226D3400DFD270 /* HNRegisteredEventsVC.m */; };
 		CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC46C3F8201BDCC300E6775E /* HNMenuVC.m */; };
 		CCAEC5A4201BC8CC0053A70A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5A3201BC8CC0053A70A /* Assets.xcassets */; };
 		CCAEC5AA201BC8CC0053A70A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5A9201BC8CC0053A70A /* main.m */; };
@@ -44,6 +48,14 @@
 		AC169ABC2020EBFE0027B562 /* HNEventPromotionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNEventPromotionCell.m; sourceTree = "<group>"; };
 		AC3ACFBA201F39E8009F4324 /* HNShadowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNShadowView.h; sourceTree = "<group>"; };
 		AC3ACFBB201F39E8009F4324 /* HNShadowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNShadowView.m; sourceTree = "<group>"; };
+		AC76AC1F2022431600DFD270 /* HNFilesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNFilesVC.h; sourceTree = "<group>"; };
+		AC76AC202022431600DFD270 /* HNFilesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNFilesVC.m; sourceTree = "<group>"; };
+		AC76AC222022467300DFD270 /* HNContentsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNContentsTableViewCell.h; sourceTree = "<group>"; };
+		AC76AC232022467300DFD270 /* HNContentsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNContentsTableViewCell.m; sourceTree = "<group>"; };
+		AC76AC252022574600DFD270 /* HNEventPromoDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNEventPromoDetailVC.h; sourceTree = "<group>"; };
+		AC76AC262022574600DFD270 /* HNEventPromoDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNEventPromoDetailVC.m; sourceTree = "<group>"; };
+		AC76AC2820226D3400DFD270 /* HNRegisteredEventsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNRegisteredEventsVC.h; sourceTree = "<group>"; };
+		AC76AC2920226D3400DFD270 /* HNRegisteredEventsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNRegisteredEventsVC.m; sourceTree = "<group>"; };
 		CC46C3F7201BDCC300E6775E /* HNMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNMenuVC.h; sourceTree = "<group>"; };
 		CC46C3F8201BDCC300E6775E /* HNMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNMenuVC.m; sourceTree = "<group>"; };
 		CCAEC597201BC8CC0053A70A /* Hanlin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanlin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,8 +154,16 @@
 				CCAEC5B9201BC9A40053A70A /* HNWebVC.m */,
 				AC169AB82020EA590027B562 /* HNEventPromotionVC.h */,
 				AC169AB92020EA590027B562 /* HNEventPromotionVC.m */,
+				AC76AC2820226D3400DFD270 /* HNRegisteredEventsVC.h */,
+				AC76AC2920226D3400DFD270 /* HNRegisteredEventsVC.m */,
 				AC169ABB2020EBFE0027B562 /* HNEventPromotionCell.h */,
 				AC169ABC2020EBFE0027B562 /* HNEventPromotionCell.m */,
+				AC76AC1F2022431600DFD270 /* HNFilesVC.h */,
+				AC76AC202022431600DFD270 /* HNFilesVC.m */,
+				AC76AC222022467300DFD270 /* HNContentsTableViewCell.h */,
+				AC76AC232022467300DFD270 /* HNContentsTableViewCell.m */,
+				AC76AC252022574600DFD270 /* HNEventPromoDetailVC.h */,
+				AC76AC262022574600DFD270 /* HNEventPromoDetailVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -302,13 +322,17 @@
 				CCAEC5DB201BC9A40053A70A /* HNWebVC.m in Sources */,
 				CCAEC5DA201BC9A40053A70A /* HNProfileVC.m in Sources */,
 				AC169ABD2020EBFE0027B562 /* HNEventPromotionCell.m in Sources */,
+				AC76AC242022467300DFD270 /* HNContentsTableViewCell.m in Sources */,
 				CCAEC5EA201BC9A40053A70A /* HNRoundedImageView.m in Sources */,
 				CCAEC5DD201BC9A40053A70A /* HNUtility.m in Sources */,
 				AC3ACFBC201F39E8009F4324 /* HNShadowView.m in Sources */,
+				AC76AC212022431600DFD270 /* HNFilesVC.m in Sources */,
 				CCAEC5DC201BC9A40053A70A /* HRegisterVC.m in Sources */,
 				CCAEC5DF201BC9A40053A70A /* AppDelegate.m in Sources */,
+				AC76AC272022574600DFD270 /* HNEventPromoDetailVC.m in Sources */,
 				CCAEC5D9201BC9A40053A70A /* HNContactUSVC.m in Sources */,
 				AC169ABA2020EA590027B562 /* HNEventPromotionVC.m in Sources */,
+				AC76AC2A20226D3400DFD270 /* HNRegisteredEventsVC.m in Sources */,
 				CCAEC5AA201BC8CC0053A70A /* main.m in Sources */,
 				CCAEC5D8201BC9A40053A70A /* HLoginVC.m in Sources */,
 				2CF852A1201C60A300D1F01F /* HNNotificationVC.m in Sources */,
