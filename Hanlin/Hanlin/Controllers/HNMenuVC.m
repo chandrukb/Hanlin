@@ -10,8 +10,7 @@
 
 @interface HNMenuVC ()
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnRegisteredEventsHeightConstraint;
-@property (weak, nonatomic) IBOutlet UIImageView *ivEventsPromotions;
+
 @end
 
 @implementation HNMenuVC
@@ -26,23 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)segmentButtonValueChanged:(id)sender {
-    NSInteger selectedIndex = ((UISegmentedControl *)sender).selectedSegmentIndex;
-    switch (selectedIndex) {
-        case 0://selected events
-        {
-            [self updateUIForEvents];
-        }
-            break;
-        case 1://selected promotions
-        {
-            [self updateUIForPromotions];
-        }
-            break;
-        default:
-            break;
-    }
-}
+
 
 /*
 #pragma mark - Navigation
@@ -54,13 +37,5 @@
 }
 */
 
--(void)updateUIForEvents
-{
-    self.ivEventsPromotions.image = [UIImage imageNamed:@"EventImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 40.0f;
-}
 
--(void)updateUIForPromotions
-{
-    self.ivEventsPromotions.image = [UIImage imageNamed:@"PromoImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 0.0f;
-}
 @end

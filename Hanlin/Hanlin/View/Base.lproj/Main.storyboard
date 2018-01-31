@@ -514,7 +514,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="35"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -1315,10 +1315,38 @@
             </objects>
             <point key="canvasLocation" x="-1588" y="940"/>
         </scene>
-        <!--Events-->
+        <!--Table View Controller-->
+        <scene sceneID="QPo-tO-ZRL">
+            <objects>
+                <tableViewController id="U85-ZT-uAg" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iOw-Yo-bQV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Bls-Rk-ZqO">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bls-Rk-ZqO" id="xiF-1J-zvV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="U85-ZT-uAg" id="0g9-3w-aDk"/>
+                            <outlet property="delegate" destination="U85-ZT-uAg" id="36z-Ix-rZB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Iv-wP-lsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="-1703"/>
+        </scene>
+        <!--EventsAndPromotions-->
         <scene sceneID="lTI-ch-cn2">
             <objects>
-                <viewController title="Events" id="e3A-on-77Q" customClass="HNMenuVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HNEventPromotionVC" title="EventsAndPromotions" id="e3A-on-77Q" customClass="HNEventPromotionVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rkm-fH-SLr"/>
                         <viewControllerLayoutGuide type="bottom" id="bbx-nd-WVn"/>
@@ -1343,6 +1371,9 @@
                                     <constraint firstAttribute="height" constant="40" id="iTQ-DV-eHz"/>
                                 </constraints>
                                 <state key="normal" title="REGISTERED EVENTS"/>
+                                <connections>
+                                    <segue destination="U85-ZT-uAg" kind="show" id="aUE-Bb-Sq5"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zq3-De-Hdc">
                                 <rect key="frame" x="15" y="276" width="345" height="31"/>
@@ -1363,7 +1394,7 @@
                                 <rect key="frame" x="0.0" y="314" width="375" height="313"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zVG-OQ-DtS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventPromoCell" id="zVG-OQ-DtS" customClass="HNEventPromotionCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zVG-OQ-DtS" id="box-ol-gKb">
@@ -1413,9 +1444,18 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="ivEventPromo" destination="D59-ZE-kK3" id="Xv9-Wn-kXg"/>
+                                            <outlet property="lblDate" destination="LxP-cK-NAj" id="ADI-oS-p5K"/>
+                                            <outlet property="lblTitle" destination="cMs-a8-i0i" id="MYq-aB-EO9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="e3A-on-77Q" id="dKW-m2-AFw"/>
+                                    <outlet property="delegate" destination="e3A-on-77Q" id="WwS-MS-otl"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1444,7 +1484,10 @@
                     </view>
                     <connections>
                         <outlet property="btnRegisteredEventsHeightConstraint" destination="iTQ-DV-eHz" id="Rai-Ci-gM1"/>
-                        <outlet property="ivEventsPromotions" destination="ZMl-HW-694" id="wuM-qh-9mb"/>
+                        <outlet property="btnSegmentControl" destination="zq3-De-Hdc" id="cyc-bW-hhg"/>
+                        <outlet property="eventPromoTableView" destination="xi8-fK-kfY" id="WIU-ha-6eL"/>
+                        <outlet property="ivEventsPromotions" destination="ZMl-HW-694" id="Jc1-Mx-jgd"/>
+                        <outlet property="ivScreenBG" destination="aW4-db-gTY" id="gil-fL-1AW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2T1-tI-IqS" sceneMemberID="firstResponder"/>
@@ -1565,7 +1608,7 @@
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="25"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
