@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CF852A1201C60A300D1F01F /* HNNotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF852A0201C60A300D1F01F /* HNNotificationVC.m */; };
+		AC3ACFBC201F39E8009F4324 /* HNShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3ACFBB201F39E8009F4324 /* HNShadowView.m */; };
 		CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC46C3F8201BDCC300E6775E /* HNMenuVC.m */; };
 		CCAEC5A4201BC8CC0053A70A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5A3201BC8CC0053A70A /* Assets.xcassets */; };
 		CCAEC5AA201BC8CC0053A70A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5A9201BC8CC0053A70A /* main.m */; };
@@ -35,6 +36,8 @@
 /* Begin PBXFileReference section */
 		2CF8529F201C60A300D1F01F /* HNNotificationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNNotificationVC.h; sourceTree = "<group>"; };
 		2CF852A0201C60A300D1F01F /* HNNotificationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNNotificationVC.m; sourceTree = "<group>"; };
+		AC3ACFBA201F39E8009F4324 /* HNShadowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNShadowView.h; sourceTree = "<group>"; };
+		AC3ACFBB201F39E8009F4324 /* HNShadowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNShadowView.m; sourceTree = "<group>"; };
 		CC46C3F7201BDCC300E6775E /* HNMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNMenuVC.h; sourceTree = "<group>"; };
 		CC46C3F8201BDCC300E6775E /* HNMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNMenuVC.m; sourceTree = "<group>"; };
 		CCAEC597201BC8CC0053A70A /* Hanlin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanlin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +203,8 @@
 				CCAEC5D3201BC9A40053A70A /* Main.storyboard */,
 				CCAEC5D5201BC9A40053A70A /* HNRoundedImageView.h */,
 				CCAEC5D6201BC9A40053A70A /* HNRoundedImageView.m */,
+				AC3ACFBA201F39E8009F4324 /* HNShadowView.h */,
+				AC3ACFBB201F39E8009F4324 /* HNShadowView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,7 +240,7 @@
 				TargetAttributes = {
 					CCAEC596201BC8CC0053A70A = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -288,6 +293,7 @@
 				CCAEC5DA201BC9A40053A70A /* HNProfileVC.m in Sources */,
 				CCAEC5EA201BC9A40053A70A /* HNRoundedImageView.m in Sources */,
 				CCAEC5DD201BC9A40053A70A /* HNUtility.m in Sources */,
+				AC3ACFBC201F39E8009F4324 /* HNShadowView.m in Sources */,
 				CCAEC5DC201BC9A40053A70A /* HRegisterVC.m in Sources */,
 				CCAEC5DF201BC9A40053A70A /* AppDelegate.m in Sources */,
 				CCAEC5D9201BC9A40053A70A /* HNContactUSVC.m in Sources */,
@@ -428,13 +434,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MRH72M6F6B;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = E442Y28P53;
 				INFOPLIST_FILE = Hanlin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hanlin.Hanlin;
+				PRODUCT_BUNDLE_IDENTIFIER = pcode.eventapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c7a4112e-77f9-484d-bd4c-b6cf4046a80f";
+				PROVISIONING_PROFILE_SPECIFIER = "Event App Distribution";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -443,13 +452,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MRH72M6F6B;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = E442Y28P53;
 				INFOPLIST_FILE = Hanlin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hanlin.Hanlin;
+				PRODUCT_BUNDLE_IDENTIFIER = pcode.eventapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c7a4112e-77f9-484d-bd4c-b6cf4046a80f";
+				PROVISIONING_PROFILE_SPECIFIER = "Event App Distribution";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

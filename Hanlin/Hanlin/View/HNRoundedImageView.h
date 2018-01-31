@@ -10,7 +10,7 @@
 IB_DESIGNABLE
 @interface HNRoundedImageView : UIImageView
 
-@property (nonatomic) IBInspectable CGFloat cornerRadious;
+@property (nonatomic) IBInspectable CGFloat cornerRadius;
 @property (nonatomic) IBInspectable BOOL masksToBounds;
 
 @end
