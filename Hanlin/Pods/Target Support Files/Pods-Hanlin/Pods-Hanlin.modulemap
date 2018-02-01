@@ -1,0 +1,6 @@
+framework module Pods_Hanlin {
+  umbrella header "Pods-Hanlin-umbrella.h"
+
+  export *
+  module * { export * }
+}

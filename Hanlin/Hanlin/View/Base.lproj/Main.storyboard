@@ -702,6 +702,54 @@
             </objects>
             <point key="canvasLocation" x="2665" y="-43"/>
         </scene>
+        <!--CalendarVC-->
+        <scene sceneID="Ed6-mD-nwC">
+            <objects>
+                <viewController id="Mmv-jz-VUw" customClass="HNCalendarVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hdC-VL-g74"/>
+                        <viewControllerLayoutGuide type="bottom" id="qfN-nK-mmI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="142-1S-d0M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ju-AB-ki9" customClass="JTHorizontalCalendarView">
+                                <rect key="frame" x="0.0" y="114" width="375" height="300"/>
+                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="FDh-SN-sPd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9om-Xr-Bca" customClass="JTCalendarMenuView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sXX-UV-INp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9om-Xr-Bca" firstAttribute="top" secondItem="hdC-VL-g74" secondAttribute="bottom" id="8pt-ZN-oiR"/>
+                            <constraint firstItem="7ju-AB-ki9" firstAttribute="top" secondItem="9om-Xr-Bca" secondAttribute="bottom" id="MOi-dU-Q1Z"/>
+                            <constraint firstItem="7ju-AB-ki9" firstAttribute="leading" secondItem="142-1S-d0M" secondAttribute="leading" id="NJR-Pv-GjU"/>
+                            <constraint firstItem="7ju-AB-ki9" firstAttribute="top" secondItem="9om-Xr-Bca" secondAttribute="bottom" id="S06-UZ-apm"/>
+                            <constraint firstAttribute="trailing" secondItem="9om-Xr-Bca" secondAttribute="trailing" id="nzT-3X-wdf"/>
+                            <constraint firstAttribute="trailing" secondItem="7ju-AB-ki9" secondAttribute="trailing" id="sPo-0W-wU7"/>
+                            <constraint firstItem="9om-Xr-Bca" firstAttribute="leading" secondItem="142-1S-d0M" secondAttribute="leading" id="sXT-85-rZ8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendarContentView" destination="7ju-AB-ki9" id="9eF-Zx-SAh"/>
+                        <outlet property="calendarContentViewHeight" destination="FDh-SN-sPd" id="Nd4-2Z-FMa"/>
+                        <outlet property="calendarMenuView" destination="9om-Xr-Bca" id="Rlf-60-nEy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qvi-jB-oX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50" y="-639"/>
+        </scene>
         <!--Menu screen-->
         <scene sceneID="DFx-Ix-324">
             <objects>
@@ -807,6 +855,9 @@
                                         <state key="normal" title="Calendar" image="MenuCalendar">
                                             <color key="titleColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Mmv-jz-VUw" kind="show" id="8ca-W6-Y2q"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szi-SD-Gvx">
                                         <rect key="frame" x="20" y="200" width="100" height="105"/>
