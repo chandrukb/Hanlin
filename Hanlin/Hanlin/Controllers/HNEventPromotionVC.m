@@ -8,6 +8,7 @@
 
 #import "HNEventPromotionVC.h"
 #import "HNEventPromotionCell.h"
+#import "HNEventPromoDetailVC.h"
 
 @interface HNEventPromotionVC ()<UITableViewDelegate, UITableViewDataSource>
 {
@@ -27,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"";
     // Do any additional setup after loading the view.
 //    [self.eventPromoTableView registerClass:[HNEventPromotionCell class] forCellReuseIdentifier:@"EventPromoCell"];
     
@@ -37,6 +39,7 @@
     [eventData setValue:@"10 February 2018" forKey:@"event_date"];
     events = [[NSMutableArray alloc] init];
     [events addObject:eventData];
+    [events addObject:eventData];
     
     //mock data for promos
     promoData = [[NSMutableDictionary alloc] init];
@@ -44,8 +47,8 @@
     [promoData setValue:@"Buy One Free One Buffet Dinner" forKey:@"promo_title"];
     [promoData setValue:@"10 February 2018" forKey:@"promo_date"];
     promos = [[NSMutableArray alloc] init];
-    [promos addObject:promoData	];
-    
+    [promos addObject:promoData];
+    [promos addObject:promoData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,15 +56,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    //This need to be checked and refined while actual implementation
+    if([segue.identifier isEqualToString:@"EventPromoDetailSegue"])
+    {
+    HNEventPromoDetailVC *destinationVC = [segue destinationViewController];
+    if(self.btnSegmentControl.selectedSegmentIndex == 0)
+    {
+        destinationVC.selectedOption = @"events";
+    }
+    else{
+        destinationVC.selectedOption = @"promos";
+    }
+    }
 }
-*/
+
 
 - (IBAction)segmentButtonValueChanged:(id)sender {
     NSInteger selectedIndex = ((UISegmentedControl *)sender).selectedSegmentIndex;
@@ -84,13 +100,13 @@
 
 -(void)updateUIForEvents
 {
-    self.title = @"Event";
+    self.title = @"";
     self.ivEventsPromotions.image = [UIImage imageNamed:@"EventImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 40.0f;
 }
 
 -(void)updateUIForPromotions
 {
-    self.title = @"Promotion";
+    self.title = @"";
     self.ivEventsPromotions.image = [UIImage imageNamed:@"PromoImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 0.0f;
 }
 
