@@ -702,10 +702,10 @@
             </objects>
             <point key="canvasLocation" x="2665" y="-43"/>
         </scene>
-        <!--CalendarVC-->
+        <!--Calendar-->
         <scene sceneID="Ed6-mD-nwC">
             <objects>
-                <viewController id="Mmv-jz-VUw" customClass="HNCalendarVC" sceneMemberID="viewController">
+                <viewController title="Calendar" id="Mmv-jz-VUw" customClass="HNCalendarVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hdC-VL-g74"/>
                         <viewControllerLayoutGuide type="bottom" id="qfN-nK-mmI"/>
