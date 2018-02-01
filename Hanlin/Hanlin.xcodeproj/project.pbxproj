@@ -156,14 +156,14 @@
 				AC169AB92020EA590027B562 /* HNEventPromotionVC.m */,
 				AC76AC2820226D3400DFD270 /* HNRegisteredEventsVC.h */,
 				AC76AC2920226D3400DFD270 /* HNRegisteredEventsVC.m */,
-				AC169ABB2020EBFE0027B562 /* HNEventPromotionCell.h */,
-				AC169ABC2020EBFE0027B562 /* HNEventPromotionCell.m */,
 				AC76AC1F2022431600DFD270 /* HNFilesVC.h */,
 				AC76AC202022431600DFD270 /* HNFilesVC.m */,
-				AC76AC222022467300DFD270 /* HNContentsTableViewCell.h */,
-				AC76AC232022467300DFD270 /* HNContentsTableViewCell.m */,
 				AC76AC252022574600DFD270 /* HNEventPromoDetailVC.h */,
 				AC76AC262022574600DFD270 /* HNEventPromoDetailVC.m */,
+				AC169ABB2020EBFE0027B562 /* HNEventPromotionCell.h */,
+				AC169ABC2020EBFE0027B562 /* HNEventPromotionCell.m */,
+				AC76AC222022467300DFD270 /* HNContentsTableViewCell.h */,
+				AC76AC232022467300DFD270 /* HNContentsTableViewCell.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
