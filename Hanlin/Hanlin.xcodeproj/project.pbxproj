@@ -15,6 +15,7 @@
 		AC76AC242022467300DFD270 /* HNContentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76AC232022467300DFD270 /* HNContentsTableViewCell.m */; };
 		AC76AC272022574600DFD270 /* HNEventPromoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76AC262022574600DFD270 /* HNEventPromoDetailVC.m */; };
 		AC76AC2A20226D3400DFD270 /* HNRegisteredEventsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76AC2920226D3400DFD270 /* HNRegisteredEventsVC.m */; };
+		ACCD780E2023884A00091F19 /* HNCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCD780C2023884A00091F19 /* HNCalendarVC.m */; };
 		CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC46C3F8201BDCC300E6775E /* HNMenuVC.m */; };
 		CCAEC5A4201BC8CC0053A70A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5A3201BC8CC0053A70A /* Assets.xcassets */; };
 		CCAEC5AA201BC8CC0053A70A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5A9201BC8CC0053A70A /* main.m */; };
@@ -37,11 +38,14 @@
 		CCAEC5E8201BC9A40053A70A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5D1201BC9A40053A70A /* LaunchScreen.storyboard */; };
 		CCAEC5E9201BC9A40053A70A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5D3201BC9A40053A70A /* Main.storyboard */; };
 		CCAEC5EA201BC9A40053A70A /* HNRoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5D6201BC9A40053A70A /* HNRoundedImageView.m */; };
+		EF0EDF3A85D9B6E48DAFDF9B /* Pods_Hanlin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1C068EC6FC85B9D8E3C824 /* Pods_Hanlin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BF244257D784FFCE4EC0304 /* Pods-Hanlin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hanlin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hanlin/Pods-Hanlin.debug.xcconfig"; sourceTree = "<group>"; };
 		2CF8529F201C60A300D1F01F /* HNNotificationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNNotificationVC.h; sourceTree = "<group>"; };
 		2CF852A0201C60A300D1F01F /* HNNotificationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNNotificationVC.m; sourceTree = "<group>"; };
+		4CDCA7D6FA23F88D3BE24A23 /* Pods-Hanlin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hanlin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hanlin/Pods-Hanlin.release.xcconfig"; sourceTree = "<group>"; };
 		AC169AB82020EA590027B562 /* HNEventPromotionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNEventPromotionVC.h; sourceTree = "<group>"; };
 		AC169AB92020EA590027B562 /* HNEventPromotionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNEventPromotionVC.m; sourceTree = "<group>"; };
 		AC169ABB2020EBFE0027B562 /* HNEventPromotionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNEventPromotionCell.h; sourceTree = "<group>"; };
@@ -56,6 +60,9 @@
 		AC76AC262022574600DFD270 /* HNEventPromoDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNEventPromoDetailVC.m; sourceTree = "<group>"; };
 		AC76AC2820226D3400DFD270 /* HNRegisteredEventsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNRegisteredEventsVC.h; sourceTree = "<group>"; };
 		AC76AC2920226D3400DFD270 /* HNRegisteredEventsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNRegisteredEventsVC.m; sourceTree = "<group>"; };
+		ACCD780B2023884900091F19 /* HNCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNCalendarVC.h; sourceTree = "<group>"; };
+		ACCD780C2023884A00091F19 /* HNCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNCalendarVC.m; sourceTree = "<group>"; };
+		BA1C068EC6FC85B9D8E3C824 /* Pods_Hanlin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hanlin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC46C3F7201BDCC300E6775E /* HNMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNMenuVC.h; sourceTree = "<group>"; };
 		CC46C3F8201BDCC300E6775E /* HNMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNMenuVC.m; sourceTree = "<group>"; };
 		CCAEC597201BC8CC0053A70A /* Hanlin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanlin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,17 +104,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0EDF3A85D9B6E48DAFDF9B /* Pods_Hanlin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29D5453C185BAE797FA68B67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA1C068EC6FC85B9D8E3C824 /* Pods_Hanlin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67393BAEC0F24A9D5A463326 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BF244257D784FFCE4EC0304 /* Pods-Hanlin.debug.xcconfig */,
+				4CDCA7D6FA23F88D3BE24A23 /* Pods-Hanlin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CCAEC58E201BC8CC0053A70A = {
 			isa = PBXGroup;
 			children = (
 				CCAEC599201BC8CC0053A70A /* Hanlin */,
 				CCAEC598201BC8CC0053A70A /* Products */,
+				67393BAEC0F24A9D5A463326 /* Pods */,
+				29D5453C185BAE797FA68B67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +165,8 @@
 		CCAEC5B1201BC9A40053A70A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ACCD780B2023884900091F19 /* HNCalendarVC.h */,
+				ACCD780C2023884A00091F19 /* HNCalendarVC.m */,
 				CCAEC5B2201BC9A40053A70A /* HLoginVC.h */,
 				CCAEC5B3201BC9A40053A70A /* HLoginVC.m */,
 				CCAEC5B4201BC9A40053A70A /* HNContactUSVC.h */,
@@ -246,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCAEC5AD201BC8CC0053A70A /* Build configuration list for PBXNativeTarget "Hanlin" */;
 			buildPhases = (
+				7840405C5C253DB21CF37F63 /* [CP] Check Pods Manifest.lock */,
 				CCAEC593201BC8CC0053A70A /* Sources */,
 				CCAEC594201BC8CC0053A70A /* Frameworks */,
 				CCAEC595201BC8CC0053A70A /* Resources */,
+				6BA67DD5D0EC2D87C47D34F3 /* [CP] Embed Pods Frameworks */,
+				C7E5FC60ABC97F28AD4E861F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,6 +346,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6BA67DD5D0EC2D87C47D34F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hanlin/Pods-Hanlin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CVCalendar/CVCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/JTCalendar/JTCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CVCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hanlin/Pods-Hanlin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7840405C5C253DB21CF37F63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hanlin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7E5FC60ABC97F28AD4E861F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hanlin/Pods-Hanlin-resources.sh",
+				"${PODS_ROOT}/CKCalendar/Source/resources/left_arrow.png",
+				"${PODS_ROOT}/CKCalendar/Source/resources/left_arrow@2x.png",
+				"${PODS_ROOT}/CKCalendar/Source/resources/right_arrow.png",
+				"${PODS_ROOT}/CKCalendar/Source/resources/right_arrow@2x.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hanlin/Pods-Hanlin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CCAEC593201BC8CC0053A70A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -337,6 +431,7 @@
 				CCAEC5D8201BC9A40053A70A /* HLoginVC.m in Sources */,
 				2CF852A1201C60A300D1F01F /* HNNotificationVC.m in Sources */,
 				CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */,
+				ACCD780E2023884A00091F19 /* HNCalendarVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +563,7 @@
 		};
 		CCAEC5AE201BC8CC0053A70A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BF244257D784FFCE4EC0304 /* Pods-Hanlin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -480,12 +576,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		CCAEC5AF201BC8CC0053A70A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CDCA7D6FA23F88D3BE24A23 /* Pods-Hanlin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -498,6 +596,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
