@@ -67,7 +67,7 @@
 {
     UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
-    if([self.selectedOption isEqualToString:@"promos"] && (indexPath.row == 2 || indexPath.row == 4))
+    if([self.selectedOption isEqualToString:@"promos"] && (indexPath.row == 2 || indexPath.row == 4 || indexPath.row == 5))//
         return 0; //set the hidden cell's height to 0
     
     if([self.selectedOption isEqualToString:@"events"] && indexPath.row == 5)
