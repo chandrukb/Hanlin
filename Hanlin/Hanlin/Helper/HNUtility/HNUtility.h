@@ -11,4 +11,5 @@
 
 @interface HNUtility : NSObject
 //-(void)addShadowToView:(UIView *) inView;
++ (UIImage *)imageWithImage:(UIImage *)image convertToSize:(CGSize)size;
 @end

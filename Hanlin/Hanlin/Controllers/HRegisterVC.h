@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class ASIHTTPRequest;
+
 @interface HRegisterVC : UIViewController
+{
+    ASIHTTPRequest *request;
+}
+
+@property (retain, nonatomic) ASIHTTPRequest *request;
 
 @end
