@@ -9,6 +9,9 @@
 #import "HNEventPromotionVC.h"
 #import "HNEventPromotionCell.h"
 #import "HNEventPromoDetailVC.h"
+#import <ASIHTTPRequest/ASIHTTPRequest.h>
+#import "HNConstants.h"
+#import "JSON.h"
 
 @interface HNEventPromotionVC ()<UITableViewDelegate, UITableViewDataSource>
 {
@@ -149,4 +152,39 @@
 
 }
 
+#pragma mark- Service call
+- (void)grabEventsInBackground:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_ALL_EVENTS]];
+    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setCompletionBlock:^{
+//        // Use when fetching text data
+//        NSString *responseString = [request responseString];
+        //handle the request
+        if (request.responseStatusCode == 400) {
+            NSLog(@"Invalid code");
+        } else if (request.responseStatusCode == 403) {
+            NSLog(@"Code already used");
+        } else if (request.responseStatusCode == 200) {
+            NSString *resString = [request responseString];
+            NSArray *responseArray = [resString JSONValue];
+            NSDictionary *response = responseArray[0];
+            BOOL responseStatus = [[response valueForKey:@"success"] boolValue];
+            NSString * message = [response valueForKey:@"msg"];
+            if(responseStatus == true)
+            {
+            }
+            else
+            {
+                
+            }
+        }
+        // Use when fetching binary data
+        NSData *responseData = [request responseData];
+    }];
+    [request setFailedBlock:^{
+        NSError *error = [request error];
+    }];
+    [request startAsynchronous];
+}
 @end

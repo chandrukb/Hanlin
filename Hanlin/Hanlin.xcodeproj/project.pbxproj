@@ -23,6 +23,7 @@
 		ACEA4BB1202F3CE10080FBA9 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEA4BA9202F3CE10080FBA9 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ACEA4BB2202F3CE10080FBA9 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEA4BAB202F3CE10080FBA9 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ACEA4BB3202F3CE10080FBA9 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEA4BAD202F3CE10080FBA9 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ACEBCBCD20322AAC0087A6A3 /* HNTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEBCBC8203223290087A6A3 /* HNTextField.m */; };
 		CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC46C3F8201BDCC300E6775E /* HNMenuVC.m */; };
 		CCAEC5A4201BC8CC0053A70A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5A3201BC8CC0053A70A /* Assets.xcassets */; };
 		CCAEC5AA201BC8CC0053A70A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5A9201BC8CC0053A70A /* main.m */; };
@@ -81,6 +82,8 @@
 		ACEA4BAB202F3CE10080FBA9 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		ACEA4BAC202F3CE10080FBA9 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		ACEA4BAD202F3CE10080FBA9 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		ACEBCBC8203223290087A6A3 /* HNTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNTextField.m; sourceTree = "<group>"; };
+		ACEBCBC92032232A0087A6A3 /* HNTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNTextField.h; sourceTree = "<group>"; };
 		CC46C3F7201BDCC300E6775E /* HNMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNMenuVC.h; sourceTree = "<group>"; };
 		CC46C3F8201BDCC300E6775E /* HNMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNMenuVC.m; sourceTree = "<group>"; };
 		CCAEC597201BC8CC0053A70A /* Hanlin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanlin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +260,8 @@
 		CCAEC5BF201BC9A40053A70A /* HNUtility */ = {
 			isa = PBXGroup;
 			children = (
+				ACEBCBC92032232A0087A6A3 /* HNTextField.h */,
+				ACEBCBC8203223290087A6A3 /* HNTextField.m */,
 				CCAEC5C0201BC9A40053A70A /* HNUtility.h */,
 				CCAEC5C1201BC9A40053A70A /* HNUtility.m */,
 			);
@@ -476,6 +481,7 @@
 				CCAEC5D8201BC9A40053A70A /* HLoginVC.m in Sources */,
 				2CF852A1201C60A300D1F01F /* HNNotificationVC.m in Sources */,
 				CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */,
+				ACEBCBCD20322AAC0087A6A3 /* HNTextField.m in Sources */,
 				ACEA4BB3202F3CE10080FBA9 /* SBJsonWriter.m in Sources */,
 				ACEA4BB2202F3CE10080FBA9 /* SBJsonParser.m in Sources */,
 				ACEA4BAF202F3CE10080FBA9 /* NSString+SBJSON.m in Sources */,

@@ -15,6 +15,7 @@
 #define HN_CHANGE_PASSWORD @"changePassword.php"
 #define HN_UPDATE_PASSWORD @"resetPassword.php"
 #define HN_DOCUMENT_DOWNLOAD @"Mobile/documentDownload.php"
+#define HN_GET_ALL_EVENTS @"events.php"
 
 //API Constants
 #define HN_REQ_NAME @"name"
@@ -22,5 +23,5 @@
 #define HN_REQ_EMAIL @"email"
 #define HN_REQ_PASSWORD @"password"
 #define HN_REQ_USERFILE @"userfile"
-
+#define HN_USERNAME @"username"
 #endif /* HNConstants_h */

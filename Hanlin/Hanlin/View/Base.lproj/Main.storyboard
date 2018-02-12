@@ -67,7 +67,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2d-On-ucR">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2d-On-ucR" customClass="HNTextField">
                                                         <rect key="frame" x="0.0" y="21" width="250" height="35"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -76,6 +76,10 @@
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="sNF-Qu-g4k"/>
+                                                            <outlet property="presentInView" destination="8bC-Xf-vdC" id="buo-Ae-RAb"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRB-wj-fUA">
                                                         <rect key="frame" x="0.0" y="56" width="250" height="16"/>
@@ -125,7 +129,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9LF-9Y-F6m">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9LF-9Y-F6m" customClass="HNTextField">
                                                         <rect key="frame" x="0.0" y="21" width="250" height="35"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -134,6 +138,10 @@
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="uGP-b1-upC"/>
+                                                            <outlet property="presentInView" destination="8bC-Xf-vdC" id="lNj-c4-C1n"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxz-EH-gLI">
                                                         <rect key="frame" x="0.0" y="56" width="250" height="16"/>
@@ -184,6 +192,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="onLoginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="122-RN-cen"/>
                                                     <segue destination="nvM-1c-jTD" kind="show" id="0ON-LI-Crc"/>
                                                 </connections>
                                             </button>
@@ -201,6 +210,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="onRegisterClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0hp-TA-Emx"/>
                                                     <segue destination="jRB-Ki-3K8" kind="show" id="tYH-8i-fIl"/>
                                                 </connections>
                                             </button>
@@ -254,6 +264,23 @@
                             <constraint firstAttribute="bottom" secondItem="QNl-IP-ibe" secondAttribute="bottom" id="x6p-ba-ARh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="lac-Cf-rZG" id="pNf-lp-neY"/>
+                        <outlet property="btnRegister" destination="GxR-wv-GQc" id="7vk-6D-s3S"/>
+                        <outlet property="err_lblPassword" destination="Mxz-EH-gLI" id="o1A-LX-q7x"/>
+                        <outlet property="err_lblUsername" destination="kRB-wj-fUA" id="a76-qc-r8G"/>
+                        <outlet property="lblOr" destination="xVR-5m-FxC" id="t4O-0m-QQP"/>
+                        <outlet property="lblPassword" destination="KfN-42-E7F" id="gK6-sG-9qs"/>
+                        <outlet property="lblUsername" destination="Cf1-B2-C2f" id="yZC-4i-3iY"/>
+                        <outlet property="passwordBorderView" destination="qr7-tC-zTl" id="3dj-gp-XlX"/>
+                        <outlet property="passwordContainerHeightConstraint" destination="Ohm-K8-xHp" id="7X8-Jy-Dl3"/>
+                        <outlet property="scrollView" destination="QNl-IP-ibe" id="GfN-EM-17d"/>
+                        <outlet property="tfPassword" destination="9LF-9Y-F6m" id="5Fa-Al-3lF"/>
+                        <outlet property="tfUsername" destination="E2d-On-ucR" id="1J0-hb-cVe"/>
+                        <outlet property="usernameBorderView" destination="pgp-S3-GdQ" id="x0t-hK-EyI"/>
+                        <outlet property="usernameContainerHeightConstraint" destination="6J4-F9-sdp" id="VuK-4i-cuN"/>
+                        <segue destination="8UL-JZ-Eb1" kind="unwind" unwindAction="prepareForUnwind:" id="cb3-eF-K1b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -1005,7 +1032,7 @@
                         <barButtonItem key="rightBarButtonItem" image="Signout" style="plain" id="HXE-vl-Lg8">
                             <color key="tintColor" red="0.27370542287826538" green="0.41112762689590454" blue="0.64740955829620361" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="hu1-cx-0gy" kind="unwind" unwindAction="prepareForUnwind:" id="MiL-ah-E3e"/>
+                                <segue destination="hu1-cx-0gy" kind="unwind" identifier="ShowLoginPage" unwindAction="prepareForUnwind:" id="MiL-ah-E3e"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1218,7 +1245,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPj-nM-Bse">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPj-nM-Bse" customClass="HNTextField">
                                                         <rect key="frame" x="0.0" y="21" width="250" height="35"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -1226,7 +1253,11 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="jRB-Ki-3K8" id="alv-wH-rc8"/>
+                                                            <outlet property="presentInView" destination="smG-0C-xI9" id="GcA-5u-wCY"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaO-01-b8T">
                                                         <rect key="frame" x="0.0" y="56" width="250" height="16"/>
@@ -1276,7 +1307,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VFm-qX-Nga">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VFm-qX-Nga" customClass="HNTextField">
                                                         <rect key="frame" x="0.0" y="21" width="250" height="35"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -1284,7 +1315,11 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="jRB-Ki-3K8" id="t0V-R1-TxH"/>
+                                                            <outlet property="presentInView" destination="smG-0C-xI9" id="yc9-wh-ejo"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f51-jT-cdz">
                                                         <rect key="frame" x="0.0" y="56" width="250" height="16"/>
@@ -1333,7 +1368,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Contact No." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gky-iT-JHz">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Contact No." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gky-iT-JHz" customClass="HNTextField">
                                                         <rect key="frame" x="0.0" y="21" width="250" height="35"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -1341,7 +1376,11 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="jRB-Ki-3K8" id="Imb-V7-6Fc"/>
+                                                            <outlet property="presentInView" destination="smG-0C-xI9" id="t8e-qj-HPf"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n56-VU-fqk">
                                                         <rect key="frame" x="0.0" y="56" width="250" height="16"/>
@@ -1391,7 +1430,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EnO-hN-MLp">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EnO-hN-MLp" customClass="HNTextField">
                                                         <rect key="frame" x="0.0" y="21" width="250" height="35"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -1399,7 +1438,11 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="jRB-Ki-3K8" id="qKP-Sm-Cbj"/>
+                                                            <outlet property="presentInView" destination="smG-0C-xI9" id="pDg-Zv-doZ"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDK-cd-MO6">
                                                         <rect key="frame" x="0.0" y="56" width="250" height="16"/>
@@ -1547,20 +1590,23 @@
                         <outlet property="lblInvalidFullname" destination="xaO-01-b8T" id="qcw-QR-IEX"/>
                         <outlet property="lblInvalidPassword" destination="IDK-cd-MO6" id="umd-L4-pmS"/>
                         <outlet property="lblPassword" destination="PKl-xO-oYz" id="bo4-Ea-FdA"/>
+                        <outlet property="scrollView" destination="8wQ-jq-PCO" id="YA1-cp-fr8"/>
                         <outlet property="tfContactNumber" destination="gky-iT-JHz" id="uSw-77-hoT"/>
                         <outlet property="tfEmail" destination="VFm-qX-Nga" id="XkP-Rc-e1q"/>
                         <outlet property="tfFullname" destination="MPj-nM-Bse" id="1Me-bQ-4uD"/>
                         <outlet property="tfPassword" destination="EnO-hN-MLp" id="rfU-Y1-wb1"/>
+                        <segue destination="8UL-JZ-Eb1" kind="unwind" identifier="ShowLoginPage" unwindAction="prepareForUnwind:" id="DGo-4N-7ei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhA-SJ-q7L" sceneMemberID="firstResponder"/>
+                <exit id="8UL-JZ-Eb1" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="mZs-bf-3UI">
                     <connections>
                         <action selector="addProfileImageTapped:" destination="jRB-Ki-3K8" id="llR-as-opl"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1588" y="940"/>
+            <point key="canvasLocation" x="-1588" y="925"/>
         </scene>
         <!--Event Promo DetailVC-->
         <scene sceneID="QPo-tO-ZRL">
