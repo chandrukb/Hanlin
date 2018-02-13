@@ -8,104 +8,114 @@
 
 /* Begin PBXBuildFile section */
 		026C9CD242D3321B12D50F933B708688 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AD0AED80BF9507DEDC45805C1854EE /* MobileCoreServices.framework */; };
-		07201D929A594092DB4AB8211FC3DAC6 /* ASIS3BucketRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C56F50F2D2FBA98AE261F4D2B69CC8 /* ASIS3BucketRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		0839CEAA76CA0C0023A0D0349ABA6921 /* ASICloudFilesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 624041C0FD755ED0A33BB5C438BBFA41 /* ASICloudFilesRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		0B92C609090AD3F630C0CDFEAADAB308 /* JTCalendarWeekDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F588723EB30242CB94ACAF3CA421 /* JTCalendarWeekDayView.m */; };
-		0F400B5F556C93860ED272376FEDAAAD /* ASIS3BucketRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DE5CBCF0F34D3E88B04F74398B2A335D /* ASIS3BucketRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10CCE3EE77476C2DA31FCE8FA547E723 /* ASIS3Request.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEAAA05B4E174A1F7947FF05179F248 /* ASIS3Request.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17843C0E2C8339405FF8566A9B6D2280 /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F60FAB44F02DD12BE2DF050487A2D5 /* ASICacheDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A5BEDC57E17712D312C29BBFB2A3316 /* JTCalendarSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C844E3EFBA50A621B1EBE8F70E6100 /* JTCalendarSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1AC6DFA672F1EA3E557892813E04D84C /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = F563CF8D05B1FEC3BD659CB5B7B7CD15 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B7DB4AF25CBFAE21C56D8157FBE0B39 /* JTCalendarWeek.h in Headers */ = {isa = PBXBuildFile; fileRef = 6481ED9D326A0BACCBECB1F31FDCF307 /* JTCalendarWeek.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C4AF8D0570425A512FD79D885819869 /* JTCalendarPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = C79E2B4BC3C133AE689252D8F41D5BDB /* JTCalendarPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D962112402DD432D933424B9AAC845F /* ASIFormDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9222A8C032B74F5239D480CF0F8DD30F /* ASIFormDataRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E32E25A3726913524CF5A9DBEE98E68 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA3B969122C5BDA2E82190B2EF9A247 /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		257233B60B2E3DB62E6AFC44B108AE0C /* JTCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B4FD69A638C8859B38CE9AFBBF845 /* JTCalendarDayView.m */; };
-		30C4CF70790695A22980D3772EBAEE36 /* JTVerticalCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = D69777FE1A6B8C8585A6F432750540AC /* JTVerticalCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3110520F43E052EEB23A57FF7A874B79 /* ASIProgressDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 383F211FB054ED4D90CAAA2DBF682D47 /* ASIProgressDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03FAF97D1ADDF88E9A3D921A6CF3BC4D /* CSCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 162C5E8F47E12DDEEA9185014F128BBB /* CSCacheManager.m */; };
+		053B7B06E96492EB4427DCEB3185E178 /* CSURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 172FC1DFCBEC4DEFE46830D516316093 /* CSURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07201D929A594092DB4AB8211FC3DAC6 /* ASIS3BucketRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C98A4FC3777249D9B3865B0845C104 /* ASIS3BucketRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0839CEAA76CA0C0023A0D0349ABA6921 /* ASICloudFilesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E2187F4604871B5AF26558B4E31FC6B8 /* ASICloudFilesRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0B92C609090AD3F630C0CDFEAADAB308 /* JTCalendarWeekDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEF180F120DB53EBCF80626BB5DE859 /* JTCalendarWeekDayView.m */; };
+		0C9874FFF8367D7BD88BCB986274573C /* Pods-Hanlin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 996CC4726DD6ABF7E0560FDD84B225A8 /* Pods-Hanlin-dummy.m */; };
+		0F400B5F556C93860ED272376FEDAAAD /* ASIS3BucketRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 177F10D1D3DFA1822474B19E0849DCEA /* ASIS3BucketRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10CCE3EE77476C2DA31FCE8FA547E723 /* ASIS3Request.h in Headers */ = {isa = PBXBuildFile; fileRef = 8069FC5850627C78A901DBB007ED5908 /* ASIS3Request.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1334B4FB1F10C5264AF2A807A77EFA31 /* CSCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B044736D9AD94E9E10931A3A9489C5BA /* CSCacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17392E8E838690EFC6B292472CE35414 /* CSLazyLoadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E448946E09228E2A5244319CC3D05BF /* CSLazyLoadController.m */; };
+		17843C0E2C8339405FF8566A9B6D2280 /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F5DCBC045D71B3DF51D5225711F07BB /* ASICacheDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A5BEDC57E17712D312C29BBFB2A3316 /* JTCalendarSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 97855E111836D5EFA320B618AAE96FD4 /* JTCalendarSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AC6DFA672F1EA3E557892813E04D84C /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 293480F8247279E4FA4E409BBE9030C1 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B7DB4AF25CBFAE21C56D8157FBE0B39 /* JTCalendarWeek.h in Headers */ = {isa = PBXBuildFile; fileRef = A9D4E50CE896C7BEC9BB6C9FD23A6B25 /* JTCalendarWeek.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C4AF8D0570425A512FD79D885819869 /* JTCalendarPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C54A9C63A63A640797D53F8573ADB24 /* JTCalendarPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D962112402DD432D933424B9AAC845F /* ASIFormDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 36DC5E4EA5B037968A0DC667AF77E6C5 /* ASIFormDataRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E32E25A3726913524CF5A9DBEE98E68 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4949EF16E17D3AA3DC9ECF67EA7B603D /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		257233B60B2E3DB62E6AFC44B108AE0C /* JTCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EC5A5594067CB980C1779A0CDE5C4E /* JTCalendarDayView.m */; };
+		2C5B1BC49747CB845E060234FA088BB1 /* CSLazyLoadController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 354144454FBBB91781B91CFEACEEB04F /* CSLazyLoadController-dummy.m */; };
+		30C4CF70790695A22980D3772EBAEE36 /* JTVerticalCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F1DAC099E9BEE26711B1DEA2DAB845 /* JTVerticalCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3110520F43E052EEB23A57FF7A874B79 /* ASIProgressDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0AAF028D11289EBE349502234FAB77 /* ASIProgressDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C7EF1D2AEC29B9D59500FF99805A65A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AEB10022BC352F7845667155A34D96 /* Foundation.framework */; };
-		400A503998B8B681E66DC5A484A049B8 /* ASIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E028C993AC7DE7693E9CDDE32D132E2C /* ASIHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		405C60186C5D7BADBF698A8B2210A8C7 /* ASINSXMLParserCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = F59DE5C7F77B0CCFAFD66BA8F2B3942F /* ASINSXMLParserCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4165D8B139A63C9697508A678E579C80 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDE57ED86EE97CB06D75019941B270D /* ASIAuthenticationDialog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4692B9ED4A6A3BC8183A11D711D50CA9 /* JTVerticalCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CA9A434B419A266F1F7C6DAF5ADFDA /* JTVerticalCalendarView.m */; };
-		4693A3D6090E98FAA8B1EDAC727F3221 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E50C3A110DE30394F5EC58D81B4F92 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		51AA53E4426E98140FFE0031CDA49561 /* JTCalendarPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00217A72CDD7D2AB25667B4EE500CC53 /* JTCalendarPageView.m */; };
-		529D5BFABE3D5B73E6DD628670FE6DE3 /* ASIHTTPRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFEBD8FAFA609A326077F8C447F70AB /* ASIHTTPRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		536196304F7B3EC177C210D37ADB0EFC /* JTMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F55087517BA33DD6AB3D318854502F /* JTMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		547C3B80F7310050C99DE906CA19F0CB /* ASIInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = B31CC137BD15F396DE28AED09932715A /* ASIInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		59B22A4207C5539E9EE1FA4222145DEA /* JTCalendarDay.h in Headers */ = {isa = PBXBuildFile; fileRef = 775650C522EBE62DC0E6607310C711E8 /* JTCalendarDay.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B16D4533A374C7F7826BC1470DAE0B3 /* ASICloudFilesContainerXMLParserDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 06F2CEFD73E8DF88F6692421EB197391 /* ASICloudFilesContainerXMLParserDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5C8E00076C405BF0B0DDADDED34818D5 /* JTCalendarWeekDay.h in Headers */ = {isa = PBXBuildFile; fileRef = 61AC0EF3D6D9160173957DFB84D96FDD /* JTCalendarWeekDay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		400A503998B8B681E66DC5A484A049B8 /* ASIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4BD6954AD7C88238D09788A1D4305C /* ASIHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		405C60186C5D7BADBF698A8B2210A8C7 /* ASINSXMLParserCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = CE3316DCD0A12B69678A776F22AD1E5A /* ASINSXMLParserCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4165D8B139A63C9697508A678E579C80 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CF281F5726F905E765013B973CD9F60 /* ASIAuthenticationDialog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4692B9ED4A6A3BC8183A11D711D50CA9 /* JTVerticalCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5089FA475975BA7ADAD96EFE0E0C53 /* JTVerticalCalendarView.m */; };
+		4693A3D6090E98FAA8B1EDAC727F3221 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C75DF661321185587B922976C1C12D /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		51AA53E4426E98140FFE0031CDA49561 /* JTCalendarPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C84E54AB4A3D4D13E794D74E714986 /* JTCalendarPageView.m */; };
+		529D5BFABE3D5B73E6DD628670FE6DE3 /* ASIHTTPRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E349F6BD59BBB5F2491CBB5C09A331F /* ASIHTTPRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		536196304F7B3EC177C210D37ADB0EFC /* JTMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 57844FDBDDE9B232AAA6A92D073B639E /* JTMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		547C3B80F7310050C99DE906CA19F0CB /* ASIInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C514287EC51C18C7B97D57510C2E894 /* ASIInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59B22A4207C5539E9EE1FA4222145DEA /* JTCalendarDay.h in Headers */ = {isa = PBXBuildFile; fileRef = B6929DA8C59E406E1C63C7FDA285EA0F /* JTCalendarDay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B16D4533A374C7F7826BC1470DAE0B3 /* ASICloudFilesContainerXMLParserDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D947D459028CF81257984A9F53A8BD32 /* ASICloudFilesContainerXMLParserDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C8E00076C405BF0B0DDADDED34818D5 /* JTCalendarWeekDay.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F3AEBEC63C0AFE08063B2E257F94B9 /* JTCalendarWeekDay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EB8AC7DF2012A1059E9C52EF09696DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AEB10022BC352F7845667155A34D96 /* Foundation.framework */; };
-		5FE109F2181D5EF4346BDF6A6B7E94DE /* JTHorizontalCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 510A266CE7DD107A98F2CB4F8C9CBCA2 /* JTHorizontalCalendarView.m */; };
-		61B8F4B5507FAA5CFDC7731BA2EF6787 /* JTCalendarMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = C07ABCEB75C73528797D71E7759764AC /* JTCalendarMenuView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63EE8F31D87D7F1A37281DA14099474A /* ASICloudFilesContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = E3AFA7560078707D813FD3EC486769B3 /* ASICloudFilesContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6580B26A4E44D6B283D775E2035857D1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4386302081CBD7A5F4567469A17B11 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		65E7311207C5F9CABE891B6A34C27C77 /* ASICloudFilesObjectRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4940B3FF1DC3A4A7027F79EF01D15654 /* ASICloudFilesObjectRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6778F1E28C9C6B40E7CB2F3E1D4E6B3B /* JTCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C37DE69F965715790B410182BA6D26AC /* JTCalendar-dummy.m */; };
-		6BE1FCE325DE9A035D417E8FE01181D7 /* ASIHTTPRequestConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 5768A7794D2E73E912535B559DDB4D9A /* ASIHTTPRequestConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6FCF09542DE7C201965C80CD3F676D1F /* ASIS3BucketObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F5146FA75BBB35FFAB37588E6A97B1 /* ASIS3BucketObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		742650B580A6B1B55EA8765F316DC4A2 /* ASIDataDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = B7466D31213EE6EEEA43AC447A9FBC81 /* ASIDataDecompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		75324665184DBA6B744DCA064C03ADD5 /* ASIS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = F03D7FA5D563ADE45E32BC400507F340 /* ASIS3Request.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7617045583CCEBBCFFF5268D080D760E /* ASIHTTPRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B597CBBBB2216558680EC990182FBDB /* ASIHTTPRequest-dummy.m */; };
-		770EA5F9E3BC23096D56E0AA7315AFDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AEB10022BC352F7845667155A34D96 /* Foundation.framework */; };
-		7AABAB2F82A02BE49F7C22BF5317220C /* ASICloudFilesCDNRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 90628D8F975AB8AE7A1E08F4BB6726B8 /* ASICloudFilesCDNRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C25AD780E7FDF5D842DBE47A510FED8 /* JTCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C6290B3AC3A8E5EC898F04A24E62E6 /* JTCalendarWeekView.m */; };
-		7EDD09BB5AF0B42264BE231C7FBA5079 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F5A136FF6F77DE8EAEC3DAF157DBD1 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		80C000D286D7A11FAC14AEA7A97A0283 /* ASICloudFilesObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 99050291771A94781AAA965442D67282 /* ASICloudFilesObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8297CD0E370D3524DA0D3A40E52C924C /* JTCalendarDayView.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F2635BDC08E8ED543A7CB775139A9A /* JTCalendarDayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		832652AEFC186D053C28EA943E59E45D /* ASIS3ServiceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 06E555ECEDB7169EEE4AF352564D28DD /* ASIS3ServiceRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85CF6EBC66DE02C95C79974D42AE3006 /* JTDateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 62F38AA94737DA21C8D562236DBB55CC /* JTDateHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BD45D44BFD8966323A2D7FAC476AA20 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB0B1F5DEF5297D6AB7FD438B6CDC9 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8C929DFDA2F683BE086420DF09E828CB /* JTCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 223E8DE587DB8308C1AE3AFCAB39F928 /* JTCalendarManager.m */; };
-		8CB78B58C2A752E44D69EBF7E3663530 /* JTCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 38260766A4D729D1FDB449B4FD15FCFF /* JTCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		921738D6C5F05E13D1F034121334B228 /* JTCalendarDelegateManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A8ADF41EE769103A18AF0F964C9505E /* JTCalendarDelegateManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9AED6D02FBD8ED5A18482CF2B5C8F403 /* ASIS3Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DEB1A3D14A0A80E3C37A54541D04B8 /* ASIS3Bucket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9E945EF671D1F56632555C4189B92E65 /* JTCalendarWeekView.h in Headers */ = {isa = PBXBuildFile; fileRef = F1F587EF892573BF36DD441AA8A87BD5 /* JTCalendarWeekView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A00FD290FFEC432E1E29152585D56276 /* JTCalendarPage.h in Headers */ = {isa = PBXBuildFile; fileRef = F44F42082D4580898D51EC0D6B6410B7 /* JTCalendarPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A0527A017A19EEA1481BD2301C3F9318 /* JTCalendarDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E606248866FB8485DE41475F0DDDED4 /* JTCalendarDelegateManager.m */; };
-		A2B227AEB355C65CD324CA132E06E9B7 /* ASIS3ObjectRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D0017B071B5C9C011C47F0F0BCA98761 /* ASIS3ObjectRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A388FE399E9842911D67023FE1492AC4 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217F7B2AB035D2937E2A1CA3F9EB95CC /* ASICloudFilesContainerXMLParserDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A3891F0BC676AB38A3BB0C94D702F0E1 /* ASIDataCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DBA5BD0038AB404FC0B68B6C7FDB69 /* ASIDataCompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A543421813DBCBCC7EFCCD0567A3E63E /* ASICloudFilesContainerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FC904ADA33202CBD4DC9F756ED4A01AD /* ASICloudFilesContainerRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5FE109F2181D5EF4346BDF6A6B7E94DE /* JTHorizontalCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B18FE112FE519989EC729AB2075F37 /* JTHorizontalCalendarView.m */; };
+		61B8F4B5507FAA5CFDC7731BA2EF6787 /* JTCalendarMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 31A313716C90971FDFF1E45FA65A98A4 /* JTCalendarMenuView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63EE8F31D87D7F1A37281DA14099474A /* ASICloudFilesContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = D26BE9ACE4502D06F6E26766229F93C4 /* ASICloudFilesContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6580B26A4E44D6B283D775E2035857D1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C136CC904802F17917E82C631930715 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65E7311207C5F9CABE891B6A34C27C77 /* ASICloudFilesObjectRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 21AB6E4EDFCFD2794EF87210C3FEAA49 /* ASICloudFilesObjectRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6778F1E28C9C6B40E7CB2F3E1D4E6B3B /* JTCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 150FC3385873BF1C949EABD7323D0C9C /* JTCalendar-dummy.m */; };
+		6BE1FCE325DE9A035D417E8FE01181D7 /* ASIHTTPRequestConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 8446B3E17054CDA109D53A63B760A604 /* ASIHTTPRequestConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FCF09542DE7C201965C80CD3F676D1F /* ASIS3BucketObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC9C381CB27B52BE0A24A8CD289B461 /* ASIS3BucketObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		742650B580A6B1B55EA8765F316DC4A2 /* ASIDataDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = F50A2F861717945B1F274F7EBCF13D33 /* ASIDataDecompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75324665184DBA6B744DCA064C03ADD5 /* ASIS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 639DEFD6BD39688BAB161D3F3FE948F7 /* ASIS3Request.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7617045583CCEBBCFFF5268D080D760E /* ASIHTTPRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94948FA6F691171756CB5045A0616AE2 /* ASIHTTPRequest-dummy.m */; };
+		79E930A81B528E11BE7CC33EC089B27F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AEB10022BC352F7845667155A34D96 /* Foundation.framework */; };
+		7AABAB2F82A02BE49F7C22BF5317220C /* ASICloudFilesCDNRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA93FBF73C6CC06D8CB1866E013377 /* ASICloudFilesCDNRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C25AD780E7FDF5D842DBE47A510FED8 /* JTCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A203077E1A3B98283C2F77E54B76E /* JTCalendarWeekView.m */; };
+		7EDD09BB5AF0B42264BE231C7FBA5079 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C668C7340BDBC534D6AC24DA6CA44617 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		80C000D286D7A11FAC14AEA7A97A0283 /* ASICloudFilesObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FBF9DD0CECB50DA5161025C4B4382191 /* ASICloudFilesObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8297CD0E370D3524DA0D3A40E52C924C /* JTCalendarDayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 73778B23E667BC383D715602EE414DD4 /* JTCalendarDayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		832652AEFC186D053C28EA943E59E45D /* ASIS3ServiceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BA2A02EFB6549A47FCB8FC7249C58924 /* ASIS3ServiceRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85CF6EBC66DE02C95C79974D42AE3006 /* JTDateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 7451B5C161270FED74D8A7BE461D3E77 /* JTDateHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BD45D44BFD8966323A2D7FAC476AA20 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F08EF8C3ECFB89386438CA2BA461875 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8C929DFDA2F683BE086420DF09E828CB /* JTCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1338CCBCA859A5A1B73BA8F94F4A6E36 /* JTCalendarManager.m */; };
+		8CB78B58C2A752E44D69EBF7E3663530 /* JTCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = FD4F4D18C7024E7E052DD5FF7532B3C1 /* JTCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		921738D6C5F05E13D1F034121334B228 /* JTCalendarDelegateManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0476F5C6A44E030B235B302A55F6D75A /* JTCalendarDelegateManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AED6D02FBD8ED5A18482CF2B5C8F403 /* ASIS3Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = DF02FC578FB4230C1582496EC11E9F26 /* ASIS3Bucket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C3997030C18BB55BB348F1EE6D4E770 /* CSLazyLoadController.h in Headers */ = {isa = PBXBuildFile; fileRef = C84AD6F01676CF5282191529DED5BF6C /* CSLazyLoadController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E945EF671D1F56632555C4189B92E65 /* JTCalendarWeekView.h in Headers */ = {isa = PBXBuildFile; fileRef = 958F2877A2D2949FEA83A95FE24FF4AF /* JTCalendarWeekView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A00FD290FFEC432E1E29152585D56276 /* JTCalendarPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4623D8A6E0801949F3BD289D2A7460FE /* JTCalendarPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0527A017A19EEA1481BD2301C3F9318 /* JTCalendarDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F38A1788E2C68212A7CB7080B5AB38A5 /* JTCalendarDelegateManager.m */; };
+		A2B227AEB355C65CD324CA132E06E9B7 /* ASIS3ObjectRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C32A3E6983382A5D0FBE1FE47B22C0B5 /* ASIS3ObjectRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A388FE399E9842911D67023FE1492AC4 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 299C2795A9AD565832C6C41A91896946 /* ASICloudFilesContainerXMLParserDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3891F0BC676AB38A3BB0C94D702F0E1 /* ASIDataCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 32937BBF0A70DDAB8F4DD8AC77469F0A /* ASIDataCompressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A543421813DBCBCC7EFCCD0567A3E63E /* ASICloudFilesContainerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B412907E06194C78B06F71C1D38253C3 /* ASICloudFilesContainerRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A594DB973B9405359A05F06CF9830A70 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19305DBE12F7DABF95DF196F369FFE72 /* CFNetwork.framework */; };
-		A5C341B38ECA045C3051FA277FF1671B /* JTCalendarWeekDayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 601B119D7538581767E5B9C9ECA2C6E1 /* JTCalendarWeekDayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A660DE8B25F03617707E12D6541807D4 /* ASIDownloadCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBB2A55FA89D478BCF15F4177778A6B /* ASIDownloadCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A6747928587BCF6A18CB5C808BFF119E /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4FB7D8695459541999A0AC2E50C1E8 /* ASIS3ServiceRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A5C341B38ECA045C3051FA277FF1671B /* JTCalendarWeekDayView.h in Headers */ = {isa = PBXBuildFile; fileRef = FD7A43FCF425F087842C7B6F1F4BA3B8 /* JTCalendarWeekDayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A660DE8B25F03617707E12D6541807D4 /* ASIDownloadCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E57BAA7C4F464E0559E57E7DBC67D3B /* ASIDownloadCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6747928587BCF6A18CB5C808BFF119E /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA855A11C2FE86EE9321A4593FCBA588 /* ASIS3ServiceRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A76C713C86A5CCDAC314506474DD8F70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B5F6881D0B47981C7FDF5FA6DF5FC2 /* SystemConfiguration.framework */; };
-		A7FA7803B5975CC3CABF0069D7300EE2 /* JTCalendarSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF09129265C70DE28C0E557A322576 /* JTCalendarSettings.m */; };
-		A8D23C82F47999E97963F1AAE062482A /* ASIS3Bucket.h in Headers */ = {isa = PBXBuildFile; fileRef = 50BFE20692272152B32626B634220EB6 /* ASIS3Bucket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A99254A513D5DCFEA3DB292935EF8C33 /* Pods-Hanlin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 996CC4726DD6ABF7E0560FDD84B225A8 /* Pods-Hanlin-dummy.m */; };
-		ACE3A94BF0C9C69C11E886845FFB7948 /* ASIWebPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA42370FD5BF70CB33A6F4CB7F0B80 /* ASIWebPageRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		B0D173D0608F3470567F14951B063A7D /* ASICloudFilesRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A16198B0D0C61EE98DBA2CC07AF10B8 /* ASICloudFilesRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0D459C76CD70420C0E545C326D5F5BC /* JTContent.h in Headers */ = {isa = PBXBuildFile; fileRef = BE092DE78622E49E4136C31EF7DE7174 /* JTContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3459072790A10ADE793F1A77CDF32EB /* ASIS3ObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CDA42EF52969ACA986FE6D619E9F04 /* ASIS3ObjectRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A7FA7803B5975CC3CABF0069D7300EE2 /* JTCalendarSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BFC60D047347179BC43D85CB02E535 /* JTCalendarSettings.m */; };
+		A8D23C82F47999E97963F1AAE062482A /* ASIS3Bucket.h in Headers */ = {isa = PBXBuildFile; fileRef = 1049790B8C8292420B61E58807EE4B83 /* ASIS3Bucket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACE3A94BF0C9C69C11E886845FFB7948 /* ASIWebPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 367200E4F5869976EB18B5B0F48F4378 /* ASIWebPageRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B0D173D0608F3470567F14951B063A7D /* ASICloudFilesRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C41814DDB94BC20F0F35B91089818F9 /* ASICloudFilesRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0D459C76CD70420C0E545C326D5F5BC /* JTContent.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD97F96BFFDEAB48FC32264DBF1E042 /* JTContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3459072790A10ADE793F1A77CDF32EB /* ASIS3ObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6417BA5F2C55567375A812DB61BF07FA /* ASIS3ObjectRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B35857B270D29EB11EB875ED9D3433EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131CE21F718CC642B19EDE4778E569C0 /* CoreGraphics.framework */; };
-		B3EF49DA660F2511CBCA82BF8ECC4028 /* JTCalendarMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D495FDE3B188D46A8837DD3177DB2FB6 /* JTCalendarMenuView.m */; };
-		BFDE29CCA1C8B4656ECA8C5E98D05507 /* ASINetworkQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 891B4761725421FC36F401406F4FD3CB /* ASINetworkQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4C160B59A2D33A603EFE532FEC0BC4F /* JTCalendarScrollManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DC3A81E32648E759927DE910C78A8B51 /* JTCalendarScrollManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C530AD236B631DBE04C6C868E947A191 /* JTHorizontalCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 85C86D78AE8A33B2A7F89F5E3CBF168E /* JTHorizontalCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C86F872499B2A87438D1C4913BEBC66E /* ASICloudFilesObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC02EA37857D030F9B2D3E0D746A6A /* ASICloudFilesObjectRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CB1A9829FA1C960924DC4DB02F8B793C /* JTCalendarScrollManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBCC0452637FBD5DD7A179F5402CC4F /* JTCalendarScrollManager.m */; };
-		CB253797348DD0011735781AFB9A1D0B /* ASIWebPageRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1F9A55B896419E86185D960B2D005B /* ASIWebPageRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC4C9024692D6FB6174ED66AE971D22A /* ASICloudFilesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B9ADF1E57D5D1FB6F52C5721009944 /* ASICloudFilesObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D02C4A27D2991991BFA29E51AFA1B528 /* ASICloudFilesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A938D8D0BC8235C1A024CF035DECF4D /* ASICloudFilesContainer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D2CE56842AC56D87E6804A40567B8634 /* JTDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B5A9B4CBEFF92C3FC1EC8181ED3BC3 /* JTDateHelper.m */; };
-		D677F96B1493AB9AD035049332C2C315 /* ASICloudFilesCDNRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4700F6D0C0600A3CF17B192D3AF520 /* ASICloudFilesCDNRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3EF49DA660F2511CBCA82BF8ECC4028 /* JTCalendarMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5413B497DE63223E2EB312FD5CBC91 /* JTCalendarMenuView.m */; };
+		B7E9D168B6D8C10584B4AA0975321D01 /* NSURL+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE79BF91A133D70BE6B48F895B8B55F /* NSURL+Parameters.m */; };
+		BFDE29CCA1C8B4656ECA8C5E98D05507 /* ASINetworkQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = FA5805B7517563BFFA6134A0104A820C /* ASINetworkQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4C160B59A2D33A603EFE532FEC0BC4F /* JTCalendarScrollManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FC399AD7C32F227F40E752CF8AD4920 /* JTCalendarScrollManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C530AD236B631DBE04C6C868E947A191 /* JTHorizontalCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = B108D3923058E2A5ABD922759505B07B /* JTHorizontalCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C86F872499B2A87438D1C4913BEBC66E /* ASICloudFilesObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CA51C4108A6F367B170EC4505B17FA /* ASICloudFilesObjectRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CB1A9829FA1C960924DC4DB02F8B793C /* JTCalendarScrollManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F52A2CB19148A56800D3EF728F2389 /* JTCalendarScrollManager.m */; };
+		CB253797348DD0011735781AFB9A1D0B /* ASIWebPageRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9394C18D6815FDEBD8CF9962D0A29F5D /* ASIWebPageRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC4C9024692D6FB6174ED66AE971D22A /* ASICloudFilesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E46CF453EF7F93790874377B7D09CD /* ASICloudFilesObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D02C4A27D2991991BFA29E51AFA1B528 /* ASICloudFilesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8FC8B2DDD4436BE7F11DC3947A5E45 /* ASICloudFilesContainer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D2CE56842AC56D87E6804A40567B8634 /* JTDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0830197292FACE264D63EEB3CD871 /* JTDateHelper.m */; };
+		D677F96B1493AB9AD035049332C2C315 /* ASICloudFilesCDNRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B36C00BC90D16926FE5AA963DED7C79F /* ASICloudFilesCDNRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D72EB9B09E1BE79110C342F74A20BFE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AEB10022BC352F7845667155A34D96 /* Foundation.framework */; };
-		DBB70B614371E7F8ACDA46A492D7D630 /* JTCalendarDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF06ADDDA32A9567CAD0DE35D893358 /* JTCalendarDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFB0845B833B1689F43DC38583F5654E /* ASIS3BucketObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0612D37ED30EA4B5093FB55F1F0E7DF1 /* ASIS3BucketObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E84220DA381DDDD7BEE27BDBB7D3D0D9 /* ASICloudFilesContainerRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F2E67B604F926F471E6E16D4DEF721 /* ASICloudFilesContainerRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F22BC70D538F17028FEEA53EB346B113 /* JTCalendarManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F22EA784C6B9A6F4B4E73EF7CD0A2789 /* JTCalendarManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F22E1ADBD6B924F152C36482F30713B4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEA679319F89D45B2FE1390D6301C8 /* Reachability.m */; };
-		F25150C84798BF517235D20EC88F6C9B /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0667102DA02E074FA0687C5859C9F7CF /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F88490379B012E2EB12258BFEB5903C3 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9169DABEDD7443CCBB53DCEB4E814620 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FADA7FCB88A448B7730DADC09C562357 /* Reachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFEFC27A56FAC98FE049EE72C158AE0E /* Reachability-dummy.m */; };
-		FBC5186D3BCE271BB5118844E9B2D17D /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A15F64B372A980B1DC6F59C3692584 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DBB70B614371E7F8ACDA46A492D7D630 /* JTCalendarDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DEDE0668337BE2284344F90F16A1279 /* JTCalendarDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFB0845B833B1689F43DC38583F5654E /* ASIS3BucketObject.h in Headers */ = {isa = PBXBuildFile; fileRef = DA0413441B276D2FAD0EA417D16F7FD1 /* ASIS3BucketObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3434713E703E5262B64692F7447C12A /* NSURL+Parameters.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A52232D141D59D07E1532CFB0BE91D3 /* NSURL+Parameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E84220DA381DDDD7BEE27BDBB7D3D0D9 /* ASICloudFilesContainerRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A96D2F57881D3BF328153D83E25054E /* ASICloudFilesContainerRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC7BD0FE5931C7AC7E745D28FA5A6F8E /* CSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E0BC6C7EC099F259F88CABEA7637E3 /* CSURL.m */; };
+		EF94F2F3761090EBD3EFA0100B767731 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AEB10022BC352F7845667155A34D96 /* Foundation.framework */; };
+		F22BC70D538F17028FEEA53EB346B113 /* JTCalendarManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B33ABBA0C5C8F3FEAA03CE451468936 /* JTCalendarManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F22E1ADBD6B924F152C36482F30713B4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F1E34353CF360A604F40A7A81D370C /* Reachability.m */; };
+		F25150C84798BF517235D20EC88F6C9B /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 247838B71178EF673B1411D650BF7672 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F88490379B012E2EB12258BFEB5903C3 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D7949CBF9037DBD36B0774CAFB550CA5 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FADA7FCB88A448B7730DADC09C562357 /* Reachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA33D455345E2108AA1F19E264F124C /* Reachability-dummy.m */; };
+		FBC5186D3BCE271BB5118844E9B2D17D /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C57654D7AD380617300E16D7EF3015F /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D993C76A70E80A191CFE7E07BA5058B /* PBXContainerItemProxy */ = {
+		1E263C62F91AC515B15F3E52DB37600B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -119,135 +129,162 @@
 			remoteGlobalIDString = 9C623D1AF8229419BA603B3C66BE24B9;
 			remoteInfo = Reachability;
 		};
-		77E5ABB215AE037906D5F14FB4E16EAC /* PBXContainerItemProxy */ = {
+		81EDA657C9FEF0155736B40F3860F471 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9C623D1AF8229419BA603B3C66BE24B9;
-			remoteInfo = Reachability;
+			remoteGlobalIDString = B39710E7E9C803B9E687E51A00ED3112;
+			remoteInfo = CSLazyLoadController;
 		};
-		B5F40CBB17ADC73B6FA87719937CA8B2 /* PBXContainerItemProxy */ = {
+		BABC6562A8691165FF42EC8D1BB2A2C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F0EA78F8F3362DEBC9840500226DA5E7;
 			remoteInfo = ASIHTTPRequest;
 		};
+		EB1BB938D161DD490FB1433F35F64BD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C623D1AF8229419BA603B3C66BE24B9;
+			remoteInfo = Reachability;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00217A72CDD7D2AB25667B4EE500CC53 /* JTCalendarPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarPageView.m; path = JTCalendar/Views/JTCalendarPageView.m; sourceTree = "<group>"; };
-		0612D37ED30EA4B5093FB55F1F0E7DF1 /* ASIS3BucketObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3BucketObject.h; path = Classes/S3/ASIS3BucketObject.h; sourceTree = "<group>"; };
-		0667102DA02E074FA0687C5859C9F7CF /* ASINetworkQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = Classes/ASINetworkQueue.m; sourceTree = "<group>"; };
-		06E555ECEDB7169EEE4AF352564D28DD /* ASIS3ServiceRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3ServiceRequest.h; path = Classes/S3/ASIS3ServiceRequest.h; sourceTree = "<group>"; };
-		06F2CEFD73E8DF88F6692421EB197391 /* ASICloudFilesContainerXMLParserDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesContainerXMLParserDelegate.h; path = Classes/CloudFiles/ASICloudFilesContainerXMLParserDelegate.h; sourceTree = "<group>"; };
-		0A938D8D0BC8235C1A024CF035DECF4D /* ASICloudFilesContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesContainer.m; path = Classes/CloudFiles/ASICloudFilesContainer.m; sourceTree = "<group>"; };
-		0ACB0B1F5DEF5297D6AB7FD438B6CDC9 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDataDecompressor.m; path = Classes/ASIDataDecompressor.m; sourceTree = "<group>"; };
-		10DBA5BD0038AB404FC0B68B6C7FDB69 /* ASIDataCompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDataCompressor.h; path = Classes/ASIDataCompressor.h; sourceTree = "<group>"; };
+		0476F5C6A44E030B235B302A55F6D75A /* JTCalendarDelegateManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarDelegateManager.h; path = JTCalendar/Managers/JTCalendarDelegateManager.h; sourceTree = "<group>"; };
+		0B2122D7A3B11B768D8432C223462FED /* libJTCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJTCalendar.a; path = libJTCalendar.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CF281F5726F905E765013B973CD9F60 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = Classes/ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		0DEDE0668337BE2284344F90F16A1279 /* JTCalendarDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarDelegate.h; path = JTCalendar/JTCalendarDelegate.h; sourceTree = "<group>"; };
+		0F08EF8C3ECFB89386438CA2BA461875 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDataDecompressor.m; path = Classes/ASIDataDecompressor.m; sourceTree = "<group>"; };
+		1049790B8C8292420B61E58807EE4B83 /* ASIS3Bucket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3Bucket.h; path = Classes/S3/ASIS3Bucket.h; sourceTree = "<group>"; };
+		12F1E34353CF360A604F40A7A81D370C /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		131CE21F718CC642B19EDE4778E569C0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		16F5A136FF6F77DE8EAEC3DAF157DBD1 /* ASIInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = Classes/ASIInputStream.m; sourceTree = "<group>"; };
+		1338CCBCA859A5A1B73BA8F94F4A6E36 /* JTCalendarManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarManager.m; path = JTCalendar/JTCalendarManager.m; sourceTree = "<group>"; };
+		150FC3385873BF1C949EABD7323D0C9C /* JTCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JTCalendar-dummy.m"; sourceTree = "<group>"; };
+		162C5E8F47E12DDEEA9185014F128BBB /* CSCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSCacheManager.m; path = CSLazyLoadController/CSLazyLoadController/CSCacheManager.m; sourceTree = "<group>"; };
+		172FC1DFCBEC4DEFE46830D516316093 /* CSURL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSURL.h; path = CSLazyLoadController/CSLazyLoadController/CSURL.h; sourceTree = "<group>"; };
+		177F10D1D3DFA1822474B19E0849DCEA /* ASIS3BucketRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3BucketRequest.h; path = Classes/S3/ASIS3BucketRequest.h; sourceTree = "<group>"; };
 		18154298D076E85B7253700D61B48CF8 /* Pods-Hanlin-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Hanlin-resources.sh"; sourceTree = "<group>"; };
+		18A0830197292FACE264D63EEB3CD871 /* JTDateHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTDateHelper.m; path = JTCalendar/JTDateHelper.m; sourceTree = "<group>"; };
 		19305DBE12F7DABF95DF196F369FFE72 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		1D801FEED2058481F617C471EDFFFA17 /* Pods-Hanlin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hanlin.release.xcconfig"; sourceTree = "<group>"; };
-		200CCA1EE94C9F999381FAD8582A9572 /* ASIHTTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASIHTTPRequest-prefix.pch"; sourceTree = "<group>"; };
-		217F7B2AB035D2937E2A1CA3F9EB95CC /* ASICloudFilesContainerXMLParserDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesContainerXMLParserDelegate.m; path = Classes/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m; sourceTree = "<group>"; };
-		223E8DE587DB8308C1AE3AFCAB39F928 /* JTCalendarManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarManager.m; path = JTCalendar/JTCalendarManager.m; sourceTree = "<group>"; };
-		23CDA42EF52969ACA986FE6D619E9F04 /* ASIS3ObjectRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3ObjectRequest.m; path = Classes/S3/ASIS3ObjectRequest.m; sourceTree = "<group>"; };
-		26E50C3A110DE30394F5EC58D81B4F92 /* ASIDataCompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDataCompressor.m; path = Classes/ASIDataCompressor.m; sourceTree = "<group>"; };
-		2CFEBD8FAFA609A326077F8C447F70AB /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = Classes/ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
-		2FB5917C0AA3B92049E98099EBA0A94F /* Reachability.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Reachability.xcconfig; sourceTree = "<group>"; };
-		31B9ADF1E57D5D1FB6F52C5721009944 /* ASICloudFilesObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesObject.m; path = Classes/CloudFiles/ASICloudFilesObject.m; sourceTree = "<group>"; };
-		34A9A109340E37B14DF8D0F17D4CF2A2 /* ASIHTTPRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASIHTTPRequest.xcconfig; sourceTree = "<group>"; };
-		38260766A4D729D1FDB449B4FD15FCFF /* JTCalendar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendar.h; path = JTCalendar/JTCalendar.h; sourceTree = "<group>"; };
-		383F211FB054ED4D90CAAA2DBF682D47 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = Classes/ASIProgressDelegate.h; sourceTree = "<group>"; };
+		1DAA93FBF73C6CC06D8CB1866E013377 /* ASICloudFilesCDNRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesCDNRequest.m; path = Classes/CloudFiles/ASICloudFilesCDNRequest.m; sourceTree = "<group>"; };
+		1E448946E09228E2A5244319CC3D05BF /* CSLazyLoadController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSLazyLoadController.m; path = CSLazyLoadController/CSLazyLoadController/CSLazyLoadController.m; sourceTree = "<group>"; };
+		21AB6E4EDFCFD2794EF87210C3FEAA49 /* ASICloudFilesObjectRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesObjectRequest.h; path = Classes/CloudFiles/ASICloudFilesObjectRequest.h; sourceTree = "<group>"; };
+		247838B71178EF673B1411D650BF7672 /* ASINetworkQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = Classes/ASINetworkQueue.m; sourceTree = "<group>"; };
+		26E46CF453EF7F93790874377B7D09CD /* ASICloudFilesObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesObject.m; path = Classes/CloudFiles/ASICloudFilesObject.m; sourceTree = "<group>"; };
+		293480F8247279E4FA4E409BBE9030C1 /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		299C2795A9AD565832C6C41A91896946 /* ASICloudFilesContainerXMLParserDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesContainerXMLParserDelegate.m; path = Classes/CloudFiles/ASICloudFilesContainerXMLParserDelegate.m; sourceTree = "<group>"; };
+		2C136CC904802F17917E82C631930715 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = Classes/ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		2F5089FA475975BA7ADAD96EFE0E0C53 /* JTVerticalCalendarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTVerticalCalendarView.m; path = JTCalendar/Views/JTVerticalCalendarView.m; sourceTree = "<group>"; };
+		31A313716C90971FDFF1E45FA65A98A4 /* JTCalendarMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarMenuView.h; path = JTCalendar/Views/JTCalendarMenuView.h; sourceTree = "<group>"; };
+		32937BBF0A70DDAB8F4DD8AC77469F0A /* ASIDataCompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDataCompressor.h; path = Classes/ASIDataCompressor.h; sourceTree = "<group>"; };
+		354144454FBBB91781B91CFEACEEB04F /* CSLazyLoadController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CSLazyLoadController-dummy.m"; sourceTree = "<group>"; };
+		367200E4F5869976EB18B5B0F48F4378 /* ASIWebPageRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIWebPageRequest.m; path = Classes/ASIWebPageRequest/ASIWebPageRequest.m; sourceTree = "<group>"; };
+		36DC5E4EA5B037968A0DC667AF77E6C5 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = Classes/ASIFormDataRequest.h; sourceTree = "<group>"; };
+		39F52A2CB19148A56800D3EF728F2389 /* JTCalendarScrollManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarScrollManager.m; path = JTCalendar/Managers/JTCalendarScrollManager.m; sourceTree = "<group>"; };
+		3B5912106E87F0E26E142C6B99406C8F /* ASIHTTPRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASIHTTPRequest-prefix.pch"; sourceTree = "<group>"; };
+		3B7A203077E1A3B98283C2F77E54B76E /* JTCalendarWeekView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarWeekView.m; path = JTCalendar/Views/JTCalendarWeekView.m; sourceTree = "<group>"; };
 		41AD0AED80BF9507DEDC45805C1854EE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		44C56F50F2D2FBA98AE261F4D2B69CC8 /* ASIS3BucketRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3BucketRequest.m; path = Classes/S3/ASIS3BucketRequest.m; sourceTree = "<group>"; };
-		47EC02EA37857D030F9B2D3E0D746A6A /* ASICloudFilesObjectRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesObjectRequest.m; path = Classes/CloudFiles/ASICloudFilesObjectRequest.m; sourceTree = "<group>"; };
-		4940B3FF1DC3A4A7027F79EF01D15654 /* ASICloudFilesObjectRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesObjectRequest.h; path = Classes/CloudFiles/ASICloudFilesObjectRequest.h; sourceTree = "<group>"; };
-		4A8ADF41EE769103A18AF0F964C9505E /* JTCalendarDelegateManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarDelegateManager.h; path = JTCalendar/Managers/JTCalendarDelegateManager.h; sourceTree = "<group>"; };
-		4C4700F6D0C0600A3CF17B192D3AF520 /* ASICloudFilesCDNRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesCDNRequest.h; path = Classes/CloudFiles/ASICloudFilesCDNRequest.h; sourceTree = "<group>"; };
+		41C75DF661321185587B922976C1C12D /* ASIDataCompressor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDataCompressor.m; path = Classes/ASIDataCompressor.m; sourceTree = "<group>"; };
+		4623D8A6E0801949F3BD289D2A7460FE /* JTCalendarPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarPage.h; path = JTCalendar/Protocols/JTCalendarPage.h; sourceTree = "<group>"; };
+		4949EF16E17D3AA3DC9ECF67EA7B603D /* ASIDownloadCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = Classes/ASIDownloadCache.m; sourceTree = "<group>"; };
+		4C41814DDB94BC20F0F35B91089818F9 /* ASICloudFilesRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesRequest.h; path = Classes/CloudFiles/ASICloudFilesRequest.h; sourceTree = "<group>"; };
 		4CD382EFA41C912C6E32CC467DC1C809 /* Pods-Hanlin-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Hanlin-frameworks.sh"; sourceTree = "<group>"; };
-		50BFE20692272152B32626B634220EB6 /* ASIS3Bucket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3Bucket.h; path = Classes/S3/ASIS3Bucket.h; sourceTree = "<group>"; };
-		510A266CE7DD107A98F2CB4F8C9CBCA2 /* JTHorizontalCalendarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTHorizontalCalendarView.m; path = JTCalendar/Views/JTHorizontalCalendarView.m; sourceTree = "<group>"; };
-		5768A7794D2E73E912535B559DDB4D9A /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = Classes/ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
-		5BDE57ED86EE97CB06D75019941B270D /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = Classes/ASIAuthenticationDialog.h; sourceTree = "<group>"; };
-		601B119D7538581767E5B9C9ECA2C6E1 /* JTCalendarWeekDayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarWeekDayView.h; path = JTCalendar/Views/JTCalendarWeekDayView.h; sourceTree = "<group>"; };
+		57844FDBDDE9B232AAA6A92D073B639E /* JTMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTMenu.h; path = JTCalendar/Protocols/JTMenu.h; sourceTree = "<group>"; };
+		5AD210C07BEFD7FA590456A9F607FA8B /* libCSLazyLoadController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCSLazyLoadController.a; path = libCSLazyLoadController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B33ABBA0C5C8F3FEAA03CE451468936 /* JTCalendarManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarManager.h; path = JTCalendar/JTCalendarManager.h; sourceTree = "<group>"; };
+		5C54A9C63A63A640797D53F8573ADB24 /* JTCalendarPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarPageView.h; path = JTCalendar/Views/JTCalendarPageView.h; sourceTree = "<group>"; };
+		5E349F6BD59BBB5F2491CBB5C09A331F /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestDelegate.h; path = Classes/ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		5EA33D455345E2108AA1F19E264F124C /* Reachability-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Reachability-dummy.m"; sourceTree = "<group>"; };
+		5F5413B497DE63223E2EB312FD5CBC91 /* JTCalendarMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarMenuView.m; path = JTCalendar/Views/JTCalendarMenuView.m; sourceTree = "<group>"; };
 		6183B60FE49082A99CE3A8048BD5DA11 /* Pods-Hanlin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hanlin.debug.xcconfig"; sourceTree = "<group>"; };
-		61AC0EF3D6D9160173957DFB84D96FDD /* JTCalendarWeekDay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarWeekDay.h; path = JTCalendar/Protocols/JTCalendarWeekDay.h; sourceTree = "<group>"; };
-		624041C0FD755ED0A33BB5C438BBFA41 /* ASICloudFilesRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesRequest.m; path = Classes/CloudFiles/ASICloudFilesRequest.m; sourceTree = "<group>"; };
-		62F38AA94737DA21C8D562236DBB55CC /* JTDateHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTDateHelper.h; path = JTCalendar/JTDateHelper.h; sourceTree = "<group>"; };
-		6481ED9D326A0BACCBECB1F31FDCF307 /* JTCalendarWeek.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarWeek.h; path = JTCalendar/Protocols/JTCalendarWeek.h; sourceTree = "<group>"; };
-		65AC20316217BB72248546C9597330E8 /* libJTCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJTCalendar.a; path = libJTCalendar.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		639DEFD6BD39688BAB161D3F3FE948F7 /* ASIS3Request.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3Request.m; path = Classes/S3/ASIS3Request.m; sourceTree = "<group>"; };
+		6417BA5F2C55567375A812DB61BF07FA /* ASIS3ObjectRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3ObjectRequest.m; path = Classes/S3/ASIS3ObjectRequest.m; sourceTree = "<group>"; };
+		646BD1E370718CAE2ABF76240A7316DF /* libReachability.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libReachability.a; path = libReachability.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		655B8442C032897B9A6A9C48B90D4CA0 /* ASIHTTPRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASIHTTPRequest.xcconfig; sourceTree = "<group>"; };
 		66B5F6881D0B47981C7FDF5FA6DF5FC2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		67DEB1A3D14A0A80E3C37A54541D04B8 /* ASIS3Bucket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3Bucket.m; path = Classes/S3/ASIS3Bucket.m; sourceTree = "<group>"; };
-		6B597CBBBB2216558680EC990182FBDB /* ASIHTTPRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ASIHTTPRequest-dummy.m"; sourceTree = "<group>"; };
+		69BFC60D047347179BC43D85CB02E535 /* JTCalendarSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarSettings.m; path = JTCalendar/JTCalendarSettings.m; sourceTree = "<group>"; };
+		6AC9C381CB27B52BE0A24A8CD289B461 /* ASIS3BucketObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3BucketObject.m; path = Classes/S3/ASIS3BucketObject.m; sourceTree = "<group>"; };
+		6E57BAA7C4F464E0559E57E7DBC67D3B /* ASIDownloadCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDownloadCache.h; path = Classes/ASIDownloadCache.h; sourceTree = "<group>"; };
+		6FC399AD7C32F227F40E752CF8AD4920 /* JTCalendarScrollManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarScrollManager.h; path = JTCalendar/Managers/JTCalendarScrollManager.h; sourceTree = "<group>"; };
 		7222CEF62384E3B34E32B3FE26EA0DB8 /* Pods-Hanlin-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Hanlin-acknowledgements.plist"; sourceTree = "<group>"; };
-		72A9CF32BD9C3C0CE5BE39A5D9828939 /* libReachability.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libReachability.a; path = libReachability.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		72F5146FA75BBB35FFAB37588E6A97B1 /* ASIS3BucketObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3BucketObject.m; path = Classes/S3/ASIS3BucketObject.m; sourceTree = "<group>"; };
-		775650C522EBE62DC0E6607310C711E8 /* JTCalendarDay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarDay.h; path = JTCalendar/Protocols/JTCalendarDay.h; sourceTree = "<group>"; };
-		7CC25F857B94EC07E5BE4BFE031C0B58 /* libPods-Hanlin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Hanlin.a"; path = "libPods-Hanlin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DCF618C17B53EA597DB29402D824498 /* Reachability-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reachability-prefix.pch"; sourceTree = "<group>"; };
-		7FDEA679319F89D45B2FE1390D6301C8 /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		85C0F588723EB30242CB94ACAF3CA421 /* JTCalendarWeekDayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarWeekDayView.m; path = JTCalendar/Views/JTCalendarWeekDayView.m; sourceTree = "<group>"; };
-		85C86D78AE8A33B2A7F89F5E3CBF168E /* JTHorizontalCalendarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTHorizontalCalendarView.h; path = JTCalendar/Views/JTHorizontalCalendarView.h; sourceTree = "<group>"; };
-		891B4761725421FC36F401406F4FD3CB /* ASINetworkQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = Classes/ASINetworkQueue.h; sourceTree = "<group>"; };
-		8A16198B0D0C61EE98DBA2CC07AF10B8 /* ASICloudFilesRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesRequest.h; path = Classes/CloudFiles/ASICloudFilesRequest.h; sourceTree = "<group>"; };
-		8DBB2A55FA89D478BCF15F4177778A6B /* ASIDownloadCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDownloadCache.h; path = Classes/ASIDownloadCache.h; sourceTree = "<group>"; };
-		8EF06ADDDA32A9567CAD0DE35D893358 /* JTCalendarDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarDelegate.h; path = JTCalendar/JTCalendarDelegate.h; sourceTree = "<group>"; };
-		8F4386302081CBD7A5F4567469A17B11 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = Classes/ASIAuthenticationDialog.m; sourceTree = "<group>"; };
-		90628D8F975AB8AE7A1E08F4BB6726B8 /* ASICloudFilesCDNRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesCDNRequest.m; path = Classes/CloudFiles/ASICloudFilesCDNRequest.m; sourceTree = "<group>"; };
-		90F2E67B604F926F471E6E16D4DEF721 /* ASICloudFilesContainerRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesContainerRequest.h; path = Classes/CloudFiles/ASICloudFilesContainerRequest.h; sourceTree = "<group>"; };
-		9169DABEDD7443CCBB53DCEB4E814620 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = Classes/ASIFormDataRequest.m; sourceTree = "<group>"; };
-		917A638F9759B888AFAA660072AAC309 /* libASIHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libASIHTTPRequest.a; path = libASIHTTPRequest.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9222A8C032B74F5239D480CF0F8DD30F /* ASIFormDataRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = Classes/ASIFormDataRequest.h; sourceTree = "<group>"; };
+		73778B23E667BC383D715602EE414DD4 /* JTCalendarDayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarDayView.h; path = JTCalendar/Views/JTCalendarDayView.h; sourceTree = "<group>"; };
+		7451B5C161270FED74D8A7BE461D3E77 /* JTDateHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTDateHelper.h; path = JTCalendar/JTDateHelper.h; sourceTree = "<group>"; };
+		797AD9117BA6436F28D00B5291FD5271 /* Reachability-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Reachability-prefix.pch"; sourceTree = "<group>"; };
+		7F558040AEA362276DC83E731919B5A1 /* JTCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JTCalendar.xcconfig; sourceTree = "<group>"; };
+		7F5DCBC045D71B3DF51D5225711F07BB /* ASICacheDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = Classes/ASICacheDelegate.h; sourceTree = "<group>"; };
+		8069FC5850627C78A901DBB007ED5908 /* ASIS3Request.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3Request.h; path = Classes/S3/ASIS3Request.h; sourceTree = "<group>"; };
+		83F1DAC099E9BEE26711B1DEA2DAB845 /* JTVerticalCalendarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTVerticalCalendarView.h; path = JTCalendar/Views/JTVerticalCalendarView.h; sourceTree = "<group>"; };
+		83F3AEBEC63C0AFE08063B2E257F94B9 /* JTCalendarWeekDay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarWeekDay.h; path = JTCalendar/Protocols/JTCalendarWeekDay.h; sourceTree = "<group>"; };
+		8446B3E17054CDA109D53A63B760A604 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = Classes/ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		84B18FE112FE519989EC729AB2075F37 /* JTHorizontalCalendarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTHorizontalCalendarView.m; path = JTCalendar/Views/JTHorizontalCalendarView.m; sourceTree = "<group>"; };
+		87CA51C4108A6F367B170EC4505B17FA /* ASICloudFilesObjectRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesObjectRequest.m; path = Classes/CloudFiles/ASICloudFilesObjectRequest.m; sourceTree = "<group>"; };
+		8A52232D141D59D07E1532CFB0BE91D3 /* NSURL+Parameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+Parameters.h"; path = "CSLazyLoadController/CSLazyLoadController/NSURL+Parameters/NSURL+Parameters.h"; sourceTree = "<group>"; };
+		8C57654D7AD380617300E16D7EF3015F /* ASIHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = Classes/ASIHTTPRequest.m; sourceTree = "<group>"; };
+		90E0BC6C7EC099F259F88CABEA7637E3 /* CSURL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSURL.m; path = CSLazyLoadController/CSLazyLoadController/CSURL.m; sourceTree = "<group>"; };
+		9394C18D6815FDEBD8CF9962D0A29F5D /* ASIWebPageRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIWebPageRequest.h; path = Classes/ASIWebPageRequest/ASIWebPageRequest.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		99050291771A94781AAA965442D67282 /* ASICloudFilesObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesObject.h; path = Classes/CloudFiles/ASICloudFilesObject.h; sourceTree = "<group>"; };
+		94948FA6F691171756CB5045A0616AE2 /* ASIHTTPRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ASIHTTPRequest-dummy.m"; sourceTree = "<group>"; };
+		958F2877A2D2949FEA83A95FE24FF4AF /* JTCalendarWeekView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarWeekView.h; path = JTCalendar/Views/JTCalendarWeekView.h; sourceTree = "<group>"; };
+		97855E111836D5EFA320B618AAE96FD4 /* JTCalendarSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarSettings.h; path = JTCalendar/JTCalendarSettings.h; sourceTree = "<group>"; };
+		97EC5A5594067CB980C1779A0CDE5C4E /* JTCalendarDayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarDayView.m; path = JTCalendar/Views/JTCalendarDayView.m; sourceTree = "<group>"; };
 		996CC4726DD6ABF7E0560FDD84B225A8 /* Pods-Hanlin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Hanlin-dummy.m"; sourceTree = "<group>"; };
-		9C1B4FD69A638C8859B38CE9AFBBF845 /* JTCalendarDayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarDayView.m; path = JTCalendar/Views/JTCalendarDayView.m; sourceTree = "<group>"; };
-		9CDA42370FD5BF70CB33A6F4CB7F0B80 /* ASIWebPageRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIWebPageRequest.m; path = Classes/ASIWebPageRequest/ASIWebPageRequest.m; sourceTree = "<group>"; };
-		9E606248866FB8485DE41475F0DDDED4 /* JTCalendarDelegateManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarDelegateManager.m; path = JTCalendar/Managers/JTCalendarDelegateManager.m; sourceTree = "<group>"; };
-		AFA3B969122C5BDA2E82190B2EF9A247 /* ASIDownloadCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIDownloadCache.m; path = Classes/ASIDownloadCache.m; sourceTree = "<group>"; };
-		B31CC137BD15F396DE28AED09932715A /* ASIInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = Classes/ASIInputStream.h; sourceTree = "<group>"; };
-		B7466D31213EE6EEEA43AC447A9FBC81 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = Classes/ASIDataDecompressor.h; sourceTree = "<group>"; };
-		B8A15F64B372A980B1DC6F59C3692584 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = Classes/ASIHTTPRequest.m; sourceTree = "<group>"; };
-		BE092DE78622E49E4136C31EF7DE7174 /* JTContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTContent.h; path = JTCalendar/Protocols/JTContent.h; sourceTree = "<group>"; };
-		BFEAAA05B4E174A1F7947FF05179F248 /* ASIS3Request.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3Request.h; path = Classes/S3/ASIS3Request.h; sourceTree = "<group>"; };
-		C07ABCEB75C73528797D71E7759764AC /* JTCalendarMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarMenuView.h; path = JTCalendar/Views/JTCalendarMenuView.h; sourceTree = "<group>"; };
-		C37DE69F965715790B410182BA6D26AC /* JTCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JTCalendar-dummy.m"; sourceTree = "<group>"; };
-		C79E2B4BC3C133AE689252D8F41D5BDB /* JTCalendarPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarPageView.h; path = JTCalendar/Views/JTCalendarPageView.h; sourceTree = "<group>"; };
-		C7EDCB833F61CC01F8A8AACC45074C92 /* JTCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JTCalendar.xcconfig; sourceTree = "<group>"; };
-		C9F2635BDC08E8ED543A7CB775139A9A /* JTCalendarDayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarDayView.h; path = JTCalendar/Views/JTCalendarDayView.h; sourceTree = "<group>"; };
-		CE1F9A55B896419E86185D960B2D005B /* ASIWebPageRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIWebPageRequest.h; path = Classes/ASIWebPageRequest/ASIWebPageRequest.h; sourceTree = "<group>"; };
-		D0017B071B5C9C011C47F0F0BCA98761 /* ASIS3ObjectRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3ObjectRequest.h; path = Classes/S3/ASIS3ObjectRequest.h; sourceTree = "<group>"; };
-		D495FDE3B188D46A8837DD3177DB2FB6 /* JTCalendarMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarMenuView.m; path = JTCalendar/Views/JTCalendarMenuView.m; sourceTree = "<group>"; };
-		D5AF09129265C70DE28C0E557A322576 /* JTCalendarSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarSettings.m; path = JTCalendar/JTCalendarSettings.m; sourceTree = "<group>"; };
-		D69777FE1A6B8C8585A6F432750540AC /* JTVerticalCalendarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTVerticalCalendarView.h; path = JTCalendar/Views/JTVerticalCalendarView.h; sourceTree = "<group>"; };
-		D6F60FAB44F02DD12BE2DF050487A2D5 /* ASICacheDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = Classes/ASICacheDelegate.h; sourceTree = "<group>"; };
-		DC3A81E32648E759927DE910C78A8B51 /* JTCalendarScrollManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarScrollManager.h; path = JTCalendar/Managers/JTCalendarScrollManager.h; sourceTree = "<group>"; };
-		DE5CBCF0F34D3E88B04F74398B2A335D /* ASIS3BucketRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3BucketRequest.h; path = Classes/S3/ASIS3BucketRequest.h; sourceTree = "<group>"; };
-		DF4FB7D8695459541999A0AC2E50C1E8 /* ASIS3ServiceRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3ServiceRequest.m; path = Classes/S3/ASIS3ServiceRequest.m; sourceTree = "<group>"; };
-		DFEFC27A56FAC98FE049EE72C158AE0E /* Reachability-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Reachability-dummy.m"; sourceTree = "<group>"; };
-		E028C993AC7DE7693E9CDDE32D132E2C /* ASIHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = Classes/ASIHTTPRequest.h; sourceTree = "<group>"; };
-		E3AFA7560078707D813FD3EC486769B3 /* ASICloudFilesContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesContainer.h; path = Classes/CloudFiles/ASICloudFilesContainer.h; sourceTree = "<group>"; };
-		E3C844E3EFBA50A621B1EBE8F70E6100 /* JTCalendarSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarSettings.h; path = JTCalendar/JTCalendarSettings.h; sourceTree = "<group>"; };
-		E3F55087517BA33DD6AB3D318854502F /* JTMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTMenu.h; path = JTCalendar/Protocols/JTMenu.h; sourceTree = "<group>"; };
-		E6CA9A434B419A266F1F7C6DAF5ADFDA /* JTVerticalCalendarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTVerticalCalendarView.m; path = JTCalendar/Views/JTVerticalCalendarView.m; sourceTree = "<group>"; };
-		E7C6290B3AC3A8E5EC898F04A24E62E6 /* JTCalendarWeekView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarWeekView.m; path = JTCalendar/Views/JTCalendarWeekView.m; sourceTree = "<group>"; };
-		ECBCC0452637FBD5DD7A179F5402CC4F /* JTCalendarScrollManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarScrollManager.m; path = JTCalendar/Managers/JTCalendarScrollManager.m; sourceTree = "<group>"; };
-		F03D7FA5D563ADE45E32BC400507F340 /* ASIS3Request.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3Request.m; path = Classes/S3/ASIS3Request.m; sourceTree = "<group>"; };
-		F0A7AE5D5D235611984271CA8658C519 /* JTCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTCalendar-prefix.pch"; sourceTree = "<group>"; };
+		9A8FC8B2DDD4436BE7F11DC3947A5E45 /* ASICloudFilesContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesContainer.m; path = Classes/CloudFiles/ASICloudFilesContainer.m; sourceTree = "<group>"; };
+		9A96D2F57881D3BF328153D83E25054E /* ASICloudFilesContainerRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesContainerRequest.h; path = Classes/CloudFiles/ASICloudFilesContainerRequest.h; sourceTree = "<group>"; };
+		9C45141541A81FECEC536FB5EAB6BB88 /* JTCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTCalendar-prefix.pch"; sourceTree = "<group>"; };
+		9C514287EC51C18C7B97D57510C2E894 /* ASIInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = Classes/ASIInputStream.h; sourceTree = "<group>"; };
+		A73696B4E5ED3E435E32164BC9052A02 /* CSLazyLoadController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSLazyLoadController-prefix.pch"; sourceTree = "<group>"; };
+		A9D4E50CE896C7BEC9BB6C9FD23A6B25 /* JTCalendarWeek.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarWeek.h; path = JTCalendar/Protocols/JTCalendarWeek.h; sourceTree = "<group>"; };
+		AAD97F96BFFDEAB48FC32264DBF1E042 /* JTContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTContent.h; path = JTCalendar/Protocols/JTContent.h; sourceTree = "<group>"; };
+		ACE79BF91A133D70BE6B48F895B8B55F /* NSURL+Parameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Parameters.m"; path = "CSLazyLoadController/CSLazyLoadController/NSURL+Parameters/NSURL+Parameters.m"; sourceTree = "<group>"; };
+		B044736D9AD94E9E10931A3A9489C5BA /* CSCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSCacheManager.h; path = CSLazyLoadController/CSLazyLoadController/CSCacheManager.h; sourceTree = "<group>"; };
+		B108D3923058E2A5ABD922759505B07B /* JTHorizontalCalendarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTHorizontalCalendarView.h; path = JTCalendar/Views/JTHorizontalCalendarView.h; sourceTree = "<group>"; };
+		B36C00BC90D16926FE5AA963DED7C79F /* ASICloudFilesCDNRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesCDNRequest.h; path = Classes/CloudFiles/ASICloudFilesCDNRequest.h; sourceTree = "<group>"; };
+		B412907E06194C78B06F71C1D38253C3 /* ASICloudFilesContainerRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesContainerRequest.m; path = Classes/CloudFiles/ASICloudFilesContainerRequest.m; sourceTree = "<group>"; };
+		B6929DA8C59E406E1C63C7FDA285EA0F /* JTCalendarDay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarDay.h; path = JTCalendar/Protocols/JTCalendarDay.h; sourceTree = "<group>"; };
+		BA2A02EFB6549A47FCB8FC7249C58924 /* ASIS3ServiceRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3ServiceRequest.h; path = Classes/S3/ASIS3ServiceRequest.h; sourceTree = "<group>"; };
+		BE4BD6954AD7C88238D09788A1D4305C /* ASIHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = Classes/ASIHTTPRequest.h; sourceTree = "<group>"; };
+		C2FA1B38E3A8E2F239078DA2F8F63ECB /* libPods-Hanlin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Hanlin.a"; path = "libPods-Hanlin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32A3E6983382A5D0FBE1FE47B22C0B5 /* ASIS3ObjectRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3ObjectRequest.h; path = Classes/S3/ASIS3ObjectRequest.h; sourceTree = "<group>"; };
+		C4555ABCFE9AD5B7CDDAC280E5AD0B65 /* Reachability.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Reachability.xcconfig; sourceTree = "<group>"; };
+		C55F32800C5B4732DC795B200496C969 /* libASIHTTPRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libASIHTTPRequest.a; path = libASIHTTPRequest.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C668C7340BDBC534D6AC24DA6CA44617 /* ASIInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = Classes/ASIInputStream.m; sourceTree = "<group>"; };
+		C84AD6F01676CF5282191529DED5BF6C /* CSLazyLoadController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSLazyLoadController.h; path = CSLazyLoadController/CSLazyLoadController/CSLazyLoadController.h; sourceTree = "<group>"; };
+		CDEF180F120DB53EBCF80626BB5DE859 /* JTCalendarWeekDayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarWeekDayView.m; path = JTCalendar/Views/JTCalendarWeekDayView.m; sourceTree = "<group>"; };
+		CE3316DCD0A12B69678A776F22AD1E5A /* ASINSXMLParserCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASINSXMLParserCompat.h; path = Classes/S3/ASINSXMLParserCompat.h; sourceTree = "<group>"; };
+		D26BE9ACE4502D06F6E26766229F93C4 /* ASICloudFilesContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesContainer.h; path = Classes/CloudFiles/ASICloudFilesContainer.h; sourceTree = "<group>"; };
+		D7949CBF9037DBD36B0774CAFB550CA5 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = Classes/ASIFormDataRequest.m; sourceTree = "<group>"; };
+		D8C98A4FC3777249D9B3865B0845C104 /* ASIS3BucketRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3BucketRequest.m; path = Classes/S3/ASIS3BucketRequest.m; sourceTree = "<group>"; };
+		D947D459028CF81257984A9F53A8BD32 /* ASICloudFilesContainerXMLParserDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesContainerXMLParserDelegate.h; path = Classes/CloudFiles/ASICloudFilesContainerXMLParserDelegate.h; sourceTree = "<group>"; };
+		DA0413441B276D2FAD0EA417D16F7FD1 /* ASIS3BucketObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIS3BucketObject.h; path = Classes/S3/ASIS3BucketObject.h; sourceTree = "<group>"; };
+		DF02FC578FB4230C1582496EC11E9F26 /* ASIS3Bucket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3Bucket.m; path = Classes/S3/ASIS3Bucket.m; sourceTree = "<group>"; };
+		E2187F4604871B5AF26558B4E31FC6B8 /* ASICloudFilesRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesRequest.m; path = Classes/CloudFiles/ASICloudFilesRequest.m; sourceTree = "<group>"; };
+		ED0AAF028D11289EBE349502234FAB77 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIProgressDelegate.h; path = Classes/ASIProgressDelegate.h; sourceTree = "<group>"; };
+		F0C84E54AB4A3D4D13E794D74E714986 /* JTCalendarPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarPageView.m; path = JTCalendar/Views/JTCalendarPageView.m; sourceTree = "<group>"; };
 		F143708ADDDE5FEC178B79E8CA39A2AC /* Pods-Hanlin-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Hanlin-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F1F587EF892573BF36DD441AA8A87BD5 /* JTCalendarWeekView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarWeekView.h; path = JTCalendar/Views/JTCalendarWeekView.h; sourceTree = "<group>"; };
-		F22EA784C6B9A6F4B4E73EF7CD0A2789 /* JTCalendarManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarManager.h; path = JTCalendar/JTCalendarManager.h; sourceTree = "<group>"; };
-		F44F42082D4580898D51EC0D6B6410B7 /* JTCalendarPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarPage.h; path = JTCalendar/Protocols/JTCalendarPage.h; sourceTree = "<group>"; };
-		F563CF8D05B1FEC3BD659CB5B7B7CD15 /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		F59DE5C7F77B0CCFAFD66BA8F2B3942F /* ASINSXMLParserCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASINSXMLParserCompat.h; path = Classes/S3/ASINSXMLParserCompat.h; sourceTree = "<group>"; };
-		F6B5A9B4CBEFF92C3FC1EC8181ED3BC3 /* JTDateHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTDateHelper.m; path = JTCalendar/JTDateHelper.m; sourceTree = "<group>"; };
+		F38A1788E2C68212A7CB7080B5AB38A5 /* JTCalendarDelegateManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTCalendarDelegateManager.m; path = JTCalendar/Managers/JTCalendarDelegateManager.m; sourceTree = "<group>"; };
+		F50A2F861717945B1F274F7EBCF13D33 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIDataDecompressor.h; path = Classes/ASIDataDecompressor.h; sourceTree = "<group>"; };
 		F8AEB10022BC352F7845667155A34D96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		FC904ADA33202CBD4DC9F756ED4A01AD /* ASICloudFilesContainerRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesContainerRequest.m; path = Classes/CloudFiles/ASICloudFilesContainerRequest.m; sourceTree = "<group>"; };
+		FA5805B7517563BFFA6134A0104A820C /* ASINetworkQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = Classes/ASINetworkQueue.h; sourceTree = "<group>"; };
+		FA6E70BB36FD156A67887EB86E01198E /* CSLazyLoadController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSLazyLoadController.xcconfig; sourceTree = "<group>"; };
+		FA855A11C2FE86EE9321A4593FCBA588 /* ASIS3ServiceRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASIS3ServiceRequest.m; path = Classes/S3/ASIS3ServiceRequest.m; sourceTree = "<group>"; };
+		FBF9DD0CECB50DA5161025C4B4382191 /* ASICloudFilesObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesObject.h; path = Classes/CloudFiles/ASICloudFilesObject.h; sourceTree = "<group>"; };
+		FD4F4D18C7024E7E052DD5FF7532B3C1 /* JTCalendar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendar.h; path = JTCalendar/JTCalendar.h; sourceTree = "<group>"; };
+		FD7A43FCF425F087842C7B6F1F4BA3B8 /* JTCalendarWeekDayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTCalendarWeekDayView.h; path = JTCalendar/Views/JTCalendarWeekDayView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2ECC308E5325A15AD12CE6F7D93D9704 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF94F2F3761090EBD3EFA0100B767731 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2F53E11B780BCFB348E6374C74EA86B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,20 +304,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F176CE524C34299C52E04132A6AE4EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79E930A81B528E11BE7CC33EC089B27F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6A43C84AE422587C780462ED3F1FE59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D72EB9B09E1BE79110C342F74A20BFE6 /* Foundation.framework in Frameworks */,
 				A76C713C86A5CCDAC314506474DD8F70 /* SystemConfiguration.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E5EB9F7063946D05DD91F410A7B98F06 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				770EA5F9E3BC23096D56E0AA7315AFDF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,24 +332,72 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		02E7B7FB2C5C9986353EDF7E61ACA628 /* Support Files */ = {
+		01F7EA09FAAEA931DEE65441EDA0DD13 /* CSLazyLoadController */ = {
 			isa = PBXGroup;
 			children = (
-				34A9A109340E37B14DF8D0F17D4CF2A2 /* ASIHTTPRequest.xcconfig */,
-				6B597CBBBB2216558680EC990182FBDB /* ASIHTTPRequest-dummy.m */,
-				200CCA1EE94C9F999381FAD8582A9572 /* ASIHTTPRequest-prefix.pch */,
+				B044736D9AD94E9E10931A3A9489C5BA /* CSCacheManager.h */,
+				162C5E8F47E12DDEEA9185014F128BBB /* CSCacheManager.m */,
+				C84AD6F01676CF5282191529DED5BF6C /* CSLazyLoadController.h */,
+				1E448946E09228E2A5244319CC3D05BF /* CSLazyLoadController.m */,
+				172FC1DFCBEC4DEFE46830D516316093 /* CSURL.h */,
+				90E0BC6C7EC099F259F88CABEA7637E3 /* CSURL.m */,
+				8A52232D141D59D07E1532CFB0BE91D3 /* NSURL+Parameters.h */,
+				ACE79BF91A133D70BE6B48F895B8B55F /* NSURL+Parameters.m */,
+				559763236E7D4D85191058510E7FABEC /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/ASIHTTPRequest";
+			name = CSLazyLoadController;
+			path = CSLazyLoadController;
 			sourceTree = "<group>";
 		};
-		0438D2C5A1CB1427C1F7EC6A1DD654DB /* ASIWebPageRequest */ = {
+		140F185ABAE8B33D843B23934A82A557 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CE1F9A55B896419E86185D960B2D005B /* ASIWebPageRequest.h */,
-				9CDA42370FD5BF70CB33A6F4CB7F0B80 /* ASIWebPageRequest.m */,
+				0CF281F5726F905E765013B973CD9F60 /* ASIAuthenticationDialog.h */,
+				2C136CC904802F17917E82C631930715 /* ASIAuthenticationDialog.m */,
+				7F5DCBC045D71B3DF51D5225711F07BB /* ASICacheDelegate.h */,
+				32937BBF0A70DDAB8F4DD8AC77469F0A /* ASIDataCompressor.h */,
+				41C75DF661321185587B922976C1C12D /* ASIDataCompressor.m */,
+				F50A2F861717945B1F274F7EBCF13D33 /* ASIDataDecompressor.h */,
+				0F08EF8C3ECFB89386438CA2BA461875 /* ASIDataDecompressor.m */,
+				6E57BAA7C4F464E0559E57E7DBC67D3B /* ASIDownloadCache.h */,
+				4949EF16E17D3AA3DC9ECF67EA7B603D /* ASIDownloadCache.m */,
+				36DC5E4EA5B037968A0DC667AF77E6C5 /* ASIFormDataRequest.h */,
+				D7949CBF9037DBD36B0774CAFB550CA5 /* ASIFormDataRequest.m */,
+				BE4BD6954AD7C88238D09788A1D4305C /* ASIHTTPRequest.h */,
+				8C57654D7AD380617300E16D7EF3015F /* ASIHTTPRequest.m */,
+				8446B3E17054CDA109D53A63B760A604 /* ASIHTTPRequestConfig.h */,
+				5E349F6BD59BBB5F2491CBB5C09A331F /* ASIHTTPRequestDelegate.h */,
+				9C514287EC51C18C7B97D57510C2E894 /* ASIInputStream.h */,
+				C668C7340BDBC534D6AC24DA6CA44617 /* ASIInputStream.m */,
+				FA5805B7517563BFFA6134A0104A820C /* ASINetworkQueue.h */,
+				247838B71178EF673B1411D650BF7672 /* ASINetworkQueue.m */,
+				ED0AAF028D11289EBE349502234FAB77 /* ASIProgressDelegate.h */,
 			);
-			name = ASIWebPageRequest;
+			name = Core;
+			sourceTree = "<group>";
+		};
+		18D4FD114E84E4232D5A260A6535538C /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				EB37DBA61E08B1FF3F464ABA035A1FB7 /* ASIWebPageRequest */,
+				39ADA347E91D29AE49FD225B64BF9566 /* CloudFiles */,
+				140F185ABAE8B33D843B23934A82A557 /* Core */,
+				761227BB9B3FD10FB42F69AE1F0BBA38 /* S3 */,
+				DC0DDD8BA6D16842ACC16C621356D1D2 /* Support Files */,
+			);
+			name = ASIHTTPRequest;
+			path = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		19EE292991BC7C2DB40EBE725E06BBC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18D4FD114E84E4232D5A260A6535538C /* ASIHTTPRequest */,
+				01F7EA09FAAEA931DEE65441EDA0DD13 /* CSLazyLoadController */,
+				CBE3D23E771B0269EB0A74EC8546AE86 /* JTCalendar */,
+				449519EFCDE54F0C16279A68A6105177 /* Reachability */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
@@ -323,26 +408,60 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		321F143AAAE3DD7A6B7797DACE4E4B55 /* Support Files */ = {
+		2B81660BCFFA00F52DF50715FE3CA3FC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C7EDCB833F61CC01F8A8AACC45074C92 /* JTCalendar.xcconfig */,
-				C37DE69F965715790B410182BA6D26AC /* JTCalendar-dummy.m */,
-				F0A7AE5D5D235611984271CA8658C519 /* JTCalendar-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/JTCalendar";
-			sourceTree = "<group>";
-		};
-		5559072662596C8DEEB5FE32BE12334B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				917A638F9759B888AFAA660072AAC309 /* libASIHTTPRequest.a */,
-				65AC20316217BB72248546C9597330E8 /* libJTCalendar.a */,
-				7CC25F857B94EC07E5BE4BFE031C0B58 /* libPods-Hanlin.a */,
-				72A9CF32BD9C3C0CE5BE39A5D9828939 /* libReachability.a */,
+				C55F32800C5B4732DC795B200496C969 /* libASIHTTPRequest.a */,
+				5AD210C07BEFD7FA590456A9F607FA8B /* libCSLazyLoadController.a */,
+				0B2122D7A3B11B768D8432C223462FED /* libJTCalendar.a */,
+				C2FA1B38E3A8E2F239078DA2F8F63ECB /* libPods-Hanlin.a */,
+				646BD1E370718CAE2ABF76240A7316DF /* libReachability.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		39ADA347E91D29AE49FD225B64BF9566 /* CloudFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B36C00BC90D16926FE5AA963DED7C79F /* ASICloudFilesCDNRequest.h */,
+				1DAA93FBF73C6CC06D8CB1866E013377 /* ASICloudFilesCDNRequest.m */,
+				D26BE9ACE4502D06F6E26766229F93C4 /* ASICloudFilesContainer.h */,
+				9A8FC8B2DDD4436BE7F11DC3947A5E45 /* ASICloudFilesContainer.m */,
+				9A96D2F57881D3BF328153D83E25054E /* ASICloudFilesContainerRequest.h */,
+				B412907E06194C78B06F71C1D38253C3 /* ASICloudFilesContainerRequest.m */,
+				D947D459028CF81257984A9F53A8BD32 /* ASICloudFilesContainerXMLParserDelegate.h */,
+				299C2795A9AD565832C6C41A91896946 /* ASICloudFilesContainerXMLParserDelegate.m */,
+				FBF9DD0CECB50DA5161025C4B4382191 /* ASICloudFilesObject.h */,
+				26E46CF453EF7F93790874377B7D09CD /* ASICloudFilesObject.m */,
+				21AB6E4EDFCFD2794EF87210C3FEAA49 /* ASICloudFilesObjectRequest.h */,
+				87CA51C4108A6F367B170EC4505B17FA /* ASICloudFilesObjectRequest.m */,
+				4C41814DDB94BC20F0F35B91089818F9 /* ASICloudFilesRequest.h */,
+				E2187F4604871B5AF26558B4E31FC6B8 /* ASICloudFilesRequest.m */,
+				CE3316DCD0A12B69678A776F22AD1E5A /* ASINSXMLParserCompat.h */,
+			);
+			name = CloudFiles;
+			sourceTree = "<group>";
+		};
+		449519EFCDE54F0C16279A68A6105177 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				293480F8247279E4FA4E409BBE9030C1 /* Reachability.h */,
+				12F1E34353CF360A604F40A7A81D370C /* Reachability.m */,
+				F07151206302218C9C3225DA22338F68 /* Support Files */,
+			);
+			name = Reachability;
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		559763236E7D4D85191058510E7FABEC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA6E70BB36FD156A67887EB86E01198E /* CSLazyLoadController.xcconfig */,
+				354144454FBBB91781B91CFEACEEB04F /* CSLazyLoadController-dummy.m */,
+				A73696B4E5ED3E435E32164BC9052A02 /* CSLazyLoadController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CSLazyLoadController";
 			sourceTree = "<group>";
 		};
 		56B80345A48A6531EEE8416DCCB447B3 /* Pods-Hanlin */ = {
@@ -360,63 +479,6 @@
 			path = "Target Support Files/Pods-Hanlin";
 			sourceTree = "<group>";
 		};
-		6281601A449908DBE041482F99E31BD4 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				5BDE57ED86EE97CB06D75019941B270D /* ASIAuthenticationDialog.h */,
-				8F4386302081CBD7A5F4567469A17B11 /* ASIAuthenticationDialog.m */,
-				D6F60FAB44F02DD12BE2DF050487A2D5 /* ASICacheDelegate.h */,
-				10DBA5BD0038AB404FC0B68B6C7FDB69 /* ASIDataCompressor.h */,
-				26E50C3A110DE30394F5EC58D81B4F92 /* ASIDataCompressor.m */,
-				B7466D31213EE6EEEA43AC447A9FBC81 /* ASIDataDecompressor.h */,
-				0ACB0B1F5DEF5297D6AB7FD438B6CDC9 /* ASIDataDecompressor.m */,
-				8DBB2A55FA89D478BCF15F4177778A6B /* ASIDownloadCache.h */,
-				AFA3B969122C5BDA2E82190B2EF9A247 /* ASIDownloadCache.m */,
-				9222A8C032B74F5239D480CF0F8DD30F /* ASIFormDataRequest.h */,
-				9169DABEDD7443CCBB53DCEB4E814620 /* ASIFormDataRequest.m */,
-				E028C993AC7DE7693E9CDDE32D132E2C /* ASIHTTPRequest.h */,
-				B8A15F64B372A980B1DC6F59C3692584 /* ASIHTTPRequest.m */,
-				5768A7794D2E73E912535B559DDB4D9A /* ASIHTTPRequestConfig.h */,
-				2CFEBD8FAFA609A326077F8C447F70AB /* ASIHTTPRequestDelegate.h */,
-				B31CC137BD15F396DE28AED09932715A /* ASIInputStream.h */,
-				16F5A136FF6F77DE8EAEC3DAF157DBD1 /* ASIInputStream.m */,
-				891B4761725421FC36F401406F4FD3CB /* ASINetworkQueue.h */,
-				0667102DA02E074FA0687C5859C9F7CF /* ASINetworkQueue.m */,
-				383F211FB054ED4D90CAAA2DBF682D47 /* ASIProgressDelegate.h */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		6A190ACFE2DD02D0BB78BBA4A7E84D94 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2FB5917C0AA3B92049E98099EBA0A94F /* Reachability.xcconfig */,
-				DFEFC27A56FAC98FE049EE72C158AE0E /* Reachability-dummy.m */,
-				7DCF618C17B53EA597DB29402D824498 /* Reachability-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Reachability";
-			sourceTree = "<group>";
-		};
-		6D1F6C231EECE70EF8DE395DE3307EA7 /* S3 */ = {
-			isa = PBXGroup;
-			children = (
-				50BFE20692272152B32626B634220EB6 /* ASIS3Bucket.h */,
-				67DEB1A3D14A0A80E3C37A54541D04B8 /* ASIS3Bucket.m */,
-				0612D37ED30EA4B5093FB55F1F0E7DF1 /* ASIS3BucketObject.h */,
-				72F5146FA75BBB35FFAB37588E6A97B1 /* ASIS3BucketObject.m */,
-				DE5CBCF0F34D3E88B04F74398B2A335D /* ASIS3BucketRequest.h */,
-				44C56F50F2D2FBA98AE261F4D2B69CC8 /* ASIS3BucketRequest.m */,
-				D0017B071B5C9C011C47F0F0BCA98761 /* ASIS3ObjectRequest.h */,
-				23CDA42EF52969ACA986FE6D619E9F04 /* ASIS3ObjectRequest.m */,
-				BFEAAA05B4E174A1F7947FF05179F248 /* ASIS3Request.h */,
-				F03D7FA5D563ADE45E32BC400507F340 /* ASIS3Request.m */,
-				06E555ECEDB7169EEE4AF352564D28DD /* ASIS3ServiceRequest.h */,
-				DF4FB7D8695459541999A0AC2E50C1E8 /* ASIS3ServiceRequest.m */,
-			);
-			name = S3;
-			sourceTree = "<group>";
-		};
 		6D5CCFC893E24C8BFDA20DF90B919589 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,14 +491,23 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		705DF74C050630F250DA782EAAF3CD78 /* Pods */ = {
+		761227BB9B3FD10FB42F69AE1F0BBA38 /* S3 */ = {
 			isa = PBXGroup;
 			children = (
-				D4513B7DBA6C8862C04B61CCB5A6BE3C /* ASIHTTPRequest */,
-				E290948B45896E3B33C96B059D12EBF2 /* JTCalendar */,
-				B672823BE9E2911A17996A3F59CAAFC8 /* Reachability */,
+				1049790B8C8292420B61E58807EE4B83 /* ASIS3Bucket.h */,
+				DF02FC578FB4230C1582496EC11E9F26 /* ASIS3Bucket.m */,
+				DA0413441B276D2FAD0EA417D16F7FD1 /* ASIS3BucketObject.h */,
+				6AC9C381CB27B52BE0A24A8CD289B461 /* ASIS3BucketObject.m */,
+				177F10D1D3DFA1822474B19E0849DCEA /* ASIS3BucketRequest.h */,
+				D8C98A4FC3777249D9B3865B0845C104 /* ASIS3BucketRequest.m */,
+				C32A3E6983382A5D0FBE1FE47B22C0B5 /* ASIS3ObjectRequest.h */,
+				6417BA5F2C55567375A812DB61BF07FA /* ASIS3ObjectRequest.m */,
+				8069FC5850627C78A901DBB007ED5908 /* ASIS3Request.h */,
+				639DEFD6BD39688BAB161D3F3FE948F7 /* ASIS3Request.m */,
+				BA2A02EFB6549A47FCB8FC7249C58924 /* ASIS3ServiceRequest.h */,
+				FA855A11C2FE86EE9321A4593FCBA588 /* ASIS3ServiceRequest.m */,
 			);
-			name = Pods;
+			name = S3;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -444,97 +515,93 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
-				705DF74C050630F250DA782EAAF3CD78 /* Pods */,
-				5559072662596C8DEEB5FE32BE12334B /* Products */,
+				19EE292991BC7C2DB40EBE725E06BBC3 /* Pods */,
+				2B81660BCFFA00F52DF50715FE3CA3FC /* Products */,
 				01F38A02EFFB683EABE581D7003E499C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9C7DAF55EBCA6E21405152BB12FC9B19 /* CloudFiles */ = {
+		7E0E554A866FA2EC8B69D5FB0F0C6F69 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4C4700F6D0C0600A3CF17B192D3AF520 /* ASICloudFilesCDNRequest.h */,
-				90628D8F975AB8AE7A1E08F4BB6726B8 /* ASICloudFilesCDNRequest.m */,
-				E3AFA7560078707D813FD3EC486769B3 /* ASICloudFilesContainer.h */,
-				0A938D8D0BC8235C1A024CF035DECF4D /* ASICloudFilesContainer.m */,
-				90F2E67B604F926F471E6E16D4DEF721 /* ASICloudFilesContainerRequest.h */,
-				FC904ADA33202CBD4DC9F756ED4A01AD /* ASICloudFilesContainerRequest.m */,
-				06F2CEFD73E8DF88F6692421EB197391 /* ASICloudFilesContainerXMLParserDelegate.h */,
-				217F7B2AB035D2937E2A1CA3F9EB95CC /* ASICloudFilesContainerXMLParserDelegate.m */,
-				99050291771A94781AAA965442D67282 /* ASICloudFilesObject.h */,
-				31B9ADF1E57D5D1FB6F52C5721009944 /* ASICloudFilesObject.m */,
-				4940B3FF1DC3A4A7027F79EF01D15654 /* ASICloudFilesObjectRequest.h */,
-				47EC02EA37857D030F9B2D3E0D746A6A /* ASICloudFilesObjectRequest.m */,
-				8A16198B0D0C61EE98DBA2CC07AF10B8 /* ASICloudFilesRequest.h */,
-				624041C0FD755ED0A33BB5C438BBFA41 /* ASICloudFilesRequest.m */,
-				F59DE5C7F77B0CCFAFD66BA8F2B3942F /* ASINSXMLParserCompat.h */,
+				7F558040AEA362276DC83E731919B5A1 /* JTCalendar.xcconfig */,
+				150FC3385873BF1C949EABD7323D0C9C /* JTCalendar-dummy.m */,
+				9C45141541A81FECEC536FB5EAB6BB88 /* JTCalendar-prefix.pch */,
 			);
-			name = CloudFiles;
+			name = "Support Files";
+			path = "../Target Support Files/JTCalendar";
 			sourceTree = "<group>";
 		};
-		B672823BE9E2911A17996A3F59CAAFC8 /* Reachability */ = {
+		CBE3D23E771B0269EB0A74EC8546AE86 /* JTCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				F563CF8D05B1FEC3BD659CB5B7B7CD15 /* Reachability.h */,
-				7FDEA679319F89D45B2FE1390D6301C8 /* Reachability.m */,
-				6A190ACFE2DD02D0BB78BBA4A7E84D94 /* Support Files */,
-			);
-			name = Reachability;
-			path = Reachability;
-			sourceTree = "<group>";
-		};
-		D4513B7DBA6C8862C04B61CCB5A6BE3C /* ASIHTTPRequest */ = {
-			isa = PBXGroup;
-			children = (
-				0438D2C5A1CB1427C1F7EC6A1DD654DB /* ASIWebPageRequest */,
-				9C7DAF55EBCA6E21405152BB12FC9B19 /* CloudFiles */,
-				6281601A449908DBE041482F99E31BD4 /* Core */,
-				6D1F6C231EECE70EF8DE395DE3307EA7 /* S3 */,
-				02E7B7FB2C5C9986353EDF7E61ACA628 /* Support Files */,
-			);
-			name = ASIHTTPRequest;
-			path = ASIHTTPRequest;
-			sourceTree = "<group>";
-		};
-		E290948B45896E3B33C96B059D12EBF2 /* JTCalendar */ = {
-			isa = PBXGroup;
-			children = (
-				38260766A4D729D1FDB449B4FD15FCFF /* JTCalendar.h */,
-				775650C522EBE62DC0E6607310C711E8 /* JTCalendarDay.h */,
-				C9F2635BDC08E8ED543A7CB775139A9A /* JTCalendarDayView.h */,
-				9C1B4FD69A638C8859B38CE9AFBBF845 /* JTCalendarDayView.m */,
-				8EF06ADDDA32A9567CAD0DE35D893358 /* JTCalendarDelegate.h */,
-				4A8ADF41EE769103A18AF0F964C9505E /* JTCalendarDelegateManager.h */,
-				9E606248866FB8485DE41475F0DDDED4 /* JTCalendarDelegateManager.m */,
-				F22EA784C6B9A6F4B4E73EF7CD0A2789 /* JTCalendarManager.h */,
-				223E8DE587DB8308C1AE3AFCAB39F928 /* JTCalendarManager.m */,
-				C07ABCEB75C73528797D71E7759764AC /* JTCalendarMenuView.h */,
-				D495FDE3B188D46A8837DD3177DB2FB6 /* JTCalendarMenuView.m */,
-				F44F42082D4580898D51EC0D6B6410B7 /* JTCalendarPage.h */,
-				C79E2B4BC3C133AE689252D8F41D5BDB /* JTCalendarPageView.h */,
-				00217A72CDD7D2AB25667B4EE500CC53 /* JTCalendarPageView.m */,
-				DC3A81E32648E759927DE910C78A8B51 /* JTCalendarScrollManager.h */,
-				ECBCC0452637FBD5DD7A179F5402CC4F /* JTCalendarScrollManager.m */,
-				E3C844E3EFBA50A621B1EBE8F70E6100 /* JTCalendarSettings.h */,
-				D5AF09129265C70DE28C0E557A322576 /* JTCalendarSettings.m */,
-				6481ED9D326A0BACCBECB1F31FDCF307 /* JTCalendarWeek.h */,
-				61AC0EF3D6D9160173957DFB84D96FDD /* JTCalendarWeekDay.h */,
-				601B119D7538581767E5B9C9ECA2C6E1 /* JTCalendarWeekDayView.h */,
-				85C0F588723EB30242CB94ACAF3CA421 /* JTCalendarWeekDayView.m */,
-				F1F587EF892573BF36DD441AA8A87BD5 /* JTCalendarWeekView.h */,
-				E7C6290B3AC3A8E5EC898F04A24E62E6 /* JTCalendarWeekView.m */,
-				BE092DE78622E49E4136C31EF7DE7174 /* JTContent.h */,
-				62F38AA94737DA21C8D562236DBB55CC /* JTDateHelper.h */,
-				F6B5A9B4CBEFF92C3FC1EC8181ED3BC3 /* JTDateHelper.m */,
-				85C86D78AE8A33B2A7F89F5E3CBF168E /* JTHorizontalCalendarView.h */,
-				510A266CE7DD107A98F2CB4F8C9CBCA2 /* JTHorizontalCalendarView.m */,
-				E3F55087517BA33DD6AB3D318854502F /* JTMenu.h */,
-				D69777FE1A6B8C8585A6F432750540AC /* JTVerticalCalendarView.h */,
-				E6CA9A434B419A266F1F7C6DAF5ADFDA /* JTVerticalCalendarView.m */,
-				321F143AAAE3DD7A6B7797DACE4E4B55 /* Support Files */,
+				FD4F4D18C7024E7E052DD5FF7532B3C1 /* JTCalendar.h */,
+				B6929DA8C59E406E1C63C7FDA285EA0F /* JTCalendarDay.h */,
+				73778B23E667BC383D715602EE414DD4 /* JTCalendarDayView.h */,
+				97EC5A5594067CB980C1779A0CDE5C4E /* JTCalendarDayView.m */,
+				0DEDE0668337BE2284344F90F16A1279 /* JTCalendarDelegate.h */,
+				0476F5C6A44E030B235B302A55F6D75A /* JTCalendarDelegateManager.h */,
+				F38A1788E2C68212A7CB7080B5AB38A5 /* JTCalendarDelegateManager.m */,
+				5B33ABBA0C5C8F3FEAA03CE451468936 /* JTCalendarManager.h */,
+				1338CCBCA859A5A1B73BA8F94F4A6E36 /* JTCalendarManager.m */,
+				31A313716C90971FDFF1E45FA65A98A4 /* JTCalendarMenuView.h */,
+				5F5413B497DE63223E2EB312FD5CBC91 /* JTCalendarMenuView.m */,
+				4623D8A6E0801949F3BD289D2A7460FE /* JTCalendarPage.h */,
+				5C54A9C63A63A640797D53F8573ADB24 /* JTCalendarPageView.h */,
+				F0C84E54AB4A3D4D13E794D74E714986 /* JTCalendarPageView.m */,
+				6FC399AD7C32F227F40E752CF8AD4920 /* JTCalendarScrollManager.h */,
+				39F52A2CB19148A56800D3EF728F2389 /* JTCalendarScrollManager.m */,
+				97855E111836D5EFA320B618AAE96FD4 /* JTCalendarSettings.h */,
+				69BFC60D047347179BC43D85CB02E535 /* JTCalendarSettings.m */,
+				A9D4E50CE896C7BEC9BB6C9FD23A6B25 /* JTCalendarWeek.h */,
+				83F3AEBEC63C0AFE08063B2E257F94B9 /* JTCalendarWeekDay.h */,
+				FD7A43FCF425F087842C7B6F1F4BA3B8 /* JTCalendarWeekDayView.h */,
+				CDEF180F120DB53EBCF80626BB5DE859 /* JTCalendarWeekDayView.m */,
+				958F2877A2D2949FEA83A95FE24FF4AF /* JTCalendarWeekView.h */,
+				3B7A203077E1A3B98283C2F77E54B76E /* JTCalendarWeekView.m */,
+				AAD97F96BFFDEAB48FC32264DBF1E042 /* JTContent.h */,
+				7451B5C161270FED74D8A7BE461D3E77 /* JTDateHelper.h */,
+				18A0830197292FACE264D63EEB3CD871 /* JTDateHelper.m */,
+				B108D3923058E2A5ABD922759505B07B /* JTHorizontalCalendarView.h */,
+				84B18FE112FE519989EC729AB2075F37 /* JTHorizontalCalendarView.m */,
+				57844FDBDDE9B232AAA6A92D073B639E /* JTMenu.h */,
+				83F1DAC099E9BEE26711B1DEA2DAB845 /* JTVerticalCalendarView.h */,
+				2F5089FA475975BA7ADAD96EFE0E0C53 /* JTVerticalCalendarView.m */,
+				7E0E554A866FA2EC8B69D5FB0F0C6F69 /* Support Files */,
 			);
 			name = JTCalendar;
 			path = JTCalendar;
+			sourceTree = "<group>";
+		};
+		DC0DDD8BA6D16842ACC16C621356D1D2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				655B8442C032897B9A6A9C48B90D4CA0 /* ASIHTTPRequest.xcconfig */,
+				94948FA6F691171756CB5045A0616AE2 /* ASIHTTPRequest-dummy.m */,
+				3B5912106E87F0E26E142C6B99406C8F /* ASIHTTPRequest-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ASIHTTPRequest";
+			sourceTree = "<group>";
+		};
+		EB37DBA61E08B1FF3F464ABA035A1FB7 /* ASIWebPageRequest */ = {
+			isa = PBXGroup;
+			children = (
+				9394C18D6815FDEBD8CF9962D0A29F5D /* ASIWebPageRequest.h */,
+				367200E4F5869976EB18B5B0F48F4378 /* ASIWebPageRequest.m */,
+			);
+			name = ASIWebPageRequest;
+			sourceTree = "<group>";
+		};
+		F07151206302218C9C3225DA22338F68 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4555ABCFE9AD5B7CDDAC280E5AD0B65 /* Reachability.xcconfig */,
+				5EA33D455345E2108AA1F19E264F124C /* Reachability-dummy.m */,
+				797AD9117BA6436F28D00B5291FD5271 /* Reachability-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Reachability";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -609,6 +676,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7237021802DFF195B09F8042EE4E7BC2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1334B4FB1F10C5264AF2A807A77EFA31 /* CSCacheManager.h in Headers */,
+				9C3997030C18BB55BB348F1EE6D4E770 /* CSLazyLoadController.h in Headers */,
+				053B7B06E96492EB4427DCEB3185E178 /* CSURL.h in Headers */,
+				E3434713E703E5262B64692F7447C12A /* NSURL+Parameters.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -626,26 +704,27 @@
 			);
 			name = JTCalendar;
 			productName = JTCalendar;
-			productReference = 65AC20316217BB72248546C9597330E8 /* libJTCalendar.a */;
+			productReference = 0B2122D7A3B11B768D8432C223462FED /* libJTCalendar.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		53504433796953B95223B43AF5F71819 /* Pods-Hanlin */ = {
+		2D7CD49CC50FDB72F0E4F3A8671442C8 /* Pods-Hanlin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9FBF9C911089D5118D24880379967543 /* Build configuration list for PBXNativeTarget "Pods-Hanlin" */;
+			buildConfigurationList = 80582374AA5968EE0DD30ADCF1D9AA3C /* Build configuration list for PBXNativeTarget "Pods-Hanlin" */;
 			buildPhases = (
-				B1C3453F1A374EAF8F6E4DE2CDE28BBF /* Sources */,
-				E5EB9F7063946D05DD91F410A7B98F06 /* Frameworks */,
+				4FBE771C02CCA19347105D86CF6E1491 /* Sources */,
+				5F176CE524C34299C52E04132A6AE4EF /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				925E637D32E36AE4DC731B4C3E58770E /* PBXTargetDependency */,
-				8C54FA75B970D9BD8BA50542F62BA815 /* PBXTargetDependency */,
-				4BAAE8A53C1FCBD5C14EC5E41E9A131A /* PBXTargetDependency */,
+				C9C4C07EACE02399FD3E580F3B4F93FD /* PBXTargetDependency */,
+				755CDE6F5C378EB2B6D130281D54E3E4 /* PBXTargetDependency */,
+				F77026F0619A14DCDDF2872D21ABFA8F /* PBXTargetDependency */,
+				5309E6C3B44DEB743966EAEC355E85EF /* PBXTargetDependency */,
 			);
 			name = "Pods-Hanlin";
 			productName = "Pods-Hanlin";
-			productReference = 7CC25F857B94EC07E5BE4BFE031C0B58 /* libPods-Hanlin.a */;
+			productReference = C2FA1B38E3A8E2F239078DA2F8F63ECB /* libPods-Hanlin.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9C623D1AF8229419BA603B3C66BE24B9 /* Reachability */ = {
@@ -662,7 +741,24 @@
 			);
 			name = Reachability;
 			productName = Reachability;
-			productReference = 72A9CF32BD9C3C0CE5BE39A5D9828939 /* libReachability.a */;
+			productReference = 646BD1E370718CAE2ABF76240A7316DF /* libReachability.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B39710E7E9C803B9E687E51A00ED3112 /* CSLazyLoadController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BFB856F64B3D370C4C8AF742CE85BB4 /* Build configuration list for PBXNativeTarget "CSLazyLoadController" */;
+			buildPhases = (
+				0FCA00FB7642CA746E0272B910810BB0 /* Sources */,
+				2ECC308E5325A15AD12CE6F7D93D9704 /* Frameworks */,
+				7237021802DFF195B09F8042EE4E7BC2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSLazyLoadController;
+			productName = CSLazyLoadController;
+			productReference = 5AD210C07BEFD7FA590456A9F607FA8B /* libCSLazyLoadController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		F0EA78F8F3362DEBC9840500226DA5E7 /* ASIHTTPRequest */ = {
@@ -680,7 +776,7 @@
 			);
 			name = ASIHTTPRequest;
 			productName = ASIHTTPRequest;
-			productReference = 917A638F9759B888AFAA660072AAC309 /* libASIHTTPRequest.a */;
+			productReference = C55F32800C5B4732DC795B200496C969 /* libASIHTTPRequest.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -700,24 +796,37 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 5559072662596C8DEEB5FE32BE12334B /* Products */;
+			productRefGroup = 2B81660BCFFA00F52DF50715FE3CA3FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F0EA78F8F3362DEBC9840500226DA5E7 /* ASIHTTPRequest */,
+				B39710E7E9C803B9E687E51A00ED3112 /* CSLazyLoadController */,
 				0BE4A16FFDEF8D8F814E3AE6A2577F6C /* JTCalendar */,
-				53504433796953B95223B43AF5F71819 /* Pods-Hanlin */,
+				2D7CD49CC50FDB72F0E4F3A8671442C8 /* Pods-Hanlin */,
 				9C623D1AF8229419BA603B3C66BE24B9 /* Reachability */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B1C3453F1A374EAF8F6E4DE2CDE28BBF /* Sources */ = {
+		0FCA00FB7642CA746E0272B910810BB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A99254A513D5DCFEA3DB292935EF8C33 /* Pods-Hanlin-dummy.m in Sources */,
+				03FAF97D1ADDF88E9A3D921A6CF3BC4D /* CSCacheManager.m in Sources */,
+				2C5B1BC49747CB845E060234FA088BB1 /* CSLazyLoadController-dummy.m in Sources */,
+				17392E8E838690EFC6B292472CE35414 /* CSLazyLoadController.m in Sources */,
+				EC7BD0FE5931C7AC7E745D28FA5A6F8E /* CSURL.m in Sources */,
+				B7E9D168B6D8C10584B4AA0975321D01 /* NSURL+Parameters.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FBE771C02CCA19347105D86CF6E1491 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C9874FFF8367D7BD88BCB986274573C /* Pods-Hanlin-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,11 +892,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4BAAE8A53C1FCBD5C14EC5E41E9A131A /* PBXTargetDependency */ = {
+		5309E6C3B44DEB743966EAEC355E85EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Reachability;
 			target = 9C623D1AF8229419BA603B3C66BE24B9 /* Reachability */;
-			targetProxy = 77E5ABB215AE037906D5F14FB4E16EAC /* PBXContainerItemProxy */;
+			targetProxy = EB1BB938D161DD490FB1433F35F64BD8 /* PBXContainerItemProxy */;
 		};
 		5572CE11D4CE5662B2156FE53D1FDBB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -795,44 +904,30 @@
 			target = 9C623D1AF8229419BA603B3C66BE24B9 /* Reachability */;
 			targetProxy = 74795D79E5424F6385749DDE32F7267E /* PBXContainerItemProxy */;
 		};
-		8C54FA75B970D9BD8BA50542F62BA815 /* PBXTargetDependency */ = {
+		755CDE6F5C378EB2B6D130281D54E3E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = JTCalendar;
-			target = 0BE4A16FFDEF8D8F814E3AE6A2577F6C /* JTCalendar */;
-			targetProxy = 3D993C76A70E80A191CFE7E07BA5058B /* PBXContainerItemProxy */;
+			name = CSLazyLoadController;
+			target = B39710E7E9C803B9E687E51A00ED3112 /* CSLazyLoadController */;
+			targetProxy = 81EDA657C9FEF0155736B40F3860F471 /* PBXContainerItemProxy */;
 		};
-		925E637D32E36AE4DC731B4C3E58770E /* PBXTargetDependency */ = {
+		C9C4C07EACE02399FD3E580F3B4F93FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ASIHTTPRequest;
 			target = F0EA78F8F3362DEBC9840500226DA5E7 /* ASIHTTPRequest */;
-			targetProxy = B5F40CBB17ADC73B6FA87719937CA8B2 /* PBXContainerItemProxy */;
+			targetProxy = BABC6562A8691165FF42EC8D1BB2A2C9 /* PBXContainerItemProxy */;
+		};
+		F77026F0619A14DCDDF2872D21ABFA8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JTCalendar;
+			target = 0BE4A16FFDEF8D8F814E3AE6A2577F6C /* JTCalendar */;
+			targetProxy = 1E263C62F91AC515B15F3E52DB37600B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		055D33C3D15DE12056092689DF08CB2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6183B60FE49082A99CE3A8048BD5DA11 /* Pods-Hanlin.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		0803AA27F4AD0B166F772DA2A9DD82D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FB5917C0AA3B92049E98099EBA0A94F /* Reachability.xcconfig */;
+			baseConfigurationReference = C4555ABCFE9AD5B7CDDAC280E5AD0B65 /* Reachability.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -853,7 +948,7 @@
 		};
 		08AD20795457E6B9E84FFB700CA43BBA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7EDCB833F61CC01F8A8AACC45074C92 /* JTCalendar.xcconfig */;
+			baseConfigurationReference = 7F558040AEA362276DC83E731919B5A1 /* JTCalendar.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -873,9 +968,30 @@
 			};
 			name = Release;
 		};
+		5A7086D8732F9529F5B19D1445E02785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA6E70BB36FD156A67887EB86E01198E /* CSLazyLoadController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CSLazyLoadController/CSLazyLoadController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		5BFFEAE07B87CC31D19A44F9C428178E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34A9A109340E37B14DF8D0F17D4CF2A2 /* ASIHTTPRequest.xcconfig */;
+			baseConfigurationReference = 655B8442C032897B9A6A9C48B90D4CA0 /* ASIHTTPRequest.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -897,7 +1013,7 @@
 		};
 		729C70B0490CD0C069174881AAB0A61C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FB5917C0AA3B92049E98099EBA0A94F /* Reachability.xcconfig */;
+			baseConfigurationReference = C4555ABCFE9AD5B7CDDAC280E5AD0B65 /* Reachability.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -912,6 +1028,27 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9ACC80702E20BED06273ABBD6C3B8348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D801FEED2058481F617C471EDFFFA17 /* Pods-Hanlin.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -974,7 +1111,7 @@
 		};
 		BB9E574A214338292B0413E797D04006 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34A9A109340E37B14DF8D0F17D4CF2A2 /* ASIHTTPRequest.xcconfig */;
+			baseConfigurationReference = 655B8442C032897B9A6A9C48B90D4CA0 /* ASIHTTPRequest.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -995,7 +1132,7 @@
 		};
 		BC98F323054493FB961EA808331CCF03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7EDCB833F61CC01F8A8AACC45074C92 /* JTCalendar.xcconfig */;
+			baseConfigurationReference = 7F558040AEA362276DC83E731919B5A1 /* JTCalendar.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1014,22 +1151,23 @@
 			};
 			name = Debug;
 		};
-		C1EA648C8D4DEA0E4196BB253D637B6E /* Release */ = {
+		C0349D03B3F056A18BB962C38526D040 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D801FEED2058481F617C471EDFFFA17 /* Pods-Hanlin.release.xcconfig */;
+			baseConfigurationReference = FA6E70BB36FD156A67887EB86E01198E /* CSLazyLoadController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/CSLazyLoadController/CSLazyLoadController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1095,6 +1233,26 @@
 			};
 			name = Debug;
 		};
+		E739F8908F0CD4DFD1704383B08A291B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6183B60FE49082A99CE3A8048BD5DA11 /* Pods-Hanlin.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1116,11 +1274,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9FBF9C911089D5118D24880379967543 /* Build configuration list for PBXNativeTarget "Pods-Hanlin" */ = {
+		7BFB856F64B3D370C4C8AF742CE85BB4 /* Build configuration list for PBXNativeTarget "CSLazyLoadController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				055D33C3D15DE12056092689DF08CB2E /* Debug */,
-				C1EA648C8D4DEA0E4196BB253D637B6E /* Release */,
+				5A7086D8732F9529F5B19D1445E02785 /* Debug */,
+				C0349D03B3F056A18BB962C38526D040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80582374AA5968EE0DD30ADCF1D9AA3C /* Build configuration list for PBXNativeTarget "Pods-Hanlin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E739F8908F0CD4DFD1704383B08A291B /* Debug */,
+				9ACC80702E20BED06273ABBD6C3B8348 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

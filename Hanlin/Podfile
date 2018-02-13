@@ -6,9 +6,8 @@ target 'Hanlin' do
 #   use_frameworks!
 
   # Pods for Hanlin
-#pod 'CKCalendar', '~> 1.0'
 pod 'JTCalendar', '~> 2.0'
-#pod 'CVCalendar', '~> 1.6.0'
-#pod 'ASIHTTPRequest-Rev'
 pod 'ASIHTTPRequest'
+pod 'CSLazyLoadController', '~> 1.0'
+
 end

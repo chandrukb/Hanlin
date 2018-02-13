@@ -9,13 +9,13 @@
 #ifndef HNConstants_h
 #define HNConstants_h
 //root url and action urls
-#define HN_ROOTURL @"http://eventapp.platinumcode.net/app/"
-#define HN_REGISTER_USER @"userdetails.php"
-#define HN_LOGIN_USER @"login.php"
-#define HN_CHANGE_PASSWORD @"changePassword.php"
-#define HN_UPDATE_PASSWORD @"resetPassword.php"
-#define HN_DOCUMENT_DOWNLOAD @"Mobile/documentDownload.php"
-#define HN_GET_ALL_EVENTS @"events.php"
+#define HN_ROOTURL @"http://eventapp.platinumcode.net/"
+#define HN_REGISTER_USER @"app/userdetails.php"
+#define HN_LOGIN_USER @"app/login.php"
+#define HN_CHANGE_PASSWORD @"app/changePassword.php"
+#define HN_UPDATE_PASSWORD @"app/resetPassword.php"
+#define HN_DOCUMENT_DOWNLOAD @"app/Mobile/documentDownload.php"
+#define HN_GET_ALL_EVENTS @"app/events.php"
 
 //API Constants
 #define HN_REQ_NAME @"name"

@@ -12,18 +12,21 @@ PODS:
     - Reachability
   - ASIHTTPRequest/S3 (1.8.2):
     - ASIHTTPRequest/Core
+  - CSLazyLoadController (1.0.1)
   - JTCalendar (2.2.1)
   - Reachability (3.2)
 
 DEPENDENCIES:
   - ASIHTTPRequest
+  - CSLazyLoadController (~> 1.0)
   - JTCalendar (~> 2.0)
 
 SPEC CHECKSUMS:
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
+  CSLazyLoadController: 1291f2d8f9d185031fd023386ed919beab57c03e
   JTCalendar: be9e781229c6e539d9b71267560410886cd65cfb
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
-PODFILE CHECKSUM: 2d56b2e7538252700a59dff06df83552fe733068
+PODFILE CHECKSUM: bb9ee6ff83d78344cd9821f34847742fb6fd0135
 
 COCOAPODS: 1.3.1
