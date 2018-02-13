@@ -44,15 +44,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString: @"ShowMenuFromLogin"])
+    {
+        
+    }
 }
-*/
+
 
 - (IBAction)onLoginClicked:(id)sender {
     if([self.tfUsername validate] & [self.tfPassword validate]){
@@ -125,12 +129,14 @@
         NSString * message = [response valueForKey:@"msg"];
         if(responseStatus == true)
         {
-            [self performSegueWithIdentifier:@"ShowMenuPage" sender:self];
+            [self saveLoginDetailsToPersistance:response];
+            [self performSegueWithIdentifier:@"ShowMenuFromLogin" sender:self];
+        }
+        else
+        {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
             [alert show];
-        }
-        NSLog(@"dictionary value: %@", response);
-        //to do: present an alert to the user and navigate to the login or the home screen
+        }        
     } else {
         NSLog(@"Unexpected error");
     }
@@ -143,6 +149,17 @@
     NSLog(@"Error : %@",error.localizedDescription);
 }
 
+-(void) saveLoginDetailsToPersistance:(NSDictionary *)userDetails
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_USERID] forKey:HN_LOGIN_USERID];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_NAME] forKey:HN_LOGIN_NAME];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_USERNAME] forKey:HN_LOGIN_USERNAME];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_PHONE] forKey:HN_LOGIN_PHONE];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_JOINDATE] forKey:HN_LOGIN_JOINDATE];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_PROFILE_IMG] forKey:HN_LOGIN_PROFILE_IMG];
+    
+}
 #pragma mark- Keyboard notification methods
 - (void)keyboardWillHide:(NSNotification *)n
 {

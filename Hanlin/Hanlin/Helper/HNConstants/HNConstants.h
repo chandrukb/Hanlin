@@ -24,4 +24,15 @@
 #define HN_REQ_PASSWORD @"password"
 #define HN_REQ_USERFILE @"userfile"
 #define HN_USERNAME @"username"
+
+//Login Response
+#define HN_LOGIN_NAME @"name"
+#define HN_LOGIN_USERNAME @"username"
+#define HN_LOGIN_USERID @"userid"
+#define HN_LOGIN_PHONE @"phone"
+#define HN_LOGIN_JOINDATE @"joindate"
+#define HN_LOGIN_PROFILE_IMG @"profileimage"
+
+//events response
+
 #endif /* HNConstants_h */

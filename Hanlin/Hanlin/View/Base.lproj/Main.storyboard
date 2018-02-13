@@ -193,7 +193,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="onLoginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="122-RN-cen"/>
-                                                    <segue destination="nvM-1c-jTD" kind="show" id="0ON-LI-Crc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxR-wv-GQc">
@@ -280,6 +279,7 @@
                         <outlet property="usernameBorderView" destination="pgp-S3-GdQ" id="x0t-hK-EyI"/>
                         <outlet property="usernameContainerHeightConstraint" destination="6J4-F9-sdp" id="VuK-4i-cuN"/>
                         <segue destination="8UL-JZ-Eb1" kind="unwind" unwindAction="prepareForUnwind:" id="cb3-eF-K1b"/>
+                        <segue destination="nvM-1c-jTD" kind="show" identifier="ShowMenuFromLogin" id="XLz-XF-3PO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
