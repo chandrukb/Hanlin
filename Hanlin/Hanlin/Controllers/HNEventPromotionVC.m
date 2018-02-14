@@ -28,7 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"";
+    self.title = @"Events";
+    [self.navigationItem.backBarButtonItem setTitle:@""];
     // Do any additional setup after loading the view.
 //    [self.eventPromoTableView registerClass:[HNEventPromotionCell class] forCellReuseIdentifier:@"EventPromoCell"];
     
@@ -100,13 +101,11 @@
 
 -(void)updateUIForEvents
 {
-    self.title = @"";
     self.ivEventsPromotions.image = [UIImage imageNamed:@"EventImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 40.0f;
 }
 
 -(void)updateUIForPromotions
 {
-    self.title = @"";
     self.ivEventsPromotions.image = [UIImage imageNamed:@"PromoImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 0.0f;
 }
 

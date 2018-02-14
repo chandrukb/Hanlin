@@ -630,7 +630,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_male" translatesAutoresizingMaskIntoConstraints="NO" id="ti0-V1-B3E">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_nickname" translatesAutoresizingMaskIntoConstraints="NO" id="ti0-V1-B3E">
                                         <rect key="frame" x="30" y="138" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Ywn-ST-Csu"/>
@@ -678,6 +678,22 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_membersince" translatesAutoresizingMaskIntoConstraints="NO" id="Ual-Hb-2cI">
+                                        <rect key="frame" x="30" y="283" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="NN7-Os-7fB"/>
+                                            <constraint firstAttribute="width" constant="25" id="muH-g4-a5t"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member ID: 101" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17P-hP-gkZ">
+                                        <rect key="frame" x="80" y="280.5" width="127.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="H07-8K-6ne"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2156862745" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -690,6 +706,7 @@
                                     <constraint firstItem="ti0-V1-B3E" firstAttribute="top" secondItem="Qo1-ay-GyH" secondAttribute="bottom" constant="28" id="DZM-74-HwF"/>
                                     <constraint firstItem="z4j-rI-Pn5" firstAttribute="leading" secondItem="Qo1-ay-GyH" secondAttribute="trailing" constant="25" id="JjN-t6-MtZ"/>
                                     <constraint firstItem="Qo1-ay-GyH" firstAttribute="top" secondItem="eUa-hH-9B4" secondAttribute="top" constant="40" id="KQJ-qf-QOV"/>
+                                    <constraint firstItem="17P-hP-gkZ" firstAttribute="leading" secondItem="Ual-Hb-2cI" secondAttribute="trailing" constant="25" id="KuU-yZ-2fg"/>
                                     <constraint firstItem="YKw-Ve-FFG" firstAttribute="centerY" secondItem="DXu-K4-voF" secondAttribute="centerY" id="Lwg-ea-s7i"/>
                                     <constraint firstItem="nZB-v3-ZAM" firstAttribute="top" secondItem="DXu-K4-voF" secondAttribute="bottom" constant="20" id="M6G-t0-bkN"/>
                                     <constraint firstItem="nZB-v3-ZAM" firstAttribute="leading" secondItem="eUa-hH-9B4" secondAttribute="leading" constant="30" id="OHP-tR-RPB"/>
@@ -698,11 +715,15 @@
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Qd-nb-JFZ" secondAttribute="trailing" constant="15" id="UB7-Ob-rqR"/>
                                     <constraint firstItem="ky3-Et-7lb" firstAttribute="leading" secondItem="Qo1-ay-GyH" secondAttribute="trailing" constant="25" id="XfG-lh-ow4"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IGX-6w-g9R" secondAttribute="trailing" constant="15" id="cjW-mu-bXU"/>
+                                    <constraint firstItem="17P-hP-gkZ" firstAttribute="centerY" secondItem="Ual-Hb-2cI" secondAttribute="centerY" id="kDm-QM-Scv"/>
                                     <constraint firstItem="8Qd-nb-JFZ" firstAttribute="leading" secondItem="nZB-v3-ZAM" secondAttribute="trailing" constant="25" id="khm-BR-hYi"/>
+                                    <constraint firstItem="Ual-Hb-2cI" firstAttribute="top" secondItem="nZB-v3-ZAM" secondAttribute="bottom" constant="25" id="kmf-LI-Cae"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YKw-Ve-FFG" secondAttribute="trailing" constant="15" id="lZh-dd-OcQ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="17P-hP-gkZ" secondAttribute="trailing" constant="15" id="nPT-3G-vL0"/>
                                     <constraint firstItem="ti0-V1-B3E" firstAttribute="leading" secondItem="eUa-hH-9B4" secondAttribute="leading" constant="30" id="oxG-sw-gGM"/>
                                     <constraint firstItem="IGX-6w-g9R" firstAttribute="centerY" secondItem="ti0-V1-B3E" secondAttribute="centerY" id="qB7-fK-Xp4"/>
                                     <constraint firstItem="Qo1-ay-GyH" firstAttribute="leading" secondItem="eUa-hH-9B4" secondAttribute="leading" constant="25" id="tYe-5K-c2H"/>
+                                    <constraint firstItem="Ual-Hb-2cI" firstAttribute="leading" secondItem="eUa-hH-9B4" secondAttribute="leading" constant="30" id="y6F-Lv-VfK"/>
                                     <constraint firstItem="YKw-Ve-FFG" firstAttribute="leading" secondItem="DXu-K4-voF" secondAttribute="trailing" constant="25" id="y6i-Rq-QbE"/>
                                 </constraints>
                             </view>
@@ -1585,10 +1606,10 @@
             </objects>
             <point key="canvasLocation" x="-1588" y="940"/>
         </scene>
-        <!--Event Promo DetailVC-->
+        <!--Event-->
         <scene sceneID="QPo-tO-ZRL">
             <objects>
-                <tableViewController id="U85-ZT-uAg" customClass="HNEventPromoDetailVC" sceneMemberID="viewController">
+                <tableViewController title="Event" id="U85-ZT-uAg" customClass="HNEventPromoDetailVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iOw-Yo-bQV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2039,10 +2060,10 @@
             </objects>
             <point key="canvasLocation" x="1100" y="-1703.2983508245879"/>
         </scene>
-        <!--EventsAndPromotions-->
+        <!--Events-->
         <scene sceneID="lTI-ch-cn2">
             <objects>
-                <viewController storyboardIdentifier="HNEventPromotionVC" title="EventsAndPromotions" id="e3A-on-77Q" customClass="HNEventPromotionVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HNEventPromotionVC" title="Events" id="e3A-on-77Q" customClass="HNEventPromotionVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rkm-fH-SLr"/>
                         <viewControllerLayoutGuide type="bottom" id="bbx-nd-WVn"/>
@@ -2472,7 +2493,7 @@
                                 </constraints>
                                 <segments>
                                     <segment title="FILES"/>
-                                    <segment title="YOUTUBE LINKS"/>
+                                    <segment title="VIDEO LINKS"/>
                                 </segments>
                                 <color key="tintColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -2617,14 +2638,15 @@
         <image name="Signout" width="25" height="24"/>
         <image name="button_next" width="17" height="17"/>
         <image name="icon_lastlogin" width="15" height="15"/>
-        <image name="icon_male" width="30" height="30"/>
+        <image name="icon_membersince" width="15" height="15"/>
+        <image name="icon_nickname" width="15" height="15"/>
         <image name="icon_nottification" width="21" height="20"/>
         <image name="icon_nottification_event" width="21" height="16"/>
         <image name="icon_phone" width="15" height="15"/>
         <image name="profile_image" width="240" height="263"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="myr-D9-UyY"/>
+        <segue reference="xPm-pT-hES"/>
         <segue reference="Faa-ip-eQ4"/>
         <segue reference="f92-yH-Aaa"/>
     </inferredMetricsTieBreakers>

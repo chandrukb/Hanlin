@@ -38,6 +38,9 @@
 {
     [super viewDidLoad];
     
+    self.title = @"Calendar";
+    [self.navigationItem.backBarButtonItem setTitle:@""];
+    
     _calendarManager = [JTCalendarManager new];
     _calendarManager.delegate = self;
 //    _todayDate = [NSDate date];

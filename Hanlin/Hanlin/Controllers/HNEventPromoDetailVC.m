@@ -16,6 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.navigationItem.backBarButtonItem setTitle:@""];
+    if([self.selectedOption isEqualToString:@"promos"]){
+        self.title = @"Promotion";
+    }
+    if([self.selectedOption isEqualToString:@"events"]){
+        self.title = @"Event";
+    }
+    
+    
     UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background.png"]];
     [tempImageView setFrame:self.tableView.frame];
     
