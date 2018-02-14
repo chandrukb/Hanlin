@@ -7,9 +7,31 @@
 //
 
 #import "HNEventPromoDetailVC.h"
+#import <ASIHTTPRequest/ASIHTTPRequest.h>
+#import <ASIHTTPRequest/ASIFormDataRequest.h>
+#import "HNConstants.h"
+#import <CSLazyLoadController/CSLazyLoadController.h>
+#import "JSON.h"
+#import "HNRoundedImageView.h"
 
-@interface HNEventPromoDetailVC ()
+@interface HNEventPromoDetailVC ()<CSLazyLoadControllerDelegate>
+{
+//    NSMutableDictionary *event;
+}
+@property (nonatomic, strong) CSLazyLoadController *lazyLoadController;
+@property (weak, nonatomic) IBOutlet HNRoundedImageView *ivEventPromo;
+@property (weak, nonatomic) IBOutlet UILabel *lblEventPromo;
+@property (weak, nonatomic) IBOutlet UILabel *lblEventPromoDate;
+@property (weak, nonatomic) IBOutlet UILabel *lblMessage;
+@property (weak, nonatomic) IBOutlet UIButton *btnRegisterEvent;
+@property (weak, nonatomic) IBOutlet UILabel *lblDay;
+@property (weak, nonatomic) IBOutlet UILabel *lblMonth;
+@property (weak, nonatomic) IBOutlet UILabel *lblYear;
+@property (weak, nonatomic) IBOutlet UIButton *btnGetPromo;
+@property (weak, nonatomic) IBOutlet UILabel *lblPeopleCount;
 
+- (IBAction)registerForEvent:(id)sender;
+- (IBAction)getPromotion:(id)sender;
 @end
 
 @implementation HNEventPromoDetailVC
@@ -28,8 +50,20 @@
     
     UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background.png"]];
     [tempImageView setFrame:self.tableView.frame];
-    
     self.tableView.backgroundView = tempImageView;
+    self.lazyLoadController = [[CSLazyLoadController alloc] init];
+    self.lazyLoadController.delegate = self;
+    
+    if ([self.selectedOption isEqualToString: @"events"]) {
+//        [self grabEventDetailInBackground];
+        [self prepareUIForEvent];
+        self.title = @"Events";
+    }
+    else if([self.selectedOption isEqualToString: @"promos"])
+    {
+        self.title = @"Promotions";
+    }
+        
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -40,6 +74,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareUIForEvent
+{
+    self.ivEventPromo.image = self.imgEventPromo;
+    self.lblEventPromo.text = [self.event valueForKey:@"eventname"];
+    self.lblEventPromoDate.text = [self.event valueForKey:@"startdate"];
+    self.lblMessage.text = [self.event valueForKey:@"message"];
+    NSArray *dateComponents = [[self.event valueForKey:@"startdate"] componentsSeparatedByString:@"-"];
+    self.lblDay.text = dateComponents[2];
+    self.lblMonth.text = dateComponents[1];
+    self.lblYear.text = dateComponents[0];
 }
 
 #pragma mark - Table view data source
@@ -87,39 +133,7 @@
         return 0; //set the hidden cell's height to 0
     return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation
@@ -131,4 +145,51 @@
 }
 */
 
+- (void)grabEventDetailInBackground
+{
+    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_ALL_EVENTS]];
+    __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue: @"9" forKey:@"id"];
+    [request setCompletionBlock:^{
+        //        // Use when fetching text data
+        //        NSString *responseString = [request responseString];
+        //handle the request
+        if (request.responseStatusCode == 400) {
+            NSLog(@"Invalid code");
+        } else if (request.responseStatusCode == 403) {
+            NSLog(@"Code already used");
+        } else if (request.responseStatusCode == 200) {
+            NSString *resString = [request responseString];
+            NSArray *responseArray = [resString JSONValue];
+            self.event = [responseArray[0] valueForKey:@"events"];
+        }
+    }];
+    [request setFailedBlock:^{
+        NSError *error = [request error];
+    }];
+    [request startAsynchronous];
+}
+
+#pragma mark - CSLazyLoadControllerDelegate
+
+- (CSURL *)lazyLoadController:(CSLazyLoadController *)loadController
+       urlForImageAtIndexPath:(NSIndexPath *)indexPath {
+
+    NSString *stringUrl = [self.event valueForKey:@"image"];
+    return [CSURL URLWithString:stringUrl];
+}
+
+- (void)lazyLoadController:(CSLazyLoadController *)loadController
+            didReciveImage:(UIImage *)image
+                   fromURL:(CSURL *)url
+                 indexPath:(NSIndexPath *)indexPath {
+//    self..image = image;
+//    [cell setNeedsLayout];
+}
+
+- (IBAction)registerForEvent:(id)sender {
+}
+
+- (IBAction)getPromotion:(id)sender {
+}
 @end

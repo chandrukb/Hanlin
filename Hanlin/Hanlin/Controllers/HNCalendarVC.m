@@ -49,7 +49,6 @@
     
 //    // Create a min and max date for limit the calendar, optional
     [self createMinAndMaxDate];
-    
     [_calendarManager setMenuView:_calendarMenuView];
     [_calendarManager setContentView:_calendarContentView];
     [_calendarManager setDate:_todayDate];
@@ -106,7 +105,7 @@
     else{
         dayView.circleView.hidden = YES;
         dayView.dotView.backgroundColor = [UIColor redColor];
-        dayView.textLabel.textColor = [UIColor blackColor];
+        dayView.textLabel.textColor = [UIColor whiteColor];
     }
     
     if([self haveEventForDay:dayView.date]){
@@ -167,6 +166,16 @@
     //    NSLog(@"Previous page loaded");
 }
 
+    
+- (void)calendar:(JTCalendarManager *)calendar prepareMenuItemView:(UIView *)menuItemView date:(NSDate *)date
+    {
+        NSDateFormatter *dateFormatter;
+        dateFormatter = [NSDateFormatter new];
+        dateFormatter.dateFormat = @"dd MMMM yyyy";
+        [(UILabel *)menuItemView setTextColor:[UIColor whiteColor]];
+        [(UILabel *)menuItemView setText:[[dateFormatter stringFromDate:date] uppercaseString]];
+    }
+    
 #pragma mark - Fake data
 
 - (void)createMinAndMaxDate

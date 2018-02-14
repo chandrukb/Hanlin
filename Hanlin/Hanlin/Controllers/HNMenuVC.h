@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HNRoundedImageView.h"
 
 @interface HNMenuVC : UIViewController
+@property (weak, nonatomic) IBOutlet HNRoundedImageView *ivProfileImage;
 
 @end

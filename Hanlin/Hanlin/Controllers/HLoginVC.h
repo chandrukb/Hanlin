@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HNTextField.h"
 
 @interface HLoginVC : UIViewController
 {
@@ -14,17 +15,18 @@
 }
 //Username field properties
 @property (weak, nonatomic) IBOutlet UILabel *lblUsername;
-@property (weak, nonatomic) IBOutlet UITextField *tfUsername;
+@property (weak, nonatomic) IBOutlet HNTextField *tfUsername;
 @property (weak, nonatomic) IBOutlet UILabel *err_lblUsername;
 @property (weak, nonatomic) IBOutlet UIView *usernameBorderView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *usernameContainerHeightConstraint;
 
 //Password field properties
 @property (weak, nonatomic) IBOutlet UILabel *lblPassword;
-@property (weak, nonatomic) IBOutlet UITextField *tfPassword;
+@property (weak, nonatomic) IBOutlet HNTextField *tfPassword;
 @property (weak, nonatomic) IBOutlet UILabel *err_lblPassword;
 @property (weak, nonatomic) IBOutlet UIView *passwordBorderView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *passwordContainerHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 //Button outlets
 @property (weak, nonatomic) IBOutlet UIButton *btnLogin;
