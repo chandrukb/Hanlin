@@ -732,10 +732,10 @@
             </objects>
             <point key="canvasLocation" x="1110" y="-41.197183098591552"/>
         </scene>
-        <!--WebVC-->
+        <!--Notification Detail-->
         <scene sceneID="N3H-dw-vxg">
             <objects>
-                <viewController id="Gwf-O0-D8N" customClass="HNWebVC" sceneMemberID="viewController">
+                <viewController title="Notification Detail" id="Gwf-O0-D8N" customClass="HNWebVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZyY-s4-G6t"/>
                         <viewControllerLayoutGuide type="bottom" id="MZZ-BD-dGz"/>
@@ -745,7 +745,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Or-HF-jjt">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -757,6 +757,9 @@
                             <constraint firstItem="9Or-HF-jjt" firstAttribute="trailing" secondItem="8Gc-1g-CnJ" secondAttribute="trailing" id="fID-Ql-Y06"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="9Or-HF-jjt" id="L2k-1P-0DW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNi-5l-ZuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1101,11 +1104,11 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TQ0-tG-Xvp">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TQ0-tG-Xvp">
                                 <rect key="frame" x="0.0" y="104" width="320" height="464"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notificationCell" rowHeight="75" id="9pP-Dy-Qgk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="notificationCell" rowHeight="75" id="9pP-Dy-Qgk" customClass="HNNotificationsCell">
                                         <rect key="frame" x="0.0" y="28" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9pP-Dy-Qgk" id="X09-IC-dNu">
@@ -1187,6 +1190,10 @@
                                             </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="notificationTextLbl" destination="bjk-b0-Jhu" id="ZC9-lr-wwZ"/>
+                                            <segue destination="Gwf-O0-D8N" kind="show" identifier="HNWebViewSegue" id="MDX-vm-0zD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1207,6 +1214,9 @@
                             <constraint firstItem="TQ0-tG-Xvp" firstAttribute="leading" secondItem="e8D-Yu-ik8" secondAttribute="leading" id="yaV-JQ-drg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title=" " id="oYS-Pl-Fi3">
+                        <barButtonItem key="backBarButtonItem" title=" " id="dyr-qb-7xF"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="notificationTableView" destination="TQ0-tG-Xvp" id="hfY-UY-nNw"/>
                     </connections>

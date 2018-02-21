@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _webView.scalesPageToFit = YES;
+    _webView.frame=self.view.bounds;
+    
+    [_webView loadHTMLString:_htmlString baseURL:nil];
 }
 
 - (void)didReceiveMemoryWarning {

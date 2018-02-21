@@ -10,4 +10,7 @@
 
 @interface HNWebVC : UIViewController
 
+@property(nonatomic) NSString *htmlString;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 @end

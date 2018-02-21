@@ -7,16 +7,44 @@
 //
 
 #import "HNNotificationVC.h"
+#import "HNWebVC.h"
+#import "HNNotificationsCell.h"
+#import <ASIHTTPRequest/ASIHTTPRequest.h>
+#import <ASIHTTPRequest/ASIFormDataRequest.h>
+#import "HNConstants.h"
+#import "JSON.h"
+#import "HNUtility.h"
 
-@interface HNNotificationVC ()
+@interface HNNotificationVC (){
+    NSMutableArray *notificationsArray;
+}
 
 @end
 
 @implementation HNNotificationVC
 
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    //This need to be checked and refined while actual implementation
+    if([segue.identifier isEqualToString:@"HNWebViewSegue"])
+    {
+        HNWebVC *destinationVC = [segue destinationViewController];
+        
+            NSIndexPath *selectedIndex = [self.notificationTableView indexPathForSelectedRow];
+            destinationVC.htmlString = [[[notificationsArray objectAtIndex:selectedIndex.row] valueForKey:@"newsletter"] valueForKey:@"description"];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    notificationsArray = [[NSMutableArray alloc]init];
+    [self grabNotificationsInBackground];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -37,7 +65,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 3;
+    return notificationsArray.count;
 }
 
 
@@ -46,16 +74,45 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *MyIdentifier = @"notificationCell";
+    HNNotificationsCell *cell = (HNNotificationsCell *) [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    NSDictionary *notificationObj = [[NSDictionary alloc] init];
+    notificationObj = [[notificationsArray objectAtIndex:[indexPath row]] valueForKey:@"newsletter"];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-    
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                       reuseIdentifier:MyIdentifier];
-    }
+    cell.notificationTextLbl.text = [NSString stringWithFormat:@"%@ %@",[notificationObj valueForKey:@"title"],[notificationObj valueForKey:@"entrydate"]];
     //cell.textLabel.text = @"My Text";
     return cell;
+}
+
+
+#pragma mark- Service call
+- (void)grabNotificationsInBackground
+{
+    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_ALL_NOTIFICATIONS]];
+    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setCompletionBlock:^{
+        //handle the request
+        if (request.responseStatusCode == 400) {
+            NSLog(@"Invalid code");
+        } else if (request.responseStatusCode == 403) {
+            NSLog(@"Code already used");
+        } else if (request.responseStatusCode == 200) {
+            NSString *resString = [request responseString];
+            NSArray *responseArray = [resString JSONValue];
+            notificationsArray = [[NSMutableArray alloc] initWithArray:responseArray];
+            [self performSelectorOnMainThread:@selector(updateUIForNotifications) withObject:nil waitUntilDone:YES];
+        }
+        // Use when fetching binary data
+        NSData *responseData = [request responseData];
+    }];
+    [request setFailedBlock:^{
+        NSError *error = [request error];
+    }];
+    [request startAsynchronous];
+}
+
+-(void)updateUIForNotifications
+{
+    [self.notificationTableView reloadData];
 }
 
 /*
