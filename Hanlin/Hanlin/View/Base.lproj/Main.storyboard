@@ -2108,7 +2108,6 @@
                         <outlet property="lblDay" destination="vO8-4g-jo1" id="XWM-xJ-VQQ"/>
                         <outlet property="lblEventPromo" destination="ZxD-3V-kNp" id="lJE-al-Ya4"/>
                         <outlet property="lblEventPromoDate" destination="4zV-EH-hiX" id="6DO-Bp-FNz"/>
-                        <outlet property="lblMessage" destination="rGY-26-492" id="YRh-wy-9KR"/>
                         <outlet property="lblMonth" destination="XAk-Zm-a2c" id="SL1-GU-LIM"/>
                         <outlet property="lblPeopleCount" destination="e9I-uc-DoL" id="ThS-Ph-Mx4"/>
                         <outlet property="lblYear" destination="jTK-Uw-ekR" id="4WN-GL-KJC"/>

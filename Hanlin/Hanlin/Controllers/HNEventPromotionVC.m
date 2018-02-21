@@ -36,8 +36,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationItem.backBarButtonItem setTitle:@""];
-    self.title = @"";
+    [self.navigationItem.backBarButtonItem setTitle:@"Events"];
+    self.title = @"Events";
     self.lazyLoadController = [[CSLazyLoadController alloc] init];
     self.lazyLoadController.delegate = self;
     // Do any additional setup after loading the view.
@@ -130,14 +130,14 @@
 
 -(void)updateUIForEvents
 {
-    self.title = @"";
+    self.title = @"Events";
     self.ivEventsPromotions.image = [UIImage imageNamed:@"EventImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 40.0f;
     [self.eventPromoTableView reloadData];
 }
 
 -(void)updateUIForPromotions
 {
-    self.title = @"";
+    self.title = @"Promotions";
     self.ivEventsPromotions.image = [UIImage imageNamed:@"PromoImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 0.0f;
     [self.eventPromoTableView reloadData];
 }

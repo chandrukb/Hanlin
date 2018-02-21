@@ -78,13 +78,13 @@
 
 -(void)updateUIForFiles
 {
-    self.title = @"";
+    self.title = @"Files";
     self.ivFilesVideo.image = [UIImage imageNamed:@"EventImage.png"];
 }
 
 -(void)updateUIForVideos
 {
-    self.title = @"";
+    self.title = @"Video Links";
     self.ivFilesVideo.image = [UIImage imageNamed:@"PromoImage.png"];
 }
 
