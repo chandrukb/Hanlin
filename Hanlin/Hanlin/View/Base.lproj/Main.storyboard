@@ -301,7 +301,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NTP-B2-69Q">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfv-Mm-itH">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfv-Mm-itH" userLabel="Company Name View">
                                 <rect key="frame" x="31" y="230" width="258" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O78-9D-1Tg">
@@ -340,7 +340,7 @@
                                     <constraint firstAttribute="height" constant="56" id="HOK-n9-wfF"/>
                                 </constraints>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlK-F1-chD">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlK-F1-chD" userLabel="Address View">
                                 <rect key="frame" x="31" y="306" width="258" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I93-g6-Q2Q">
@@ -379,7 +379,7 @@
                                     <constraint firstAttribute="height" constant="56" id="geF-3t-DOj"/>
                                 </constraints>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDZ-8X-TMj">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDZ-8X-TMj" userLabel="Contact Number View">
                                 <rect key="frame" x="31" y="382" width="258" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGe-U7-5Kq">
@@ -495,6 +495,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="cfv-Mm-itH" secondAttribute="trailing" constant="15" id="tn3-oV-NFW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="mQw-ez-QlC" id="HFr-rG-5zK"/>
+                        <outlet property="companyNameTxtField" destination="Unw-Hv-O3a" id="iVo-wt-wYH"/>
+                        <outlet property="contactNumberTxtField" destination="F75-vg-xD0" id="Wvy-Fb-Tda"/>
+                        <outlet property="descriptionTextView" destination="SyA-FR-TW4" id="SM5-nC-Zoz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TjW-CY-hUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -523,6 +529,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                 <state key="normal" title="Update Profile"/>
+                                <connections>
+                                    <segue destination="jRB-Ki-3K8" kind="presentation" identifier="RegisterVCSegue" id="MAt-FP-F7D"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jL-VC-9Fc">
                                 <rect key="frame" x="0.0" y="401" width="320" height="62"/>
@@ -1638,7 +1647,9 @@
                         <outlet property="lblInvalidFullname" destination="xaO-01-b8T" id="qcw-QR-IEX"/>
                         <outlet property="lblInvalidPassword" destination="IDK-cd-MO6" id="umd-L4-pmS"/>
                         <outlet property="lblPassword" destination="PKl-xO-oYz" id="bo4-Ea-FdA"/>
+                        <outlet property="passwordView" destination="jmc-8T-ijx" id="tQc-q4-t90"/>
                         <outlet property="scrollView" destination="8wQ-jq-PCO" id="YA1-cp-fr8"/>
+                        <outlet property="signINContainerView" destination="TR3-bE-zRg" id="UNX-GP-WTI"/>
                         <outlet property="tfContactNumber" destination="gky-iT-JHz" id="uSw-77-hoT"/>
                         <outlet property="tfEmail" destination="VFm-qX-Nga" id="XkP-Rc-e1q"/>
                         <outlet property="tfFullname" destination="MPj-nM-Bse" id="1Me-bQ-4uD"/>
@@ -2719,6 +2730,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="myr-D9-UyY"/>
+        <segue reference="MAt-FP-F7D"/>
         <segue reference="YLY-tg-kve"/>
     </inferredMetricsTieBreakers>
 </document>

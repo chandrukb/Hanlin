@@ -9,6 +9,10 @@
 #import "HNContactUSVC.h"
 
 @interface HNContactUSVC ()
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet UITextField *companyNameTxtField;
+@property (weak, nonatomic) IBOutlet UILabel *addressTextField;
+@property (weak, nonatomic) IBOutlet UITextField *contactNumberTxtField;
 
 @end
 
@@ -17,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _descriptionTextView.text = @"";
 }
 
 - (void)didReceiveMemoryWarning {

@@ -36,6 +36,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSignUp;
 @property (weak, nonatomic) IBOutlet UIButton *btnSignIn;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *passwordView;
+@property (weak, nonatomic) IBOutlet UIView *signINContainerView;
 
 - (IBAction)onSignUpClicked:(id)sender;
 - (IBAction)onSignInClicked:(id)sender;
@@ -60,6 +62,12 @@
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:self.view.window];
+    
+    if (_isFromProfile) {
+        [_btnSignUp setTitle:@"Update" forState:UIControlStateNormal];
+        _passwordView.hidden = YES;
+        _signINContainerView.hidden = YES;
+    }
 }
 
 
@@ -155,7 +163,12 @@
 //                                             otherButtonTitles:nil, nil];
 //        [alert show];
 //    }
+    if (!_isFromProfile) {
     [self prepareRequest];
+    }
+    else{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 

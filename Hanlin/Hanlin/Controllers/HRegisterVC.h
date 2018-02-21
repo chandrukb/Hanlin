@@ -16,5 +16,5 @@
 }
 
 @property (retain, nonatomic) ASIHTTPRequest *request;
-
+@property (assign) BOOL isFromProfile;
 @end
