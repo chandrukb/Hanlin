@@ -10,6 +10,8 @@
 
 @interface HNEventPromoDetailVC : UITableViewController
 @property(nonatomic) NSString *selectedOption;
-@property(nonatomic) NSDictionary *event;
+//@property(nonatomic) NSDictionary *event;
 @property(nonatomic, strong) UIImage *imgEventPromo;
+@property(nonatomic) NSString *eventId;
+@property(nonatomic) NSString *promoId;
 @end

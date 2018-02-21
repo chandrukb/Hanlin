@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"";
+    [self.navigationItem.backBarButtonItem setTitle:@""];
     
     // Do any additional setup after loading the view.
     self.lazyLoadController = [[CSLazyLoadController alloc] init];
@@ -26,35 +28,24 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *imageUrl = [defaults valueForKey:HN_LOGIN_PROFILE_IMG];
+    NSLog(@"profile url: %@",[HN_ROOTURL stringByAppendingString:imageUrl]);
     UIImage *image = [self.lazyLoadController fastCacheImage:[CSURL URLWithString:[HN_ROOTURL stringByAppendingString:imageUrl]]]; // Find image in RAM memory.
+    self.ivProfileImage.image = image;
     // If there is not image download it
     if (!image) {
         NSIndexPath *indexpath = [[NSIndexPath alloc] init];
-        indexpath = [NSIndexPath indexPathForRow:0 inSection:1];
-        [self.lazyLoadController startDownload:[CSURL URLWithString:[HN_ROOTURL stringByAppendingString:imageUrl] parameters:nil method:CSHTTPMethodPOST]
+        indexpath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.lazyLoadController startDownload:[CSURL URLWithString:[HN_ROOTURL_APP stringByAppendingString:imageUrl] parameters:nil method:CSHTTPMethodPOST]
                                   forIndexPath:indexpath];
     }
+    self.lblFullName.text = [defaults valueForKey:HN_LOGIN_NAME];
+    self.lblEmail.text = [defaults valueForKey:HN_LOGIN_USERNAME];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//-(void)updateProfileImage
-//{
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    NSString *imageUrl = [defaults valueForKey:HN_LOGIN_PROFILE_IMG];
-//    if(imageUrl.length > 0)
-//    {
-//
-//    }
-//    else
-//    {
-//        //load temp image
-//    }
-//}
-
 
 /*
 #pragma mark - Navigation

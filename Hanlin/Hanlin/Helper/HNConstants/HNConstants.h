@@ -10,12 +10,17 @@
 #define HNConstants_h
 //root url and action urls
 #define HN_ROOTURL @"http://eventapp.platinumcode.net/"
+#define HN_ROOTURL_APP @"http://eventapp.platinumcode.net/app/"
 #define HN_REGISTER_USER @"app/userdetails.php"
 #define HN_LOGIN_USER @"app/login.php"
 #define HN_CHANGE_PASSWORD @"app/changePassword.php"
 #define HN_UPDATE_PASSWORD @"app/resetPassword.php"
 #define HN_DOCUMENT_DOWNLOAD @"app/Mobile/documentDownload.php"
+
 #define HN_GET_ALL_EVENTS @"app/events.php"
+#define HN_JOIN_EVENT @"app/joinedusers.php"
+
+#define HN_GET_ALL_PROMOTIONS @"app/promotion.php"
 
 //API Constants
 #define HN_REQ_NAME @"name"
@@ -34,5 +39,8 @@
 #define HN_LOGIN_PROFILE_IMG @"profileimage"
 
 //events response
+
+
+#define HN_APP_DELEGATE ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 
 #endif /* HNConstants_h */

@@ -47,5 +47,23 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//- (id)init
+//{
+//    self = [super init];
+//    if (self != nil)
+//    {
+//        //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+//        NSString *remoteHostName = @"www.google.com";
+//        self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
+//        [self.hostReachability startNotifier];
+//
+//        self.internetReachability = [Reachability reachabilityForInternetConnection];
+//        [self.internetReachability startNotifier];
+//
+//        self.wifiReachability = [Reachability reachabilityForLocalWiFi];
+//        [self.wifiReachability startNotifier];
+//    }
+//    return self;
+//}
 
 @end

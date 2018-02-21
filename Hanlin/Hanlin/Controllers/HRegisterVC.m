@@ -142,13 +142,20 @@
 }
 
 - (IBAction)onSignUpClicked:(id)sender {
-    //check internet connection
-    //validate the fields
-    //perform the request
-    if([self.tfFullname validate] & [self.tfEmail validate] & [self.tfContactNumber validate] & [self.tfPassword validate]){
-        //Success
-        [self prepareRequest];
-    }
+//    if([HNUtility checkIfInternetIsAvailable])
+//    {
+//        [self prepareRequest];
+//    }
+//    else
+//    {
+//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No Internet!!!"
+//                                                       message:@"Unable to connect to the internet."
+//                                                      delegate:nil
+//                                             cancelButtonTitle:@"OK"
+//                                             otherButtonTitles:nil, nil];
+//        [alert show];
+//    }
+    [self prepareRequest];
 }
 
 
@@ -184,12 +191,16 @@
     // Start request
     NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_REGISTER_USER]];
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-    [request setPostValue:self.tfFullname.text forKey:HN_REQ_NAME];
-    [request setPostValue:self.tfEmail.text forKey:HN_REQ_EMAIL];
-    [request setPostValue:self.tfContactNumber.text forKey:HN_REQ_PHONE];
-    [request setPostValue:self.tfPassword.text forKey:HN_REQ_PASSWORD];
+//    [request setPostValue:self.tfFullname.text forKey:HN_REQ_NAME];
+//    [request setPostValue:self.tfEmail.text forKey:HN_REQ_EMAIL];
+//    [request setPostValue:self.tfContactNumber.text forKey:HN_REQ_PHONE];
+//    [request setPostValue:self.tfPassword.text forKey:HN_REQ_PASSWORD];
+    [request setPostValue:@"Sabareesh Balachandran" forKey:HN_REQ_NAME];
+    [request setPostValue:@"sabareesh8@gmail.com" forKey:HN_REQ_EMAIL];
+    [request setPostValue:@"9638527413" forKey:HN_REQ_PHONE];
+    [request setPostValue:@"123456" forKey:HN_REQ_PASSWORD];
     //add the image data to the request
-    [request setData:UIImagePNGRepresentation(selectedImage) forKey:HN_REQ_USERFILE];
+    [request setData:UIImagePNGRepresentation(selectedImage) withFileName:@"png" andContentType:@"multipart/form-data" forKey:HN_REQ_USERFILE];
     [request setDelegate:self];
     [request startAsynchronous];
 }

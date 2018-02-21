@@ -11,5 +11,7 @@
 
 @interface HNMenuVC : UIViewController
 @property (weak, nonatomic) IBOutlet HNRoundedImageView *ivProfileImage;
+@property (weak, nonatomic) IBOutlet UILabel *lblFullName;
+@property (weak, nonatomic) IBOutlet UILabel *lblEmail;
 
 @end

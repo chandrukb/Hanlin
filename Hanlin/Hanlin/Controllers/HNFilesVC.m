@@ -22,9 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.title = @"Files";
-    [self.navigationItem.backBarButtonItem setTitle:@""];
     // Do any additional setup after loading the view.
     //mock data for events
     filesData = [[NSMutableDictionary alloc] init];
@@ -81,13 +78,13 @@
 
 -(void)updateUIForFiles
 {
-    //self.title = @"";
+    self.title = @"";
     self.ivFilesVideo.image = [UIImage imageNamed:@"EventImage.png"];
 }
 
 -(void)updateUIForVideos
 {
-    //self.title = @"";
+    self.title = @"";
     self.ivFilesVideo.image = [UIImage imageNamed:@"PromoImage.png"];
 }
 

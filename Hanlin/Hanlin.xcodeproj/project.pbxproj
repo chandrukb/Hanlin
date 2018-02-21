@@ -17,6 +17,8 @@
 		AC76AC272022574600DFD270 /* HNEventPromoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76AC262022574600DFD270 /* HNEventPromoDetailVC.m */; };
 		AC76AC2A20226D3400DFD270 /* HNRegisteredEventsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76AC2920226D3400DFD270 /* HNRegisteredEventsVC.m */; };
 		ACCD780E2023884A00091F19 /* HNCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCD780C2023884A00091F19 /* HNCalendarVC.m */; };
+		ACDBFB092039768700DF1610 /* HNSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACDBFB062039768600DF1610 /* HNSliderView.xib */; };
+		ACDBFB0A2039768700DF1610 /* HNSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDBFB072039768600DF1610 /* HNSliderView.m */; };
 		ACEA4BAE202F3CE10080FBA9 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEA4BA3202F3CE10080FBA9 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ACEA4BAF202F3CE10080FBA9 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEA4BA5202F3CE10080FBA9 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ACEA4BB0202F3CE10080FBA9 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEA4BA7202F3CE10080FBA9 /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -69,6 +71,9 @@
 		AC76AC2920226D3400DFD270 /* HNRegisteredEventsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNRegisteredEventsVC.m; sourceTree = "<group>"; };
 		ACCD780B2023884900091F19 /* HNCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNCalendarVC.h; sourceTree = "<group>"; };
 		ACCD780C2023884A00091F19 /* HNCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNCalendarVC.m; sourceTree = "<group>"; };
+		ACDBFB062039768600DF1610 /* HNSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HNSliderView.xib; sourceTree = "<group>"; };
+		ACDBFB072039768600DF1610 /* HNSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNSliderView.m; sourceTree = "<group>"; };
+		ACDBFB082039768600DF1610 /* HNSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNSliderView.h; sourceTree = "<group>"; };
 		ACEA4BA1202F3CE10080FBA9 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		ACEA4BA2202F3CE10080FBA9 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		ACEA4BA3202F3CE10080FBA9 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -207,6 +212,9 @@
 		CCAEC5B1201BC9A40053A70A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ACDBFB082039768600DF1610 /* HNSliderView.h */,
+				ACDBFB072039768600DF1610 /* HNSliderView.m */,
+				ACDBFB062039768600DF1610 /* HNSliderView.xib */,
 				ACCD780B2023884900091F19 /* HNCalendarVC.h */,
 				ACCD780C2023884A00091F19 /* HNCalendarVC.m */,
 				CCAEC5B2201BC9A40053A70A /* HLoginVC.h */,
@@ -377,6 +385,7 @@
 				CCAEC5E2201BC9A40053A70A /* Montserrat-ExtraBold.otf in Resources */,
 				CCAEC5E7201BC9A40053A70A /* Montserrat-UltraLight.otf in Resources */,
 				CCAEC5E1201BC9A40053A70A /* Montserrat-Bold.otf in Resources */,
+				ACDBFB092039768700DF1610 /* HNSliderView.xib in Resources */,
 				CCAEC5E3201BC9A40053A70A /* Montserrat-Hairline.otf in Resources */,
 				CCAEC5E0201BC9A40053A70A /* Montserrat-Black.otf in Resources */,
 				CCAEC5D7201BC9A40053A70A /* HanlinAssets.xcassets in Resources */,
@@ -472,6 +481,7 @@
 				ACEA4BB1202F3CE10080FBA9 /* SBJsonBase.m in Sources */,
 				CCAEC5DF201BC9A40053A70A /* AppDelegate.m in Sources */,
 				ACEA4BB0202F3CE10080FBA9 /* SBJSON.m in Sources */,
+				ACDBFB0A2039768700DF1610 /* HNSliderView.m in Sources */,
 				ACEA4BAE202F3CE10080FBA9 /* NSObject+SBJSON.m in Sources */,
 				AC76AC272022574600DFD270 /* HNEventPromoDetailVC.m in Sources */,
 				CCAEC5D9201BC9A40053A70A /* HNContactUSVC.m in Sources */,
@@ -540,7 +550,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: PLATINUM CODE SDN. BHD. (E442Y28P53)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -560,7 +570,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -598,7 +608,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: PLATINUM CODE SDN. BHD. (E442Y28P53)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -612,7 +622,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -630,7 +640,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = E442Y28P53;
 				INFOPLIST_FILE = Hanlin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pcode.eventapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -649,7 +659,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = E442Y28P53;
 				INFOPLIST_FILE = Hanlin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pcode.eventapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

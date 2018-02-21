@@ -16,8 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.navigationItem.backBarButtonItem setTitle:@""];
     // Do any additional setup after loading the view.
 }
 

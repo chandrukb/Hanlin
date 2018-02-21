@@ -7,6 +7,9 @@
 //
 
 #import "HNUtility.h"
+#import "Reachability.h"
+#import "AppDelegate.h"
+#import "HNConstants.h"
 
 @implementation HNUtility
 
@@ -54,5 +57,22 @@
                                                        range:NSMakeRange(0, [emailAddress length])];
     return (regExMatches == 0) ? NO : YES ;
 }
+
+
+//+(BOOL)checkIfInternetIsAvailable
+//{
+//    BOOL reachable = NO;
+//    NetworkStatus netStatus = [HN_APP_DELEGATE.internetReachability currentReachabilityStatus];
+//    if(netStatus == ReachableViaWWAN || netStatus == ReachableViaWiFi)
+//    {
+//        reachable = YES;
+//    }
+//    else
+//    {
+//        reachable = NO;
+//    }
+//    return reachable;
+//}
+
 
 @end

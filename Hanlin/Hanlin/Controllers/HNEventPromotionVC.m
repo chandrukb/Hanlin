@@ -10,9 +10,11 @@
 #import "HNEventPromotionCell.h"
 #import "HNEventPromoDetailVC.h"
 #import <ASIHTTPRequest/ASIHTTPRequest.h>
+#import <ASIHTTPRequest/ASIFormDataRequest.h>
 #import <CSLazyLoadController/CSLazyLoadController.h>
 #import "HNConstants.h"
 #import "JSON.h"
+#import "HNUtility.h"
 
 @interface HNEventPromotionVC ()<UITableViewDelegate, UITableViewDataSource, CSLazyLoadControllerDelegate>
 {
@@ -34,19 +36,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Events";
     [self.navigationItem.backBarButtonItem setTitle:@""];
+    self.title = @"";
+    self.lazyLoadController = [[CSLazyLoadController alloc] init];
+    self.lazyLoadController.delegate = self;
     // Do any additional setup after loading the view.
     [self.btnSegmentControl setSelectedSegmentIndex:0];
     [self segmentButtonValueChanged:self.btnSegmentControl];
-    //mock data for promos
-    promoData = [[NSMutableDictionary alloc] init];
-    [promoData setValue:@"profile_image.png" forKey:@"promo_img"];
-    [promoData setValue:@"Buy One Free One Buffet Dinner" forKey:@"promo_title"];
-    [promoData setValue:@"10 February 2018" forKey:@"promo_date"];
-    promos = [[NSMutableArray alloc] init];
-    [promos addObject:promoData];
-    [promos addObject:promoData];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -75,13 +71,12 @@
     {
         destinationVC.selectedOption = @"events";
         NSIndexPath *selectedIndex = [self.eventPromoTableView indexPathForSelectedRow];
-        destinationVC.event = [[events objectAtIndex:selectedIndex.row] valueForKey:@"events"];
-        NSString *stringUrl = [HN_ROOTURL stringByAppendingString:[[[events objectAtIndex:selectedIndex.row] valueForKey:@"events"] valueForKey:@"image"]];
-        UIImage *image = [self.lazyLoadController fastCacheImage:[CSURL URLWithString:stringUrl]];
-        destinationVC.imgEventPromo = image;
+        destinationVC.eventId = [[[events objectAtIndex:selectedIndex.row] valueForKey:@"events"] valueForKey:@"eventid"];
     }
     else{
         destinationVC.selectedOption = @"promos";
+        NSIndexPath *selectedIndex = [self.eventPromoTableView indexPathForSelectedRow];
+        destinationVC.promoId = [[[promos objectAtIndex:selectedIndex.row] valueForKey:@"promotions"] valueForKey:@"promotionid"];
     }
     }
 }
@@ -92,29 +87,59 @@
     switch (selectedIndex) {
         case 0://selected events
         {
+//            if([HNUtility checkIfInternetIsAvailable])
+//            {
+//                [self grabEventsInBackground];
+//            }
+//            else
+//            {
+//                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No Internet!!!"
+//                                                               message:@"Unable to connect to the internet."
+//                                                              delegate:nil
+//                                                     cancelButtonTitle:@"OK"
+//                                                     otherButtonTitles:nil, nil];
+//                [alert show];
+//            }
             [self grabEventsInBackground];
             [self updateUIForEvents];
         }
             break;
         case 1://selected promotions
         {
+//            if([HNUtility checkIfInternetIsAvailable])
+//            {
+//                [self grabPromotionsInBackground];
+//            }
+//            else
+//            {
+//                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No Internet!!!"
+//                                                               message:@"Unable to connect to the internet."
+//                                                              delegate:nil
+//                                                     cancelButtonTitle:@"OK"
+//                                                     otherButtonTitles:nil, nil];
+//                [alert show];
+//            }
+            [self grabPromotionsInBackground];
             [self updateUIForPromotions];
         }
             break;
         default:
             break;
     }
-    [self.eventPromoTableView reloadData];
 }
 
 -(void)updateUIForEvents
 {
+    self.title = @"";
     self.ivEventsPromotions.image = [UIImage imageNamed:@"EventImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 40.0f;
+    [self.eventPromoTableView reloadData];
 }
 
 -(void)updateUIForPromotions
 {
+    self.title = @"";
     self.ivEventsPromotions.image = [UIImage imageNamed:@"PromoImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 0.0f;
+    [self.eventPromoTableView reloadData];
 }
 
 #pragma mark- TableView Delegate and Datasource
@@ -123,6 +148,7 @@
     NSInteger rowCount = 0;
     if(self.btnSegmentControl.selectedSegmentIndex == 0)
     {
+       
         rowCount = [events count];
     }
     else
@@ -160,12 +186,22 @@
     }
     else
     {
-        cell.ivEventPromo.image = [UIImage imageNamed:[[promos objectAtIndex:[indexPath row]] valueForKey:@"promo_img"]];
-        cell.lblTitle.text = [[promos objectAtIndex:[indexPath row]] valueForKey:@"promo_title"];
-        cell.lblDate.text = [[promos objectAtIndex:[indexPath row]] valueForKey:@"promo_date"];
+        NSDictionary *promoObj = [[NSDictionary alloc] init];
+        promoObj = [[promos objectAtIndex:[indexPath row]] valueForKey:@"promotions"];
+        
+        cell.lblTitle.text = [promoObj valueForKey:@"name"];
+        cell.lblDate.text = [promoObj valueForKey:@"startdate"];
+        
+        NSString *stringUrl = [HN_ROOTURL stringByAppendingString:[promoObj valueForKey:@"image"]];
+        
+        UIImage *image = [self.lazyLoadController fastCacheImage:[CSURL URLWithString:stringUrl]];
+        cell.ivEventPromo.image = image;
+        if (!image && !tableView.dragging) {
+            [self.lazyLoadController startDownload:[CSURL URLWithString:stringUrl parameters:nil method:CSHTTPMethodPOST]
+                                      forIndexPath:indexPath];
+        }
     }
     return cell;
-
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -190,6 +226,7 @@
             NSString *resString = [request responseString];
             NSArray *responseArray = [resString JSONValue];
             events = [[NSMutableArray alloc] initWithArray:responseArray];
+            [self performSelectorOnMainThread:@selector(updateUIForEvents) withObject:nil waitUntilDone:YES];
         }
         // Use when fetching binary data
         NSData *responseData = [request responseData];
@@ -200,12 +237,46 @@
     [request startAsynchronous];
 }
 
+
+- (void)grabPromotionsInBackground
+{
+    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_ALL_PROMOTIONS]];
+    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setCompletionBlock:^{
+        //        // Use when fetching text data
+        //        NSString *responseString = [request responseString];
+        //handle the request
+        if (request.responseStatusCode == 400) {
+            NSLog(@"Invalid code");
+        } else if (request.responseStatusCode == 403) {
+            NSLog(@"Code already used");
+        } else if (request.responseStatusCode == 200) {
+            NSString *resString = [request responseString];
+            NSArray *responseArray = [resString JSONValue];
+            promos = [[NSMutableArray alloc] initWithArray:responseArray];
+        }
+        [self performSelectorOnMainThread:@selector(updateUIForPromotions) withObject:nil waitUntilDone:YES];
+    }];
+    [request setFailedBlock:^{
+        NSError *error = [request error];
+    }];
+    [request startAsynchronous];
+}
+#pragma mark- end service call
+
 #pragma mark - CSLazyLoadControllerDelegate
 
 - (CSURL *)lazyLoadController:(CSLazyLoadController *)loadController
        urlForImageAtIndexPath:(NSIndexPath *)indexPath {
-    
-    NSString *stringUrl = [[[events objectAtIndex:[indexPath row]] valueForKey:@"events"] valueForKey:@"image"];
+    NSString *stringUrl = @"";
+    if(self.btnSegmentControl.selectedSegmentIndex == 0)
+    {
+        stringUrl = [[[events objectAtIndex:[indexPath row]] valueForKey:@"events"] valueForKey:@"image"];
+    }
+    else
+    {
+        stringUrl = [[[promos objectAtIndex:[indexPath row]] valueForKey:@"promotions"] valueForKey:@"image"];
+    }
     return [CSURL URLWithString:stringUrl];
 }
 

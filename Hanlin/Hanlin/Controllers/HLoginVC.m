@@ -11,6 +11,7 @@
 #import <ASIHTTPRequest/ASIHTTPRequest.h>
 #import <ASIHTTPRequest/ASIFormDataRequest.h>
 #import "JSON.h"
+#import "HNUtility.h"
 
 @interface HLoginVC ()<UITextFieldDelegate>
 {
@@ -59,10 +60,23 @@
 
 
 - (IBAction)onLoginClicked:(id)sender {
-    if([self.tfUsername validate] & [self.tfPassword validate]){
-        //Success
-        [self prepareRequest];
-    }
+//    if([self.tfUsername validate] & [self.tfPassword validate]){
+//        //Success
+//        if([HNUtility checkIfInternetIsAvailable])
+//        {
+//            [self prepareRequest];
+//        }
+//        else
+//        {
+//            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No Internet!!!"
+//                                                           message:@"Unable to connect to the internet."
+//                                                          delegate:nil
+//                                                 cancelButtonTitle:@"OK"
+//                                                 otherButtonTitles:nil, nil];
+//            [alert show];
+//        }
+//    }
+    [self prepareRequest];
 }
 
 - (IBAction)onRegisterClicked:(id)sender {
