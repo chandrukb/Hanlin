@@ -207,6 +207,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     selectedIndex = indexPath.row;
+    [self performSegueWithIdentifier:@"EventPromoDetailSegue" sender:nil];
 }
 
 #pragma mark- Service call
@@ -289,4 +290,10 @@
     cell.ivEventPromo.image = image;
     [cell setNeedsLayout];
 }
+
+- (IBAction)showRegisteredEvents:(id)sender {
+    NSLog(@"registered events clicked");
+//    [self performSegueWithIdentifier:@"RegisteredEventsSegue" sender:nil];
+}
+
 @end

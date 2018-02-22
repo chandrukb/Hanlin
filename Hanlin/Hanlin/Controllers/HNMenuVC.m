@@ -43,7 +43,7 @@
     if (!image) {
         NSIndexPath *indexpath = [[NSIndexPath alloc] init];
         indexpath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [self.lazyLoadController startDownload:[CSURL URLWithString:[HN_ROOTURL_APP stringByAppendingString:imageUrl] parameters:nil method:CSHTTPMethodPOST]
+        [self.lazyLoadController startDownload:[CSURL URLWithString:[HN_ROOTURL stringByAppendingString:imageUrl] parameters:nil method:CSHTTPMethodPOST]
                                   forIndexPath:indexpath];
     }
     self.lblFullName.text = [defaults valueForKey:HN_LOGIN_NAME];

@@ -127,7 +127,9 @@
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setUseKeychainPersistence:YES];
     [request setPostValue:self.tfUsername.text forKey:HN_USERNAME];
-    [request setPostValue:self.tfPassword.text forKey:HN_REQ_PASSWORD];    
+    [request setPostValue:self.tfPassword.text forKey:HN_REQ_PASSWORD];
+//    [request setPostValue:@"sabareesh8@gmail.com" forKey:HN_USERNAME];
+//    [request setPostValue:@"123456" forKey:HN_REQ_PASSWORD];
     [request setDelegate:self];
     [request startAsynchronous];
 }

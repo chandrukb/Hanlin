@@ -1,9 +1,9 @@
 //
-//  SBSliderView.m
+//  HNSliderView.m
 //  ImageSlider
 //
-//  Created by Soumalya Banerjee on 22/07/15.
-//  Copyright (c) 2015 Soumalya Banerjee. All rights reserved.
+//  Created by BALACHANDRAN K on 26/01/18.
+//  Copyright © 2018 Balachandran Kaliyamoorthy. All rights reserved.
 //
 
 #import "HNSliderView.h"
