@@ -163,12 +163,14 @@
 //                                             otherButtonTitles:nil, nil];
 //        [alert show];
 //    }
-    if (!_isFromProfile) {
+    
     [self prepareRequest];
-    }
-    else{
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
+//    if (!_isFromProfile) {
+//    [self prepareRequest];
+//    }
+//    else{
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    }
 }
 
 
@@ -202,16 +204,27 @@
 {
     [ASIHTTPRequest setShouldUpdateNetworkActivityIndicator:NO];
     // Start request
-    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_REGISTER_USER]];
+    NSURL *url = _isFromProfile ? [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_UPDATE_USER]]
+                                : [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_REGISTER_USER]];
+    
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
 //    [request setPostValue:self.tfFullname.text forKey:HN_REQ_NAME];
 //    [request setPostValue:self.tfEmail.text forKey:HN_REQ_EMAIL];
 //    [request setPostValue:self.tfContactNumber.text forKey:HN_REQ_PHONE];
 //    [request setPostValue:self.tfPassword.text forKey:HN_REQ_PASSWORD];
-    [request setPostValue:@"Sabareesh Balachandran" forKey:HN_REQ_NAME];
-    [request setPostValue:@"sabareesh8@gmail.com" forKey:HN_REQ_EMAIL];
-    [request setPostValue:@"9638527413" forKey:HN_REQ_PHONE];
-    [request setPostValue:@"123456" forKey:HN_REQ_PASSWORD];
+    if (_isFromProfile) {
+        [request setPostValue:@"Sabareesh Balachandran" forKey:HN_REQ_NAME];
+        [request setPostValue:@"sabareesh8@gmail.com" forKey:HN_REQ_EMAIL];
+        [request setPostValue:@"9638527410" forKey:HN_REQ_PHONE];
+        [request setPostValue:@"33" forKey:HN_REQ_USERID];
+    }
+    else{
+        [request setPostValue:@"Sabareesh Balachandran" forKey:HN_REQ_NAME];
+        [request setPostValue:@"sabareesh8@gmail.com" forKey:HN_REQ_EMAIL];
+        [request setPostValue:@"9638527413" forKey:HN_REQ_PHONE];
+        [request setPostValue:@"123456" forKey:HN_REQ_PASSWORD];
+    }
+   
     //add the image data to the request
     [request setData:UIImagePNGRepresentation(selectedImage) withFileName:@"png" andContentType:@"multipart/form-data" forKey:HN_REQ_USERFILE];
     [request setDelegate:self];

@@ -19,7 +19,16 @@
     _webView.scalesPageToFit = YES;
     _webView.frame=self.view.bounds;
     
-    [_webView loadHTMLString:_htmlString baseURL:nil];
+    if (_isFromAttachments) {
+        _webView.dataDetectorTypes = UIDataDetectorTypeAll;
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_htmlString]]];
+        self.title = @"Attachment Detail";
+    }
+    else{
+        [_webView loadHTMLString:_htmlString baseURL:nil];
+        self.title = @"Notification Detail";
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -12,5 +12,6 @@
 
 @property(nonatomic) NSString *htmlString;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (assign) BOOL isFromAttachments;
 
 @end

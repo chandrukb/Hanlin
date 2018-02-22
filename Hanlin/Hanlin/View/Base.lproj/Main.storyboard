@@ -431,6 +431,9 @@
                                         <real key="value" value="22.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendBtnAction:" destination="dZa-VW-v0s" eventType="touchUpInside" id="uoZ-XJ-ogN"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KK2-bi-QVm" customClass="HNShadowView">
                                 <rect key="frame" x="0.0" y="74" width="320" height="126"/>
@@ -1074,7 +1077,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lql-V2-nP9">
-                        <barButtonItem key="backBarButtonItem" title=" " id="Jg9-cU-4ft"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="Jg9-cU-4ft">
+                            <color key="tintColor" red="0.2156862745" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                         <barButtonItem key="leftBarButtonItem" title=" " id="eny-hR-DqA"/>
                         <barButtonItem key="rightBarButtonItem" image="Signout" style="plain" id="HXE-vl-Lg8">
                             <color key="tintColor" red="0.27370542287826538" green="0.41112762689590454" blue="0.64740955829620361" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2587,7 +2592,7 @@
                                 <rect key="frame" x="0.0" y="314" width="320" height="254"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContentsCellIdentifier" id="blr-HN-dTc" customClass="HNContentsTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContentsCellIdentifier" id="blr-HN-dTc" customClass="HNContentsTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="blr-HN-dTc" id="2m1-Ew-ATd">
@@ -2666,6 +2671,7 @@
                                             <outlet property="btnAction" destination="t2F-VP-IIj" id="wUt-zB-uu7"/>
                                             <outlet property="lblDate" destination="lNX-6f-5rh" id="2Dx-sI-Yr6"/>
                                             <outlet property="lblTitle" destination="kJY-Ng-cKk" id="vol-wo-D5M"/>
+                                            <segue destination="Gwf-O0-D8N" kind="show" identifier="AttachmentsWebView" id="E94-zp-tMg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2694,6 +2700,11 @@
                             <constraint firstItem="2D1-K2-ERZ" firstAttribute="leading" secondItem="EMa-bW-2gY" secondAttribute="leading" id="zYR-Hw-zs7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Files" id="osf-z2-CFZ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="NhK-c8-yhM">
+                            <color key="tintColor" red="0.2156862745" green="0.3294117647" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnSegmentControl" destination="BDM-5h-beL" id="f0e-Ik-lqt"/>
                         <outlet property="contentTableview" destination="abq-YY-QX6" id="eSD-ti-aWj"/>
@@ -2731,6 +2742,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="myr-D9-UyY"/>
         <segue reference="MAt-FP-F7D"/>
-        <segue reference="YLY-tg-kve"/>
+        <segue reference="f92-yH-Aaa"/>
+        <segue reference="E94-zp-tMg"/>
     </inferredMetricsTieBreakers>
 </document>
