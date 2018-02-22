@@ -18,6 +18,7 @@
 #define HN_UPDATE_PASSWORD @"app/resetPassword.php"
 #define HN_DOCUMENT_DOWNLOAD @"app/Mobile/documentDownload.php"
 
+#define HN_PUSH_NOTIFICATION @"app/tokens.php"
 #define HN_CONTACTUS @"app/contact.php"
 #define HN_GET_ALL_EVENTS @"app/events.php"
 #define HN_JOIN_EVENT @"app/joinedusers.php"
