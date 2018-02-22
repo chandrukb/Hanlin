@@ -40,8 +40,8 @@
                                                object:self.view.window];
     
     // For testing
-    _tfUsername.text= @"palani@gmail.com";
-    _tfPassword.text = @"123456";
+//    _tfUsername.text= @"palani@gmail.com";
+//    _tfPassword.text = @"123456";
 }
 
 - (void)didReceiveMemoryWarning {
