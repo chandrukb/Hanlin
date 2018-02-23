@@ -1793,7 +1793,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="89 peoples registered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9I-uc-DoL">
-                                                    <rect key="frame" x="202" y="17" width="110" height="21"/>
+                                                    <rect key="frame" x="153" y="17" width="159" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="9YA-0M-yeG"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="SWO-Go-RcR"/>
@@ -1802,95 +1802,21 @@
                                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="PxX-fA-Lef" customClass="HNRoundedImageView" customModule="Hanlin" customModuleProvider="target">
-                                                    <rect key="frame" x="11" y="10" width="35" height="35"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="QhB-rH-Ann"/>
-                                                        <constraint firstAttribute="width" constant="35" id="fvF-P6-cD5"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="17.5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="NsE-v1-nvv" customClass="HNRoundedImageView" customModule="Hanlin" customModuleProvider="target">
-                                                    <rect key="frame" x="48" y="9.5" width="35" height="35"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="BTO-L1-lFf"/>
-                                                        <constraint firstAttribute="height" constant="35" id="gGs-y8-y43"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="17.5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="5hE-bj-HE4" customClass="HNRoundedImageView" customModule="Hanlin" customModuleProvider="target">
-                                                    <rect key="frame" x="85" y="9.5" width="35" height="35"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="5Jd-10-9Na"/>
-                                                        <constraint firstAttribute="height" constant="35" id="SkL-7T-iiR"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="17.5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="mBj-Pj-Clm" customClass="HNRoundedImageView" customModule="Hanlin" customModuleProvider="target">
-                                                    <rect key="frame" x="122" y="9.5" width="35" height="35"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="4ds-fO-gpJ"/>
-                                                        <constraint firstAttribute="width" constant="35" id="lhy-QP-c4L"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="17.5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="qTO-77-R5T" customClass="HNRoundedImageView" customModule="Hanlin" customModuleProvider="target">
-                                                    <rect key="frame" x="159" y="9.5" width="35" height="35"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="Rz7-FY-XL7"/>
-                                                        <constraint firstAttribute="height" constant="35" id="cRK-3X-Wlg"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="17.5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWt-1b-cyk">
+                                                    <rect key="frame" x="5" y="5" width="140" height="45"/>
+                                                </scrollView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="WU5-Es-F9d" firstAttribute="leading" secondItem="Hzr-XJ-RSC" secondAttribute="leading" id="1O2-gO-C6s"/>
-                                                <constraint firstItem="NsE-v1-nvv" firstAttribute="centerY" secondItem="Hzr-XJ-RSC" secondAttribute="centerY" constant="-0.5" id="38y-OG-W7b"/>
-                                                <constraint firstItem="5hE-bj-HE4" firstAttribute="leading" secondItem="NsE-v1-nvv" secondAttribute="trailing" constant="2" id="5Za-fX-HXK"/>
-                                                <constraint firstItem="qTO-77-R5T" firstAttribute="leading" secondItem="mBj-Pj-Clm" secondAttribute="trailing" constant="2" id="6UL-XG-zZo"/>
-                                                <constraint firstItem="e9I-uc-DoL" firstAttribute="leading" secondItem="qTO-77-R5T" secondAttribute="trailing" constant="8" id="9F0-eK-LZq"/>
-                                                <constraint firstItem="NsE-v1-nvv" firstAttribute="leading" secondItem="PxX-fA-Lef" secondAttribute="trailing" constant="2" id="CUw-Iz-QE3"/>
-                                                <constraint firstItem="5hE-bj-HE4" firstAttribute="centerY" secondItem="Hzr-XJ-RSC" secondAttribute="centerY" constant="-0.5" id="ELv-g5-9Yp"/>
-                                                <constraint firstItem="PxX-fA-Lef" firstAttribute="leading" secondItem="Hzr-XJ-RSC" secondAttribute="leadingMargin" constant="-5" id="EiM-Yz-yPg"/>
+                                                <constraint firstAttribute="bottom" secondItem="JWt-1b-cyk" secondAttribute="bottom" constant="5" id="Cw2-b3-P7Y"/>
+                                                <constraint firstItem="e9I-uc-DoL" firstAttribute="leading" secondItem="JWt-1b-cyk" secondAttribute="trailing" constant="8" id="P1l-qX-bhE"/>
+                                                <constraint firstItem="JWt-1b-cyk" firstAttribute="leading" secondItem="Hzr-XJ-RSC" secondAttribute="leading" constant="5" id="Prx-sS-Rhj"/>
+                                                <constraint firstItem="JWt-1b-cyk" firstAttribute="top" secondItem="Hzr-XJ-RSC" secondAttribute="top" constant="5" id="TFW-rq-D5p"/>
                                                 <constraint firstAttribute="trailing" secondItem="e9I-uc-DoL" secondAttribute="trailing" constant="8" id="VL4-dX-Z9f"/>
                                                 <constraint firstAttribute="trailing" secondItem="WU5-Es-F9d" secondAttribute="trailing" id="d1i-Pf-cCF"/>
-                                                <constraint firstItem="mBj-Pj-Clm" firstAttribute="centerY" secondItem="Hzr-XJ-RSC" secondAttribute="centerY" constant="-0.5" id="f33-MM-xUH"/>
-                                                <constraint firstItem="mBj-Pj-Clm" firstAttribute="leading" secondItem="5hE-bj-HE4" secondAttribute="trailing" constant="2" id="iJF-JC-aNO"/>
                                                 <constraint firstItem="e9I-uc-DoL" firstAttribute="centerY" secondItem="Hzr-XJ-RSC" secondAttribute="centerY" id="iOm-F1-DqT"/>
-                                                <constraint firstItem="PxX-fA-Lef" firstAttribute="centerY" secondItem="Hzr-XJ-RSC" secondAttribute="centerY" id="lrK-YF-VAw"/>
                                                 <constraint firstItem="WU5-Es-F9d" firstAttribute="centerY" secondItem="Hzr-XJ-RSC" secondAttribute="centerY" id="mfK-oq-USG"/>
-                                                <constraint firstItem="qTO-77-R5T" firstAttribute="centerY" secondItem="Hzr-XJ-RSC" secondAttribute="centerY" constant="-0.5" id="vNj-43-2UQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2139,12 +2065,13 @@
                         <outlet property="lblMonth" destination="XAk-Zm-a2c" id="SL1-GU-LIM"/>
                         <outlet property="lblPeopleCount" destination="e9I-uc-DoL" id="ThS-Ph-Mx4"/>
                         <outlet property="lblYear" destination="jTK-Uw-ekR" id="4WN-GL-KJC"/>
+                        <outlet property="peopleCarousel" destination="JWt-1b-cyk" id="5jT-eY-JIc"/>
                         <outlet property="webView" destination="ppF-Ka-Moa" id="3BR-5f-lMC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Iv-wP-lsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="-1703.2983508245879"/>
+            <point key="canvasLocation" x="1098.75" y="-1703.8732394366198"/>
         </scene>
         <!--Events-->
         <scene sceneID="lTI-ch-cn2">
