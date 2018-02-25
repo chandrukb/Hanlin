@@ -38,10 +38,12 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *passwordView;
 @property (weak, nonatomic) IBOutlet UIView *signINContainerView;
+@property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
 
 - (IBAction)onSignUpClicked:(id)sender;
 - (IBAction)onSignInClicked:(id)sender;
 - (IBAction)addProfileImageTapped:(id)sender;
+- (IBAction)canceBtnAction:(id)sender;
 
 @end
 
@@ -67,6 +69,7 @@
         [_btnSignUp setTitle:@"Update" forState:UIControlStateNormal];
         _passwordView.hidden = YES;
         _signINContainerView.hidden = YES;
+        _cancelBtn.hidden = NO;
     }
 }
 
@@ -147,6 +150,11 @@
     [alert addAction:cameraAction];
     [alert addAction:cancel];
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (IBAction)canceBtnAction:(id)sender {
+    
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (IBAction)onSignUpClicked:(id)sender {

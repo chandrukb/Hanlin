@@ -210,6 +210,12 @@
     [self performSegueWithIdentifier:@"EventPromoDetailSegue" sender:nil];
 }
 
+#pragma mark- Button Actions
+- (IBAction)showRegisteredEvents:(id)sender {
+    NSLog(@"registered events clicked");
+//        [self performSegueWithIdentifier:@"RegisteredEventsSegue" sender:nil];
+}
+
 #pragma mark- Service call
 - (void)grabEventsInBackground
 {
@@ -289,11 +295,6 @@
     HNEventPromotionCell *cell = [self.eventPromoTableView cellForRowAtIndexPath:indexPath];
     cell.ivEventPromo.image = image;
     [cell setNeedsLayout];
-}
-
-- (IBAction)showRegisteredEvents:(id)sender {
-    NSLog(@"registered events clicked");
-//    [self performSegueWithIdentifier:@"RegisteredEventsSegue" sender:nil];
 }
 
 @end

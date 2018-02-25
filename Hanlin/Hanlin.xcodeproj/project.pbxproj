@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1848942043316C00EA70C4 /* HNChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1848932043316C00EA70C4 /* HNChangePasswordVC.m */; };
 		2CA488E0203DEAAD0044796D /* HNNotificationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA488DF203DEAAD0044796D /* HNNotificationsCell.m */; };
 		2CF852A1201C60A300D1F01F /* HNNotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF852A0201C60A300D1F01F /* HNNotificationVC.m */; };
 		644B69482984654CD5B427B2 /* libPods-Hanlin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E09A84CB086C314C671B8824 /* libPods-Hanlin.a */; };
@@ -53,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		2BF244257D784FFCE4EC0304 /* Pods-Hanlin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hanlin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hanlin/Pods-Hanlin.debug.xcconfig"; sourceTree = "<group>"; };
+		2C1848922043316C00EA70C4 /* HNChangePasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNChangePasswordVC.h; sourceTree = "<group>"; };
+		2C1848932043316C00EA70C4 /* HNChangePasswordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNChangePasswordVC.m; sourceTree = "<group>"; };
 		2C51756C203F44D6005B679B /* Hanlin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hanlin.entitlements; sourceTree = "<group>"; };
 		2CA488DE203DEAAD0044796D /* HNNotificationsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HNNotificationsCell.h; path = Hanlin/View/HNNotificationsCell.h; sourceTree = SOURCE_ROOT; };
 		2CA488DF203DEAAD0044796D /* HNNotificationsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HNNotificationsCell.m; path = Hanlin/View/HNNotificationsCell.m; sourceTree = SOURCE_ROOT; };
@@ -230,6 +233,8 @@
 				CCAEC5B7201BC9A40053A70A /* HNProfileVC.m */,
 				CCAEC5BA201BC9A40053A70A /* HRegisterVC.h */,
 				CCAEC5BB201BC9A40053A70A /* HRegisterVC.m */,
+				2C1848922043316C00EA70C4 /* HNChangePasswordVC.h */,
+				2C1848932043316C00EA70C4 /* HNChangePasswordVC.m */,
 				CC46C3F7201BDCC300E6775E /* HNMenuVC.h */,
 				CC46C3F8201BDCC300E6775E /* HNMenuVC.m */,
 				2CF8529F201C60A300D1F01F /* HNNotificationVC.h */,
@@ -507,6 +512,7 @@
 				2CF852A1201C60A300D1F01F /* HNNotificationVC.m in Sources */,
 				CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */,
 				ACEBCBCD20322AAC0087A6A3 /* HNTextField.m in Sources */,
+				2C1848942043316C00EA70C4 /* HNChangePasswordVC.m in Sources */,
 				ACEA4BB3202F3CE10080FBA9 /* SBJsonWriter.m in Sources */,
 				2CA488E0203DEAAD0044796D /* HNNotificationsCell.m in Sources */,
 				ACEA4BB2202F3CE10080FBA9 /* SBJsonParser.m in Sources */,
