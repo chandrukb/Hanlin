@@ -40,6 +40,7 @@
 
 - (IBAction)registerForEvent:(id)sender;
 - (IBAction)getPromotion:(id)sender;
+- (IBAction)chooseDateAction:(id)sender;
 @end
 
 @implementation HNEventPromoDetailVC
@@ -353,6 +354,10 @@
 }
 
 - (IBAction)getPromotion:(id)sender {
+}
+
+- (IBAction)chooseDateAction:(id)sender {
+    NSLog(@"Choose Date Action Called")
 }
 
 @end

@@ -60,6 +60,7 @@
 #pragma mark-Service call methods
 -(void)prepareRequest
 {
+    
     AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [ASIHTTPRequest setShouldUpdateNetworkActivityIndicator:NO];
     // Start request
@@ -67,6 +68,7 @@
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setUseKeychainPersistence:YES];
     [request setPostValue:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:HN_LOGIN_USERID];
+    NSLog(@"DeviceToken: %@",appdelegate.strDeviceToken);
     [request setPostValue:appdelegate.strDeviceToken forKey:@"devicetoken"];
     [request setPostValue:@"ios" forKey:@"devicetype"];
     [request setDelegate:self];
