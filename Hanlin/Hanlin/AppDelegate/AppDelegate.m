@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
+#import "HNConstants.h"
 
 #define SYSTEM_VERSION_GRATERTHAN_OR_EQUALTO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
@@ -19,9 +20,28 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    // Override point for customization after application launch.
+    if([[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID])
+    {
+        HNMenuVC *HomeView = [storyboard instantiateViewControllerWithIdentifier:@"HNMenuVC"];
+        
+        UIViewController *navController = [[UINavigationController alloc] initWithRootViewController:HomeView];
+        self.window.rootViewController = navController;
+    }
+    else
+    {
+        HLoginVC *HomeView = [storyboard instantiateViewControllerWithIdentifier:@"HLoginVC"];
+        
+        UIViewController *navController = [[UINavigationController alloc] initWithRootViewController:HomeView];
+        self.window.rootViewController = navController;
+    }
     // Register for Remote Notifications
+    [self.window makeKeyAndVisible];
+
     [self registerForRemoteNotifications];
     
     return YES;

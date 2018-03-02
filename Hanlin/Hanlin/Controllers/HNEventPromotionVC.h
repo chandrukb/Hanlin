@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HNEventPromotionVC : UIViewController
+{
+    UIView *TopView;
+}
 
 @end

@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C1848942043316C00EA70C4 /* HNChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1848932043316C00EA70C4 /* HNChangePasswordVC.m */; };
 		2CA488E0203DEAAD0044796D /* HNNotificationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA488DF203DEAAD0044796D /* HNNotificationsCell.m */; };
 		2CF852A1201C60A300D1F01F /* HNNotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF852A0201C60A300D1F01F /* HNNotificationVC.m */; };
 		644B69482984654CD5B427B2 /* libPods-Hanlin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E09A84CB086C314C671B8824 /* libPods-Hanlin.a */; };
+		8309C444204504220057672D /* GCNetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8309C442204504220057672D /* GCNetworkReachability.m */; };
+		830DF45B20414DC70094576A /* HNCalendarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DF45720414DC70094576A /* HNCalendarTableViewCell.m */; };
+		830DF45C20414DC70094576A /* HNCalendarDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DF45820414DC70094576A /* HNCalendarDetailVC.m */; };
+		83C53B952043AC7A0035D8C4 /* HNChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C53B942043AC790035D8C4 /* HNChangePasswordVC.m */; };
 		AC169ABA2020EA590027B562 /* HNEventPromotionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC169AB92020EA590027B562 /* HNEventPromotionVC.m */; };
 		AC169ABD2020EBFE0027B562 /* HNEventPromotionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC169ABC2020EBFE0027B562 /* HNEventPromotionCell.m */; };
 		AC3ACFBC201F39E8009F4324 /* HNShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3ACFBB201F39E8009F4324 /* HNShadowView.m */; };
@@ -54,14 +57,20 @@
 
 /* Begin PBXFileReference section */
 		2BF244257D784FFCE4EC0304 /* Pods-Hanlin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hanlin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hanlin/Pods-Hanlin.debug.xcconfig"; sourceTree = "<group>"; };
-		2C1848922043316C00EA70C4 /* HNChangePasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNChangePasswordVC.h; sourceTree = "<group>"; };
-		2C1848932043316C00EA70C4 /* HNChangePasswordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNChangePasswordVC.m; sourceTree = "<group>"; };
 		2C51756C203F44D6005B679B /* Hanlin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hanlin.entitlements; sourceTree = "<group>"; };
 		2CA488DE203DEAAD0044796D /* HNNotificationsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HNNotificationsCell.h; path = Hanlin/View/HNNotificationsCell.h; sourceTree = SOURCE_ROOT; };
 		2CA488DF203DEAAD0044796D /* HNNotificationsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HNNotificationsCell.m; path = Hanlin/View/HNNotificationsCell.m; sourceTree = SOURCE_ROOT; };
 		2CF8529F201C60A300D1F01F /* HNNotificationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNNotificationVC.h; sourceTree = "<group>"; };
 		2CF852A0201C60A300D1F01F /* HNNotificationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNNotificationVC.m; sourceTree = "<group>"; };
 		4CDCA7D6FA23F88D3BE24A23 /* Pods-Hanlin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hanlin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hanlin/Pods-Hanlin.release.xcconfig"; sourceTree = "<group>"; };
+		8309C442204504220057672D /* GCNetworkReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCNetworkReachability.m; sourceTree = "<group>"; };
+		8309C443204504220057672D /* GCNetworkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCNetworkReachability.h; sourceTree = "<group>"; };
+		830DF45720414DC70094576A /* HNCalendarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNCalendarTableViewCell.m; sourceTree = "<group>"; };
+		830DF45820414DC70094576A /* HNCalendarDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNCalendarDetailVC.m; sourceTree = "<group>"; };
+		830DF45920414DC70094576A /* HNCalendarDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNCalendarDetailVC.h; sourceTree = "<group>"; };
+		830DF45A20414DC70094576A /* HNCalendarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNCalendarTableViewCell.h; sourceTree = "<group>"; };
+		83C53B932043AC780035D8C4 /* HNChangePasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNChangePasswordVC.h; sourceTree = "<group>"; };
+		83C53B942043AC790035D8C4 /* HNChangePasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNChangePasswordVC.m; sourceTree = "<group>"; };
 		AC169AB82020EA590027B562 /* HNEventPromotionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNEventPromotionVC.h; sourceTree = "<group>"; };
 		AC169AB92020EA590027B562 /* HNEventPromotionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNEventPromotionVC.m; sourceTree = "<group>"; };
 		AC169ABB2020EBFE0027B562 /* HNEventPromotionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNEventPromotionCell.h; sourceTree = "<group>"; };
@@ -220,6 +229,12 @@
 		CCAEC5B1201BC9A40053A70A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				83C53B932043AC780035D8C4 /* HNChangePasswordVC.h */,
+				83C53B942043AC790035D8C4 /* HNChangePasswordVC.m */,
+				830DF45920414DC70094576A /* HNCalendarDetailVC.h */,
+				830DF45820414DC70094576A /* HNCalendarDetailVC.m */,
+				830DF45A20414DC70094576A /* HNCalendarTableViewCell.h */,
+				830DF45720414DC70094576A /* HNCalendarTableViewCell.m */,
 				ACDBFB082039768600DF1610 /* HNSliderView.h */,
 				ACDBFB072039768600DF1610 /* HNSliderView.m */,
 				ACDBFB062039768600DF1610 /* HNSliderView.xib */,
@@ -233,8 +248,6 @@
 				CCAEC5B7201BC9A40053A70A /* HNProfileVC.m */,
 				CCAEC5BA201BC9A40053A70A /* HRegisterVC.h */,
 				CCAEC5BB201BC9A40053A70A /* HRegisterVC.m */,
-				2C1848922043316C00EA70C4 /* HNChangePasswordVC.h */,
-				2C1848932043316C00EA70C4 /* HNChangePasswordVC.m */,
 				CC46C3F7201BDCC300E6775E /* HNMenuVC.h */,
 				CC46C3F8201BDCC300E6775E /* HNMenuVC.m */,
 				2CF8529F201C60A300D1F01F /* HNNotificationVC.h */,
@@ -280,6 +293,8 @@
 		CCAEC5BF201BC9A40053A70A /* HNUtility */ = {
 			isa = PBXGroup;
 			children = (
+				8309C443204504220057672D /* GCNetworkReachability.h */,
+				8309C442204504220057672D /* GCNetworkReachability.m */,
 				ACEBCBC92032232A0087A6A3 /* HNTextField.h */,
 				ACEBCBC8203223290087A6A3 /* HNTextField.m */,
 				CCAEC5C0201BC9A40053A70A /* HNUtility.h */,
@@ -490,12 +505,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCAEC5DB201BC9A40053A70A /* HNWebVC.m in Sources */,
+				830DF45B20414DC70094576A /* HNCalendarTableViewCell.m in Sources */,
 				CCAEC5DA201BC9A40053A70A /* HNProfileVC.m in Sources */,
+				830DF45C20414DC70094576A /* HNCalendarDetailVC.m in Sources */,
 				AC169ABD2020EBFE0027B562 /* HNEventPromotionCell.m in Sources */,
 				AC76AC242022467300DFD270 /* HNContentsTableViewCell.m in Sources */,
 				CCAEC5EA201BC9A40053A70A /* HNRoundedImageView.m in Sources */,
 				CCAEC5DD201BC9A40053A70A /* HNUtility.m in Sources */,
 				AC3ACFBC201F39E8009F4324 /* HNShadowView.m in Sources */,
+				83C53B952043AC7A0035D8C4 /* HNChangePasswordVC.m in Sources */,
 				AC76AC212022431600DFD270 /* HNFilesVC.m in Sources */,
 				CCAEC5DC201BC9A40053A70A /* HRegisterVC.m in Sources */,
 				ACEA4BB1202F3CE10080FBA9 /* SBJsonBase.m in Sources */,
@@ -509,10 +527,10 @@
 				AC76AC2A20226D3400DFD270 /* HNRegisteredEventsVC.m in Sources */,
 				CCAEC5AA201BC8CC0053A70A /* main.m in Sources */,
 				CCAEC5D8201BC9A40053A70A /* HLoginVC.m in Sources */,
+				8309C444204504220057672D /* GCNetworkReachability.m in Sources */,
 				2CF852A1201C60A300D1F01F /* HNNotificationVC.m in Sources */,
 				CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */,
 				ACEBCBCD20322AAC0087A6A3 /* HNTextField.m in Sources */,
-				2C1848942043316C00EA70C4 /* HNChangePasswordVC.m in Sources */,
 				ACEA4BB3202F3CE10080FBA9 /* SBJsonWriter.m in Sources */,
 				2CA488E0203DEAAD0044796D /* HNNotificationsCell.m in Sources */,
 				ACEA4BB2202F3CE10080FBA9 /* SBJsonParser.m in Sources */,

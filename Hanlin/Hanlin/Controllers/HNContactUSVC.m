@@ -57,7 +57,7 @@
     //    [request setPostValue:self.tfContactNumber.text forKey:HN_REQ_PHONE];
     //    [request setPostValue:self.tfPassword.text forKey:HN_REQ_PASSWORD];
     
-    [request setPostValue:@"11" forKey:HN_REQ_USERID];
+    [request setPostValue:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:HN_REQ_USERID];
     [request setPostValue:_descriptionTextView.text forKey:HN_REQ_MESSAGE];
     [request setPostValue:_contactNumberTxtField.text forKey:HN_REQ_PHONE];
     [request setPostValue:_companyNameTxtField.text forKey:HN_REQ_COMPANY];
@@ -83,12 +83,12 @@
         NSString * message = [response valueForKey:@"msg"];
         if(responseStatus == true)
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hanlin App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
             [alert show];
         }
         else
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hanlin App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
             [alert show];
         }
         NSLog(@"dictionary value: %@", response);
@@ -103,6 +103,16 @@
 {
     NSError *error = [request error];
     NSLog(@"Error : %@",error.localizedDescription);
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end

@@ -10,6 +10,8 @@
 #import "Reachability.h"
 #import "AppDelegate.h"
 #import "HNConstants.h"
+#import "GCNetworkReachability.h"
+
 
 @implementation HNUtility
 
@@ -59,20 +61,20 @@
 }
 
 
-//+(BOOL)checkIfInternetIsAvailable
-//{
-//    BOOL reachable = NO;
-//    NetworkStatus netStatus = [HN_APP_DELEGATE.internetReachability currentReachabilityStatus];
-//    if(netStatus == ReachableViaWWAN || netStatus == ReachableViaWiFi)
-//    {
-//        reachable = YES;
-//    }
-//    else
-//    {
-//        reachable = NO;
-//    }
-//    return reachable;
-//}
++(BOOL)checkIfInternetIsAvailable
+{
+    GCNetworkReachability *reachability;
+    reachability = [GCNetworkReachability reachabilityForInternetConnection];
+    
+    if([reachability isReachable])
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
 
 
 @end

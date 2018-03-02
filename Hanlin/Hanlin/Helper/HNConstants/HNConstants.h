@@ -18,14 +18,19 @@
 #define HN_UPDATE_PASSWORD @"app/resetPassword.php"
 #define HN_DOCUMENT_DOWNLOAD @"app/Mobile/documentDownload.php"
 
+#define HN_GET_MY_EVENTS @"app/user-events.php"
+#define HN_EDIT_MY_EVENTS @"app/edit-userevents.php"
+
 #define HN_PUSH_NOTIFICATION @"app/tokens.php"
 #define HN_CONTACTUS @"app/contact.php"
 #define HN_GET_ALL_EVENTS @"app/events.php"
+#define HN_GET_ALL_BANNERS @"app/banners.php"
 #define HN_JOIN_EVENT @"app/joinedusers.php"
 #define HN_GET_ALL_NOTIFICATIONS @"/app/newsletter.php"
 #define HN_GET_ALL_ATTACHMENTS @"app/event-file.php"
 
 #define HN_GET_ALL_PROMOTIONS @"app/promotion.php"
+#define HN_RESET_PASSWORD @"app/reset-password.php"
 
 //API Constants
 #define HN_REQ_NAME @"name"

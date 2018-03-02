@@ -21,7 +21,8 @@
     
     if (_isFromAttachments) {
         _webView.dataDetectorTypes = UIDataDetectorTypeAll;
-        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_htmlString]]];
+        NSString* encodedUrl = [_htmlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:encodedUrl]]];
         self.title = @"Attachment Detail";
     }
     else{

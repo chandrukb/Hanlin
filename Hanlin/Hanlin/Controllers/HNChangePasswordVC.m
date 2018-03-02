@@ -75,17 +75,10 @@
     return YES;
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-//    NSInteger fieldIndex = [textFields indexOfObject:textField];
-//    if(fieldIndex < [textFields count] - 1)
-//    {
-//        [textField resignFirstResponder];
-//        [[textFields objectAtIndex:fieldIndex+1] becomeFirstResponder];
-//    }
-//    else
-//        [textField resignFirstResponder];
-    return true;
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField
@@ -146,5 +139,56 @@
 */
 
 - (IBAction)updatePasswordAction:(id)sender {
+    
+    if((_tfCurrentPassword.text.length==0)||(_tfPassword.text.length==0)||(_tfVerifyPassword.text.length==0))
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event App" message:@"Please enter valid password" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
+    else if(![_tfPassword.text isEqualToString:_tfVerifyPassword.text])
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hanlin App" message:@"New password and Confirm Password mismatch" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
+    
+    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_RESET_PASSWORD]];
+    __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:@"userid"];
+    [request setPostValue:_tfCurrentPassword.text forKey:@"oldpassword"];
+    [request setPostValue:_tfVerifyPassword.text forKey:@"newpassword"];
+    
+    [request setCompletionBlock:^{
+        if (request.responseStatusCode == 400) {
+            NSLog(@"Invalid code");
+        } else if (request.responseStatusCode == 403) {
+            NSLog(@"Code already used");
+        } else if (request.responseStatusCode == 200) {
+            NSString *resString = [request responseString];
+            NSArray *responseArray = [resString JSONValue];
+            NSDictionary *response = responseArray[0];
+            BOOL responseStatus = [[response valueForKey:@"success"] boolValue];
+            NSString * message = [response valueForKey:@"msg"];
+            if(responseStatus == true)
+            {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hanlin App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+                [alert show];
+                
+                [self.navigationController popViewControllerAnimated:YES];
+                
+                
+            }
+            else
+            {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hanlin App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+                [alert show];
+            }
+        }
+    }];
+    [request setFailedBlock:^{
+        NSError *error = [request error];
+    }];
+    [request startAsynchronous];
 }
 @end

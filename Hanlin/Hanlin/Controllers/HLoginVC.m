@@ -22,8 +22,16 @@
 
 @implementation HLoginVC
 
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [[NSUserDefaults standardUserDefaults] setPersistentDomain:[NSDictionary dictionary] forName:[[NSBundle mainBundle] bundleIdentifier]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBarHidden=YES;
     // Do any additional setup after loading the view.
     textFields = [[NSArray alloc] initWithObjects:self.tfUsername,self.tfPassword, nil];
     [self prepareUIForLogin];
@@ -40,8 +48,8 @@
                                                object:self.view.window];
     
     // For testing
-//    _tfUsername.text= @"palani@gmail.com";
-//    _tfPassword.text = @"123456";
+  //  _tfUsername.text= @"craja.btech@icloud.com";
+  //  _tfPassword.text = @"123456";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,23 +72,22 @@
 
 
 - (IBAction)onLoginClicked:(id)sender {
-//    if([self.tfUsername validate] & [self.tfPassword validate]){
-//        //Success
-//        if([HNUtility checkIfInternetIsAvailable])
-//        {
-//            [self prepareRequest];
-//        }
-//        else
-//        {
-//            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No Internet!!!"
-//                                                           message:@"Unable to connect to the internet."
-//                                                          delegate:nil
-//                                                 cancelButtonTitle:@"OK"
-//                                                 otherButtonTitles:nil, nil];
-//            [alert show];
-//        }
-//    }
-    [self prepareRequest];
+    if([self.tfUsername validate] & [self.tfPassword validate]){
+        //Success
+        if([HNUtility checkIfInternetIsAvailable])
+       {
+            [self prepareRequest];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No Internet!!!"
+                                                           message:@"Unable to connect to the internet."
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"OK"
+                                                 otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }
 }
 
 - (IBAction)onRegisterClicked:(id)sender {

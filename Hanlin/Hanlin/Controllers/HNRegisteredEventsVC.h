@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HNEventPromoDetailVC.h"
 
-@interface HNRegisteredEventsVC : UITableViewController
+@interface HNRegisteredEventsVC : UIViewController
 
 @end

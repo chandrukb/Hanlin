@@ -13,8 +13,9 @@
 #import "JSON.h"
 #import "HNUtility.h"
 #import "HNTextField.h"
+#import <CSLazyLoadController/CSLazyLoadController.h>
 
-@interface HRegisterVC ()<UITextFieldDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface HRegisterVC ()<UITextFieldDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,CSLazyLoadControllerDelegate>
 {
     NSArray *textFields;
     UIImage *selectedImage;
@@ -38,12 +39,13 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *passwordView;
 @property (weak, nonatomic) IBOutlet UIView *signINContainerView;
-@property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
+@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
+@property (nonatomic, strong) CSLazyLoadController *lazyLoadController;
+
 
 - (IBAction)onSignUpClicked:(id)sender;
 - (IBAction)onSignInClicked:(id)sender;
 - (IBAction)addProfileImageTapped:(id)sender;
-- (IBAction)canceBtnAction:(id)sender;
 
 @end
 
@@ -65,11 +67,38 @@
                                                  name:UIKeyboardWillHideNotification
                                                object:self.view.window];
     
+    _btnCancel.hidden=YES;
+    
     if (_isFromProfile) {
-        [_btnSignUp setTitle:@"Update" forState:UIControlStateNormal];
+        [_btnSignUp setTitle:@"更新" forState:UIControlStateNormal];
         _passwordView.hidden = YES;
         _signINContainerView.hidden = YES;
-        _cancelBtn.hidden = NO;
+        _btnCancel.hidden=NO;
+        [self.view bringSubviewToFront:_btnCancel];
+        
+        _tfFullname.text=[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_NAME];
+        _tfEmail.text=[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERNAME];
+        _tfContactNumber.text=[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_PHONE];
+        
+        self.lazyLoadController = [[CSLazyLoadController alloc] init];
+        self.lazyLoadController.delegate = self;
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString *imageUrl = [defaults valueForKey:HN_LOGIN_PROFILE_IMG];
+        NSLog(@"profile url: %@",[HN_ROOTURL stringByAppendingString:imageUrl]);
+        UIImage *image = [self.lazyLoadController fastCacheImage:[CSURL URLWithString:[HN_ROOTURL stringByAppendingString:imageUrl]]]; // Find image in RAM memory.
+        self.ivProfileImage.image = image;
+        selectedImage=image;
+        // If there is not image download it
+        if (!image) {
+            NSIndexPath *indexpath = [[NSIndexPath alloc] init];
+            indexpath = [NSIndexPath indexPathForRow:0 inSection:0];
+            [self.lazyLoadController startDownload:[CSURL URLWithString:[HN_ROOTURL stringByAppendingString:imageUrl] parameters:nil method:CSHTTPMethodPOST]
+                                      forIndexPath:indexpath];
+        }
+       
+        
+
     }
 }
 
@@ -150,11 +179,6 @@
     [alert addAction:cameraAction];
     [alert addAction:cancel];
     [self presentViewController:alert animated:YES completion:nil];
-}
-
-- (IBAction)canceBtnAction:(id)sender {
-    
-    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (IBAction)onSignUpClicked:(id)sender {
@@ -261,7 +285,18 @@
         NSString * message = [response valueForKey:@"msg"];
         if(responseStatus == true)
         {
-            [self performSegueWithIdentifier:@"ShowLoginPage" sender:self];
+            if (_isFromProfile)
+            {
+                [self saveLoginDetailsToPersistance:response];
+
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+            else
+            {
+                [self performSegueWithIdentifier:@"ShowLoginPage" sender:self];
+
+            }
+            
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
             [alert show];
         }
@@ -381,5 +416,40 @@
     [UIView commitAnimations];
     keyboardIsShown = YES;
 }
+
+-(IBAction)CancelHandler:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark- Lazyloader Delegate
+// Controller asks us for URL so give him image URL
+- (CSURL *)lazyLoadController:(CSLazyLoadController *)loadController
+       urlForImageAtIndexPath:(NSIndexPath *)indexPath {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *imageUrl = [defaults valueForKey:HN_LOGIN_PROFILE_IMG];
+    return (imageUrl.length > 0) ? [CSURL URLWithString:[HN_ROOTURL stringByAppendingString:imageUrl]]:nil;
+}
+
+// Image has finished with downloading so update the cell
+- (void)lazyLoadController:(CSLazyLoadController *)loadController
+            didReciveImage:(UIImage *)image
+                   fromURL:(CSURL *)url
+                 indexPath:(NSIndexPath *)indexPath {
+    self.ivProfileImage.image = image;
+}
+
+-(void) saveLoginDetailsToPersistance:(NSDictionary *)userDetails
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_USERID] forKey:HN_LOGIN_USERID];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_NAME] forKey:HN_LOGIN_NAME];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_USERNAME] forKey:HN_LOGIN_USERNAME];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_PHONE] forKey:HN_LOGIN_PHONE];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_JOINDATE] forKey:HN_LOGIN_JOINDATE];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_PROFILE_IMG] forKey:HN_LOGIN_PROFILE_IMG];
+    
+}
+
 
 @end

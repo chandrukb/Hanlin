@@ -58,13 +58,15 @@
 //    self.backgroundColor = [UIColor blackColor];
     self.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     
+    self.frame=parentView.frame;
+    
     imagesArray = [NSArray arrayWithArray:images];
     autoSrcollEnabled = isAutoScrollEnabled;
 
     _sliderMainScroller.pagingEnabled = YES;
     _sliderMainScroller.delegate = self;
     _pageIndicator.numberOfPages = [imagesArray count];
-    _sliderMainScroller.contentSize = CGSizeMake(([UIScreen mainScreen].bounds.size.width * [imagesArray count] * 3), _sliderMainScroller.frame.size.height);
+    _sliderMainScroller.contentSize = CGSizeMake(([UIScreen mainScreen].bounds.size.width * [imagesArray count] * 3), parentView.frame.size.height);
     
     int mainCount = 0;
     for (int x = 0; x < 3; x++) {
@@ -75,10 +77,11 @@
             CGRect frameRect;
             frameRect.origin.y = 0.0f;
             frameRect.size.width = [UIScreen mainScreen].bounds.size.width;
-            frameRect.size.height = _sliderMainScroller.frame.size.height;
+            frameRect.size.height = parentView.frame.size.height;
             frameRect.origin.x = (frameRect.size.width * mainCount);
             imageV.frame = frameRect;
-            imageV.contentMode = UIViewContentModeScaleAspectFit;
+            imageV.contentMode = UIViewContentModeScaleAspectFill;
+            imageV.clipsToBounds=YES;
             
             UIImage *image = [self.lazyLoadController fastCacheImage:[CSURL URLWithString:[imagesArray objectAtIndex:i]]];
             imageV.image = image;

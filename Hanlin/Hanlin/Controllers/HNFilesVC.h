@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface HNFilesVC : UIViewController
+{
+    
+    UIView *TopView;
+}
 @property (weak, nonatomic) IBOutlet UISegmentedControl *btnSegmentControl;
 - (IBAction)segmentControlSelected:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *contentTableview;

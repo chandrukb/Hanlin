@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 //#import "Reachability.h"
+#import "HLoginVC.h"
+#import "HNMenuVC.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
     NSString *strDeviceToken;

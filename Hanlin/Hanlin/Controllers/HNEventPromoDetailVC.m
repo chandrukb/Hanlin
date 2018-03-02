@@ -98,12 +98,15 @@
     [self loadJoinedUsers:joinees];
     self.lblPeopleCount.text = [NSString stringWithFormat:@"%lu people(s) registered", (unsigned long)[joinees count]];
     self.lblEventPromo.text = [event valueForKey:@"eventname"];
-    self.lblEventPromoDate.text = [event valueForKey:@"startdate"];
+    self.lblEventPromoDate.text = [NSString stringWithFormat:@"%@ to %@ ",[event valueForKey:@"startdate"],[event valueForKey:@"enddate"]];
     [self.webView loadHTMLString:[event valueForKey:@"message"] baseURL:nil];
     NSArray *dateComponents = [[event valueForKey:@"startdate"] componentsSeparatedByString:@"-"];
     self.lblDay.text = dateComponents[2];
     self.lblMonth.text = dateComponents[1];
     self.lblYear.text = dateComponents[0];
+    
+    
+    
 }
 
 -(void)prepareUIForPromotion
@@ -195,7 +198,9 @@
     if([self.selectedOption isEqualToString:@"events"] && indexPath.row == 5)
         return 0; //set the hidden cell's height to 0
     
-    if([self.selectedOption isEqualToString:@"registered"] && (indexPath.row ==  4 || indexPath.row == 5))
+    
+    
+    if(([[event valueForKey:@"isregistered"]intValue]==1) && (indexPath.row ==  4 || indexPath.row == 5))
         return 0; //set the hidden cell's height to 0
     
     if(indexPath.row == 3)
@@ -218,9 +223,16 @@
 {
 //    if([HNUtility checkIfInternetIsAvailable])
 //    {
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+
+    
         NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_ALL_EVENTS]];
         __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
         [request setPostValue: self.eventId forKey:@"id"];
+        [request setPostValue: [defaults objectForKey:HN_LOGIN_USERID]  forKey:@"userid"];
+    
+
         [request setCompletionBlock:^{
             if (request.responseStatusCode == 400) {
                 NSLog(@"Invalid code");
@@ -303,8 +315,11 @@
             NSString * message = [response valueForKey:@"msg"];
             if(responseStatus == true)
             {
+                [self grabEventDetailInBackground];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
                 [alert show];
+                
+                
             }
             else
             {
@@ -334,7 +349,7 @@
 }
 
 - (IBAction)registerForEvent:(id)sender {
-    [self registerUserForEvent:[event valueForKey:@"eventid"]];
+    [self registerUserForEvent:[event valueForKey:@"id"]];
 }
 
 - (IBAction)getPromotion:(id)sender {

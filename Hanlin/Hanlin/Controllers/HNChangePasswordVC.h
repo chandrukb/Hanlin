@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ASIHTTPRequest/ASIHTTPRequest.h>
+#import <ASIHTTPRequest/ASIFormDataRequest.h>
+#import "HNConstants.h"
+#import "JSON.h"
 
 @interface HNChangePasswordVC : UIViewController
 

@@ -14,13 +14,20 @@
 #import "HNConstants.h"
 #import "JSON.h"
 #import "HNUtility.h"
+#import "HNSliderView.h"
 
-@interface HNFilesVC ()<UITableViewDelegate, UITableViewDataSource>
+
+@interface HNFilesVC ()<UITableViewDelegate, UITableViewDataSource,HNSliderDelegate>
 {
     NSMutableDictionary *filesData;
     NSMutableArray *files;
     NSMutableDictionary *videoData;
     NSMutableArray *videos;
+    
+    NSMutableArray *BannersObj;
+    HNSliderView *sliderView;
+    HNSliderView *peopleSliderView;
+    NSMutableArray *carouselUrlArray;
 }
 @end
 
@@ -48,8 +55,28 @@
     }
 }
 
+- (void)layoutSubviews
+{
+    
+  //  self.ivFilesVideo.frame =CGRectMake(0, 0, self.ivFilesVideo.frame.size.width, 104);
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    TopView=[[UIView alloc]init];
+    TopView.frame=CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 264);
+    [self.view addSubview:TopView];
+    
+    carouselUrlArray = [[NSMutableArray alloc] init];
+    sliderView = [[[NSBundle mainBundle] loadNibNamed:@"HNSliderView" owner:self options:nil] firstObject];
+    sliderView.delegate = self;
+    [sliderView initializeLazyLoader];
+   // sliderView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [TopView addSubview:sliderView];
+    
     // Do any additional setup after loading the view.
     //mock data for events
 //    filesData = [[NSMutableDictionary alloc] init];
@@ -70,6 +97,7 @@
 //    [videos addObject:videoData];
     
     [self grabAttachmentsInBackground];
+    [self grabBannerInBackground];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -109,13 +137,13 @@
 -(void)updateUIForFiles
 {
     self.navigationItem.title = @"Files";
-    self.ivFilesVideo.image = [UIImage imageNamed:@"EventImage.png"];
+   // self.ivFilesVideo.image = [UIImage imageNamed:@"EventImage.png"];
 }
 
 -(void)updateUIForVideos
 {
     self.navigationItem.title = @"Video Links";
-    self.ivFilesVideo.image = [UIImage imageNamed:@"PromoImage.png"];
+   // self.ivFilesVideo.image = [UIImage imageNamed:@"PromoImage.png"];
 }
 
 #pragma mark- TableView Delegate and Datasource
@@ -192,8 +220,52 @@
     [request startAsynchronous];
 }
 
+
+- (void)grabBannerInBackground
+{
+    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_ALL_BANNERS]];
+    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setCompletionBlock:^{
+        //        // Use when fetching text data
+        //        NSString *responseString = [request responseString];
+        //handle the request
+        if (request.responseStatusCode == 400) {
+            NSLog(@"Invalid code");
+        } else if (request.responseStatusCode == 403) {
+            NSLog(@"Code already used");
+        } else if (request.responseStatusCode == 200) {
+            NSString *resString = [request responseString];
+            NSArray *responseArray = [resString JSONValue];
+            BannersObj = [[NSMutableArray alloc] initWithArray:responseArray];
+            [self performSelectorOnMainThread:@selector(PrepareBannerUI) withObject:nil waitUntilDone:YES];
+        }
+        // Use when fetching binary data
+        NSData *responseData = [request responseData];
+    }];
+    [request setFailedBlock:^{
+        NSError *error = [request error];
+    }];
+    [request startAsynchronous];
+}
+
 -(void)updateUIForAttachments
 {
     [self.contentTableview reloadData];
+}
+
+-(void)PrepareBannerUI
+{
+    
+    for(NSDictionary *obj in BannersObj)
+    {
+        if([[obj valueForKey:@"type"] isEqualToString:@"files"])
+        {
+            [carouselUrlArray addObject:[HN_ROOTURL stringByAppendingString:[obj valueForKey:@"image"]]];
+            
+        }
+    }
+    
+    BOOL shouldScroll = ([carouselUrlArray count] > 1) ? YES : NO;
+    [sliderView createSliderWithImages:carouselUrlArray WithAutoScroll:shouldScroll inView:TopView];
 }
 @end

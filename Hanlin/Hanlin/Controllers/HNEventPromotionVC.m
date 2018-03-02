@@ -15,14 +15,22 @@
 #import "HNConstants.h"
 #import "JSON.h"
 #import "HNUtility.h"
+#import "HNSliderView.h"
 
-@interface HNEventPromotionVC ()<UITableViewDelegate, UITableViewDataSource, CSLazyLoadControllerDelegate>
+
+@interface HNEventPromotionVC ()<UITableViewDelegate, UITableViewDataSource, CSLazyLoadControllerDelegate,HNSliderDelegate>
 {
     NSMutableDictionary *eventData;
     NSMutableArray *events;
+    NSMutableArray *BannersObj;
+
     NSMutableDictionary *promoData;
     NSMutableArray *promos;
     NSInteger selectedIndex;
+    HNSliderView *sliderView;
+    HNSliderView *peopleSliderView;
+    NSMutableArray *carouselUrlArray;
+
 }
 @property (weak, nonatomic) IBOutlet UISegmentedControl *btnSegmentControl;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnRegisteredEventsHeightConstraint;
@@ -30,19 +38,35 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ivEventsPromotions;
 @property (weak, nonatomic) IBOutlet UITableView *eventPromoTableView;
 @property (nonatomic, strong) CSLazyLoadController *lazyLoadController;
+@property (weak, nonatomic) IBOutlet UIView *carouselView;
+
 @end
 
 @implementation HNEventPromotionVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationItem.backBarButtonItem setTitle:@"Events"];
-    self.title = @"Events";
+    
+    TopView=[[UIView alloc]init];
+    TopView.frame=CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 264);
+    [self.view addSubview:TopView];
+    
+    carouselUrlArray = [[NSMutableArray alloc] init];
+    sliderView = [[[NSBundle mainBundle] loadNibNamed:@"HNSliderView" owner:self options:nil] firstObject];
+    sliderView.delegate = self;
+    [sliderView initializeLazyLoader];
+  //  sliderView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [TopView addSubview:sliderView];
+    
+    [self.navigationItem.backBarButtonItem setTitle:@"活动"];
+    self.title = @"活动";
     self.lazyLoadController = [[CSLazyLoadController alloc] init];
     self.lazyLoadController.delegate = self;
     // Do any additional setup after loading the view.
     [self.btnSegmentControl setSelectedSegmentIndex:0];
     [self segmentButtonValueChanged:self.btnSegmentControl];
+    
+    [self grabBannerInBackground];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -55,6 +79,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)PrepareBannerUI:(int)segment
+{
+   
+    [carouselUrlArray removeAllObjects];
+    for(NSDictionary *obj in BannersObj)
+    {
+        if(segment==1)
+        {
+            if([[obj valueForKey:@"type"] isEqualToString:@"promotions"])
+            {
+                [carouselUrlArray addObject:[HN_ROOTURL stringByAppendingString:[obj valueForKey:@"image"]]];
+
+            }
+        }
+        else
+        {
+            if([[obj valueForKey:@"type"] isEqualToString:@"events"])
+            {
+                [carouselUrlArray addObject:[HN_ROOTURL stringByAppendingString:[obj valueForKey:@"image"]]];
+                
+            }
+        }
+    }
+    
+    BOOL shouldScroll = ([carouselUrlArray count] > 1) ? YES : NO;
+    [sliderView createSliderWithImages:carouselUrlArray WithAutoScroll:shouldScroll inView:TopView];
+}
 
 #pragma mark - Navigation
 
@@ -102,6 +154,7 @@
 //            }
             [self grabEventsInBackground];
             [self updateUIForEvents];
+            [self PrepareBannerUI:0];
         }
             break;
         case 1://selected promotions
@@ -121,6 +174,8 @@
 //            }
             [self grabPromotionsInBackground];
             [self updateUIForPromotions];
+            [self PrepareBannerUI:1];
+
         }
             break;
         default:
@@ -130,15 +185,17 @@
 
 -(void)updateUIForEvents
 {
-    self.title = @"Events";
-    self.ivEventsPromotions.image = [UIImage imageNamed:@"EventImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 40.0f;
+    self.title = @"活动";
+  //  self.ivEventsPromotions.image = [UIImage imageNamed:@"EventImage.png"];
+    self.btnRegisteredEventsHeightConstraint.constant = 40.0f;
     [self.eventPromoTableView reloadData];
 }
 
 -(void)updateUIForPromotions
 {
-    self.title = @"Promotions";
-    self.ivEventsPromotions.image = [UIImage imageNamed:@"PromoImage.png"]; self.btnRegisteredEventsHeightConstraint.constant = 0.0f;
+    self.title = @"促销";
+  //  self.ivEventsPromotions.image = [UIImage imageNamed:@"PromoImage.png"];
+    self.btnRegisteredEventsHeightConstraint.constant = 0.0f;
     [self.eventPromoTableView reloadData];
 }
 
@@ -210,12 +267,6 @@
     [self performSegueWithIdentifier:@"EventPromoDetailSegue" sender:nil];
 }
 
-#pragma mark- Button Actions
-- (IBAction)showRegisteredEvents:(id)sender {
-    NSLog(@"registered events clicked");
-//        [self performSegueWithIdentifier:@"RegisteredEventsSegue" sender:nil];
-}
-
 #pragma mark- Service call
 - (void)grabEventsInBackground
 {
@@ -269,6 +320,35 @@
     }];
     [request startAsynchronous];
 }
+
+
+- (void)grabBannerInBackground
+{
+    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_ALL_BANNERS]];
+    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setCompletionBlock:^{
+        //        // Use when fetching text data
+        //        NSString *responseString = [request responseString];
+        //handle the request
+        if (request.responseStatusCode == 400) {
+            NSLog(@"Invalid code");
+        } else if (request.responseStatusCode == 403) {
+            NSLog(@"Code already used");
+        } else if (request.responseStatusCode == 200) {
+            NSString *resString = [request responseString];
+            NSArray *responseArray = [resString JSONValue];
+            BannersObj = [[NSMutableArray alloc] initWithArray:responseArray];
+            [self performSelectorOnMainThread:@selector(PrepareBannerUI:) withObject:nil waitUntilDone:YES];
+        }
+        // Use when fetching binary data
+        NSData *responseData = [request responseData];
+    }];
+    [request setFailedBlock:^{
+        NSError *error = [request error];
+    }];
+    [request startAsynchronous];
+}
+
 #pragma mark- end service call
 
 #pragma mark - CSLazyLoadControllerDelegate
@@ -295,6 +375,11 @@
     HNEventPromotionCell *cell = [self.eventPromoTableView cellForRowAtIndexPath:indexPath];
     cell.ivEventPromo.image = image;
     [cell setNeedsLayout];
+}
+
+- (IBAction)showRegisteredEvents:(id)sender {
+    NSLog(@"registered events clicked");
+    [self performSegueWithIdentifier:@"RegisteredEventsSegue" sender:nil];
 }
 
 @end
