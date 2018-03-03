@@ -76,5 +76,32 @@
     }
 }
 
++(void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(nullable id)delegate cancelButtonTitle:(NSString *)cancelTitle otherButtonTitles:(NSArray *) otherButtons{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No Internet!!!"
+                                                   message:@"Unable to connect to the internet."
+                                                  delegate:nil
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil, nil];
+    [alert show];
+}
+
++(void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message inViewController:(UIViewController *)inVC cancelButtonTitle:(NSString *)cancelTitle {
+    UIAlertController *alertView = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:nil];
+    [alertView addAction:cancelAction];
+    [inVC presentViewController:alertView animated:YES completion:nil];
+}
+
++(void) saveLoginDetailsToPersistance:(NSDictionary *)userDetails
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_USERID] forKey:HN_LOGIN_USERID];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_NAME] forKey:HN_LOGIN_NAME];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_USERNAME] forKey:HN_LOGIN_USERNAME];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_PHONE] forKey:HN_LOGIN_PHONE];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_JOINDATE] forKey:HN_LOGIN_JOINDATE];
+    [defaults setValue:[userDetails valueForKey:HN_LOGIN_PROFILE_IMG] forKey:HN_LOGIN_PROFILE_IMG];
+    
+}
 
 @end

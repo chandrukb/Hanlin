@@ -49,40 +49,27 @@
     _userEmailLbl.text = [defaults valueForKey:HN_LOGIN_USERNAME];
     _userMobileLbl.text = [defaults valueForKey:HN_LOGIN_PHONE];
     _userSinceLbl.text = [defaults valueForKey:HN_LOGIN_JOINDATE] ? [defaults valueForKey:HN_LOGIN_JOINDATE]: @"" ;
-    
-   
-    
-    _userSinceLbl.text=[NSString stringWithFormat:@"会员加入 : %@",_userSinceLbl.text];
+    _userSinceLbl.text = [NSString stringWithFormat:@"会员加入 : %@",_userSinceLbl.text];
     _userIdLbl.text = [NSString stringWithFormat:@"会员证号: %@",[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID]];
     
     NSString *imageUrl = [defaults valueForKey:HN_LOGIN_PROFILE_IMG];
     NSLog(@"profile url: %@",[HN_ROOTURL stringByAppendingString:imageUrl]);
     UIImage *image = [self.lazyLoadController fastCacheImage:[CSURL URLWithString:[HN_ROOTURL stringByAppendingString:imageUrl]]]; // Find image in RAM memory.
     self.userImgView.image = image;
-    // If there is not image download it
+    // If there is no image download it
     if (!image) {
         NSIndexPath *indexpath = [[NSIndexPath alloc] init];
         indexpath = [NSIndexPath indexPathForRow:0 inSection:0];
         [self.lazyLoadController startDownload:[CSURL URLWithString:[HN_ROOTURL stringByAppendingString:imageUrl] parameters:nil method:CSHTTPMethodPOST]
                                   forIndexPath:indexpath];
     }
-    
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"帐号";
-    // Do any additional setup after loading the view.
-    
-    
-    
-    
-    // Do any additional setup after loading the view.
     self.lazyLoadController = [[CSLazyLoadController alloc] init];
     self.lazyLoadController.delegate = self;
-    
-   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -106,15 +93,5 @@
                  indexPath:(NSIndexPath *)indexPath {
     self.userImgView.image = image;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

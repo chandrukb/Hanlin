@@ -26,16 +26,12 @@
 #pragma mark - Navigation
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    //This need to be checked and refined while actual implementation
     if([segue.identifier isEqualToString:@"HNWebViewSegue"])
     {
         HNWebVC *destinationVC = [segue destinationViewController];
         
-            NSIndexPath *selectedIndex = [self.notificationTableView indexPathForSelectedRow];
-            destinationVC.htmlString = [[[notificationsArray objectAtIndex:selectedIndex.row] valueForKey:@"newsletter"] valueForKey:@"description"];
+        NSIndexPath *selectedIndex = [self.notificationTableView indexPathForSelectedRow];
+        destinationVC.htmlString = [[[notificationsArray objectAtIndex:selectedIndex.row] valueForKey:@"newsletter"] valueForKey:@"description"];
     }
 }
 
@@ -45,10 +41,6 @@
     self.navigationItem.title = @"Notifications";
     notificationsArray = [[NSMutableArray alloc]init];
     [self grabNotificationsInBackground];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,13 +54,9 @@
     return 1;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return notificationsArray.count;
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -79,10 +67,8 @@
     notificationObj = [[notificationsArray objectAtIndex:[indexPath row]] valueForKey:@"newsletter"];
     
     cell.notificationTextLbl.text = [NSString stringWithFormat:@"%@ %@",[notificationObj valueForKey:@"title"],[notificationObj valueForKey:@"entrydate"]];
-    //cell.textLabel.text = @"My Text";
     return cell;
 }
-
 
 #pragma mark- Service call
 - (void)grabNotificationsInBackground
@@ -100,12 +86,13 @@
             NSArray *responseArray = [resString JSONValue];
             notificationsArray = [[NSMutableArray alloc] initWithArray:responseArray];
             [self performSelectorOnMainThread:@selector(updateUIForNotifications) withObject:nil waitUntilDone:YES];
+            request = nil;
         }
-        // Use when fetching binary data
-        NSData *responseData = [request responseData];
     }];
     [request setFailedBlock:^{
         NSError *error = [request error];
+        NSLog(@"Error : %@",error.localizedDescription);
+        request = nil;
     }];
     [request startAsynchronous];
 }
@@ -114,15 +101,5 @@
 {
     [self.notificationTableView reloadData];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

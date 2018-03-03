@@ -44,6 +44,8 @@
 #define HN_REQ_COMPANY @"company"
 #define HN_REQ_ADDRESS @"address"
 
+#define HN_REQ_ID @"id"
+
 //Login Response
 #define HN_LOGIN_NAME @"name"
 #define HN_LOGIN_USERNAME @"username"
@@ -54,5 +56,29 @@
 
 //events response
 #define HN_APP_DELEGATE ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+
+
+//String Constants
+#define HN_NO_INTERNET_TITLE @"No Internet!!!"
+#define HN_NO_INTERNET_MSG @"Unable to connect to the internet."
+#define HN_OK_TITLE @"OK"
+#define HN_CANCEL_TITLE @"CANCEL"
+#define HN_APP_NAME @"Event App"
+
+#define kSTRING_EVENTS @"events"
+#define kSTRING_PROMOS @"promos"
+#define kSTRING_PROMOTIONS @"promotions"
+#define HN_CAMERA_UNAVAILABLE_TITLE @"Camera Unavailable"
+#define HN_CAMERA_UNAVAILABLE_MSG @"Unable to find a camera on your device."
+//#define HN_NO_INTERNET @"No Internet!!!"
+
+
+
+//Response Constants
+#define HN_RES_SUCCESS @"success"
+#define HN_RES_MSG @"msg"
+
+//Segue Constants
+#define HN_SEGUE_LOGIN_TO_MENU @"ShowMenuFromLogin"
 
 #endif /* HNConstants_h */

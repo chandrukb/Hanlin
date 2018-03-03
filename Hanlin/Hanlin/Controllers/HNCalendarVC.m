@@ -31,43 +31,18 @@
 
 @implementation HNCalendarVC
 
-//- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if(!self){
-//        return nil;
-//    }
-//
-//    self.title = @"Basic";
-//
-//    return self;
-//}
-
 -(void)viewWillAppear:(BOOL)animated
 {
     _dateSelected=[NSDate date];
-    
     [self grabEventDetailInBackground];
-    
-    
-    
-    
-    
-    //    // Create a min and max date for limit the calendar, optional
-    
-    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    
-    
-    
     _PlusBtn.imageView.contentMode=UIViewContentModeScaleAspectFit;
     
-    //self.title = @"Calendar";
     [self.navigationItem.backBarButtonItem setTitle:@""];
     
     _calendarManager = [JTCalendarManager new];
@@ -77,9 +52,6 @@
     [_calendarManager setMenuView:_calendarMenuView];
     [_calendarManager setContentView:_calendarContentView];
     [_calendarManager setDate:_todayDate];
-    //    _todayDate = [NSDate date];
-    // Generate random events sort by date using a dateformatter for the demonstration
-    
 }
 
 #pragma mark - Buttons callback
@@ -105,7 +77,7 @@
 
 #pragma mark - CalendarManager delegate
 
-// Exemple of implementation of prepareDayView method
+// Example of implementation of prepareDayView method
 // Used to customize the appearance of dayView
 - (void)calendar:(JTCalendarManager *)calendar prepareDayView:(JTCalendarDayView *)dayView
 {
@@ -160,14 +132,12 @@
                         [_calendarManager reload];
                     } completion:nil];
     
-    
     // Don't change page in week mode because block the selection of days in first and last weeks of the month
     if(_calendarManager.settings.weekModeEnabled){
         return;
     }
     
     // Load the previous or next page if touch a day from another month
-    
     if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]){
         if([_calendarContentView.date compare:dayView.date] == NSOrderedAscending){
             [_calendarContentView loadNextPageWithAnimation];
@@ -183,8 +153,6 @@
 // Used to limit the date for the calendar, optional
 - (BOOL)calendar:(JTCalendarManager *)calendar canDisplayPageWithDate:(NSDate *)date
 {
-    // NSLog(@"<>===>%@",date);
-    
     return [_calendarManager.dateHelper date:date isEqualOrAfter:_minDate andEqualOrBefore:_maxDate];
 }
 
@@ -195,16 +163,11 @@
 
 - (void)calendarDidLoadPreviousPage:(JTCalendarManager *)calendar
 {
-    
-    
     //    NSLog(@"Previous page loaded");
 }
 
-
 - (void)calendar:(JTCalendarManager *)calendar prepareMenuItemView:(UIView *)menuItemView date:(NSDate *)date
 {
-    
-    
     NSDateFormatter *dateFormatter;
     dateFormatter = [NSDateFormatter new];
     dateFormatter.dateFormat = @"dd MMMM yyyy";
@@ -231,11 +194,8 @@
     static NSDateFormatter *dateFormatter;
     if(!dateFormatter){
         dateFormatter = [NSDateFormatter new];
-        // dateFormatter.dateFormat = @"dd-MM-yyyy";
         dateFormatter.dateFormat = @"yyyy-MM-dd";
-        
     }
-    
     return dateFormatter;
 }
 
@@ -246,84 +206,53 @@
         dateFormatterFromServer = [NSDateFormatter new];
         dateFormatterFromServer.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     }
-    
     return dateFormatterFromServer;
 }
 
 - (BOOL)haveEventForDay:(NSDate *)date
 {
     NSString *key = [[self dateFormatter] stringFromDate:date];
-    
     if(_eventsByDate[key] && [_eventsByDate[key] count] > 0){
         return YES;
     }
-    
     return NO;
-    
 }
 
 - (void)createRandomEvents
 {
     _eventsByDate = [NSMutableDictionary new];
-    
-   
-   
-        for(id a in responseArray)
+    for(id a in responseArray)
+    {
+        NSDate *randomDate=[[self dateFormatterFromServer] dateFromString:[[a objectForKey:@"userevents"]valueForKey:@"eventdate"]];
+        
+        if(randomDate!=nil)
         {
+            NSString *key = [[self dateFormatter] stringFromDate:randomDate];
             
-            
-            NSDate *randomDate=[[self dateFormatterFromServer] dateFromString:[[a objectForKey:@"userevents"]valueForKey:@"eventdate"]];
-            
-            if(randomDate!=nil)
-            {
-                NSString *key = [[self dateFormatter] stringFromDate:randomDate];
-                
-                if(!_eventsByDate[key]){
-                    _eventsByDate[key] = [NSMutableArray new];
-                }
-                
-                [_eventsByDate[key] addObject:randomDate];
+            if(!_eventsByDate[key]){
+                _eventsByDate[key] = [NSMutableArray new];
             }
-            // Use the date as key for eventsByDate
-            
-            
-            // eventObj = [[events objectAtIndex:[indexPath row]] objectForKey:@"userevents"];
-            
+            [_eventsByDate[key] addObject:randomDate];
         }
-    
-    
-    
-    
+        // Use the date as key for eventsByDate
+        // eventObj = [[events objectAtIndex:[indexPath row]] objectForKey:@"userevents"];
+    }
     [_calendarManager reload];
-    
-    
-    
 }
-
 
 - (void)grabEventDetailInBackground
 {
-    
     events=[[NSMutableArray alloc]init];
-    
     NSDateFormatter* MonthdateFormatter = [[NSDateFormatter alloc]init];
     [MonthdateFormatter setDateFormat:@"MM"];
     
     NSDateFormatter* YearFormatter = [[NSDateFormatter alloc]init];
     [YearFormatter setDateFormat:@"yyyy"];
     
-    
-    // NSLog(@"Date %@ , String %@",_dateSelected,[MonthdateFormatter stringFromDate:_dateSelected]);
-    
-    
     NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_MY_EVENTS]];
     __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setPostValue: [[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:@"userid"];
-    //  [request setPostValue: [MonthdateFormatter stringFromDate:_dateSelected] forKey:@"month"];
-    //   [request setPostValue: [YearFormatter stringFromDate:_dateSelected] forKey:@"year"];
     [request setCompletionBlock:^{
-        //        // Use when fetching text data
-        //        NSString *responseString = [request responseString];
         //handle the request
         if (request.responseStatusCode == 400) {
             NSLog(@"Invalid code");
@@ -334,19 +263,14 @@
             responseArray = [resString JSONValue];
             
             NSLog(@"==>%@",responseArray);
-            //  events = responseArray;
-            
             [self UpdateSelectedDateList];
-            
-            
-            
-            
             [self createRandomEvents];
-            
+            request = nil;
         }
     }];
     [request setFailedBlock:^{
         NSError *error = [request error];
+        request = nil;
     }];
     [request startAsynchronous];
 }
@@ -354,33 +278,23 @@
 -(void)UpdateSelectedDateList
 {
     [events removeAllObjects];
-    
-    
     NSString *keySelectedDate = [[self dateFormatter] stringFromDate:_dateSelected];
-    
     for(id a in responseArray)
     {
-        
         if([[[a objectForKey:@"userevents"]objectForKey:@"eventdate"] containsString:keySelectedDate])
         {
             [events addObject:a];
         }
-        
     }
-    
     [_calendarManager reload];
     [self.calendarTableView reloadData];
-    
 }
 
 #pragma mark- TableView Delegate and Datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
     return events.count;
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -391,9 +305,7 @@
     
     cell.lblTitle.text = [eventObj valueForKey:@"title"];
     cell.lblDate.text = [eventObj valueForKey:@"eventdate"];
-    
     return cell;
-    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -410,20 +322,13 @@
     [self.navigationController pushViewController:newView animated:YES];
 }
 
-
 -(IBAction)AddNewEvent:(id)sender
 {
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    
-    
- //   NSLog(@"Date %@ , String %@",_dateSelected,[dateFormatter stringFromDate:_dateSelected]);
-    
     HNCalendarDetailVC *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"HNCalendarDetailVC"];
     newView.GetSelecteddate=[dateFormatter stringFromDate:_dateSelected];
     [self.navigationController pushViewController:newView animated:YES];
 }
 
 @end
-
-

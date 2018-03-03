@@ -15,7 +15,7 @@
 #import "JSON.h"
 #import "HNUtility.h"
 #import "HNSliderView.h"
-
+#import "HNServiceManager.h"
 
 @interface HNFilesVC ()<UITableViewDelegate, UITableViewDataSource,HNSliderDelegate>
 {
@@ -188,18 +188,9 @@
 #pragma mark- Service call
 - (void)grabAttachmentsInBackground
 {
-    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_ALL_ATTACHMENTS]];
-    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    [request setCompletionBlock:^{
-        //handle the request
-        if (request.responseStatusCode == 400) {
-            NSLog(@"Invalid code");
-        } else if (request.responseStatusCode == 403) {
-            NSLog(@"Code already used");
-        } else if (request.responseStatusCode == 200) {
-            NSString *resString = [request responseString];
-            NSArray *responseArray = [resString JSONValue];
-            
+    if([HNUtility checkIfInternetIsAvailable])
+    {
+        [HNServiceManager executeRequestWithUrl:HN_GET_ALL_ATTACHMENTS completionHandler:^(NSArray *responseArray) {
             for (NSDictionary *dict in responseArray) {
                 
                 if ([dict[@"filetype"] isEqualToString:@"Youtube Link"]) {
@@ -210,42 +201,31 @@
                 }
             }
             [self performSelectorOnMainThread:@selector(updateUIForAttachments) withObject:nil waitUntilDone:YES];
-        }
-        // Use when fetching binary data
-//        NSData *responseData = [request responseData];
-    }];
-    [request setFailedBlock:^{
-        NSError *error = [request error];
-    }];
-    [request startAsynchronous];
+        } ErrorHandler:^(NSError *error) {
+            NSLog(@"Error : %@",error.localizedDescription);
+        }];
+    }
+    else
+    {
+        [HNUtility showAlertWithTitle:HN_NO_INTERNET_TITLE andMessage:HN_NO_INTERNET_MSG inViewController:self cancelButtonTitle:HN_OK_TITLE];
+    }
 }
-
 
 - (void)grabBannerInBackground
 {
-    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_ALL_BANNERS]];
-    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    [request setCompletionBlock:^{
-        //        // Use when fetching text data
-        //        NSString *responseString = [request responseString];
-        //handle the request
-        if (request.responseStatusCode == 400) {
-            NSLog(@"Invalid code");
-        } else if (request.responseStatusCode == 403) {
-            NSLog(@"Code already used");
-        } else if (request.responseStatusCode == 200) {
-            NSString *resString = [request responseString];
-            NSArray *responseArray = [resString JSONValue];
+    if([HNUtility checkIfInternetIsAvailable])
+    {
+        [HNServiceManager executeRequestWithUrl:HN_GET_ALL_BANNERS completionHandler:^(NSArray *responseArray) {
             BannersObj = [[NSMutableArray alloc] initWithArray:responseArray];
             [self performSelectorOnMainThread:@selector(PrepareBannerUI) withObject:nil waitUntilDone:YES];
-        }
-        // Use when fetching binary data
-        NSData *responseData = [request responseData];
-    }];
-    [request setFailedBlock:^{
-        NSError *error = [request error];
-    }];
-    [request startAsynchronous];
+        } ErrorHandler:^(NSError *error) {
+            NSLog(@"Error : %@",error.localizedDescription);
+        }];
+    }
+    else
+    {
+        [HNUtility showAlertWithTitle:HN_NO_INTERNET_TITLE andMessage:HN_NO_INTERNET_MSG inViewController:self cancelButtonTitle:HN_OK_TITLE];
+    }
 }
 
 -(void)updateUIForAttachments
@@ -255,17 +235,15 @@
 
 -(void)PrepareBannerUI
 {
-    
     for(NSDictionary *obj in BannersObj)
     {
         if([[obj valueForKey:@"type"] isEqualToString:@"files"])
         {
             [carouselUrlArray addObject:[HN_ROOTURL stringByAppendingString:[obj valueForKey:@"image"]]];
-            
         }
     }
-    
     BOOL shouldScroll = ([carouselUrlArray count] > 1) ? YES : NO;
     [sliderView createSliderWithImages:carouselUrlArray WithAutoScroll:shouldScroll inView:TopView];
 }
+
 @end
