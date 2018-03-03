@@ -23,6 +23,7 @@
     NSMutableArray *carouselUrlArray;
     HNSliderView *sliderView;
     HNSliderView *peopleSliderView;
+    NSMutableArray *datePickerArray;
 }
 @property (nonatomic, strong) CSLazyLoadController *lazyLoadController;
 @property (weak, nonatomic) IBOutlet HNRoundedImageView *ivEventPromo;
@@ -37,6 +38,7 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIView *carouselView;
 @property (weak, nonatomic) IBOutlet UIScrollView *peopleCarousel;
+@property (weak, nonatomic)  UIPickerView *pickerView;
 
 - (IBAction)registerForEvent:(id)sender;
 - (IBAction)getPromotion:(id)sender;
@@ -73,6 +75,29 @@
         [self grabPromotionDetailInBackground];
         self.title = @"Promotions";
     }
+    
+    datePickerArray = [[NSMutableArray alloc] init];
+    _pickerView.backgroundColor = [UIColor redColor];
+    _pickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
+    CGSize pickerSize = [_pickerView sizeThatFits:CGSizeZero];
+    _pickerView.frame = [self pickerFrameWithSize:pickerSize];
+    
+    _pickerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    _pickerView.delegate = (id)self;
+    _pickerView.showsSelectionIndicator = YES; 
+    // note this is default to NO
+    
+    [self.view addSubview:_pickerView];
+}
+
+- (CGRect)pickerFrameWithSize: (CGSize)size
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGRect pickerRect = CGRectMake(    0.0,
+                                   screenRect.size.height - 44.0 - size.height,
+                                   screenRect.size.width,
+                                   100);
+    return pickerRect;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -178,6 +203,14 @@
 }
 #pragma mark- end webview methods
 
+#pragma mark- Utility methods
+- (NSDate*)convertDateFromString:(NSString*)strDate{
+    // Convert string to date object
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    NSDate *date = [dateFormat dateFromString:strDate];
+    return date;
+}
 
 #pragma mark - Table view data source
 
@@ -242,7 +275,10 @@
             } else if (request.responseStatusCode == 200) {
                 NSString *resString = [request responseString];
                 NSArray *responseArray = [resString JSONValue];
-                event = [responseArray[0] valueForKey:@"events"];
+                event = [responseArray[0] valueForKey:@"events"];//[event valueForKey:@"startdate"],[event valueForKey:@"enddate"]
+                NSString *startDateStr = [event valueForKey:@"startdate"];
+                NSString *endDateStr = [event valueForKey:@"enddate"];
+                datePickerArray = [HNUtility getDatesBetweenTwoDates:[self convertDateFromString:startDateStr] :[self convertDateFromString:endDateStr]];
                 [self prepareUIForEvent];
             }
         }];
@@ -349,6 +385,63 @@
                  indexPath:(NSIndexPath *)indexPath {
 }
 
+#pragma mark - CSLazyLoadControllerDelegate
+// returns the number of 'columns' to display.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return 4;
+}
+
+/*//Customize Pickerview for multiple selection
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    UITableViewCell *cell = (UITableViewCell *)view;
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        [cell setBackgroundColor:[UIColor clearColor]];
+        [cell setBounds:CGRectMake(0, 0, cell.frame.size.width - 20, 44)];
+        //cell.tab = row;
+        UITapGestureRecognizer * singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleSelection:)];
+        singleTapGestureRecognizer.numberOfTapsRequired = 1;
+        [cell addGestureRecognizer:singleTapGestureRecognizer];
+    }
+    if ([selectedItems indexOfObject:[NSNumber numberWithInt:row]] != NSNotFound) {
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+    } else { [cell setAccessoryType:UITableViewCellAccessoryNone];
+    } cell.textLabel.text = [datasource objectAtIndex:row];
+    return cell;
+}
+
+
+- (void)toggleSelection:(UITapGestureRecognizer *)recognizer {
+    NSNumber *row = [NSNumber numberWithInt:recognizer.view.tag];
+    NSUInteger index = [selectedItems indexOfObject:row];
+    if (index != NSNotFound) {
+        //[selectedItems removeObjectAtIndex:index];
+        [(UITableViewCell *)(recognizer.view) setAccessoryType:UITableViewCellAccessoryNone];
+    } else { //[selectedItems addObject:row];
+        [(UITableViewCell *)(recognizer.view) setAccessoryType:UITableViewCellAccessoryCheckmark];
+    }
+}*/
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return @"date str";//[dataArray objectAtIndex:row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+//    UIView *rowView = [self.pickerView viewForRow:row forComponent:0];
+//    if([rowView isKindOfClass:[YouCustomView class]])
+//    {
+//        [(YouCustomView*)rowView toggleCheck];
+//        [self.pickerView reloadAllComponents];
+//    }
+}
+
 - (IBAction)registerForEvent:(id)sender {
     [self registerUserForEvent:[event valueForKey:@"id"]];
 }
@@ -357,7 +450,7 @@
 }
 
 - (IBAction)chooseDateAction:(id)sender {
-    NSLog(@"Choose Date Action Called")
+    NSLog(@"Choose Date Action Called");
 }
 
 @end

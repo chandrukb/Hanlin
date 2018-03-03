@@ -12,11 +12,9 @@
 #import "HNMenuVC.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
-    NSString *strDeviceToken;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) NSString *strDeviceToken;
 //@property (nonatomic) Reachability *hostReachability;
 //@property (nonatomic) Reachability *internetReachability;
 //@property (nonatomic) Reachability *wifiReachability;

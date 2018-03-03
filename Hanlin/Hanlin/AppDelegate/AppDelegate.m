@@ -23,7 +23,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     // Override point for customization after application launch.
     if([[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID])
     {
@@ -80,7 +80,8 @@
         center.delegate = self;
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error){
             if(!error){
-                [[UIApplication sharedApplication] registerForRemoteNotifications];
+                dispatch_async(dispatch_get_main_queue(),
+                               ^{ [[UIApplication sharedApplication] registerForRemoteNotifications];});
             }
         }];
     }
@@ -98,7 +99,8 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
     NSString *strDevicetoken = [[NSString alloc]initWithFormat:@"%@",[[[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]] stringByReplacingOccurrencesOfString:@" " withString:@""]];
     NSLog(@"Device Token = %@",strDevicetoken);
-    _strDeviceToken = strDevicetoken;
+    
+    [[NSUserDefaults standardUserDefaults]setValue:strDevicetoken forKey:@"DeviceToken"];
 }
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo

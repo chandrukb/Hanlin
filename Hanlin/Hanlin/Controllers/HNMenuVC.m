@@ -68,8 +68,8 @@
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setUseKeychainPersistence:YES];
     [request setPostValue:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:HN_LOGIN_USERID];
-    NSLog(@"DeviceToken: %@",appdelegate.strDeviceToken);
-    [request setPostValue:appdelegate.strDeviceToken forKey:@"devicetoken"];
+    NSLog(@"DeviceToken: %@",[[NSUserDefaults standardUserDefaults]valueForKey:@"DeviceToken"]);
+    [request setPostValue:[[NSUserDefaults standardUserDefaults]valueForKey:@"DeviceToken"] forKey:@"devicetoken"];
     [request setPostValue:@"ios" forKey:@"devicetype"];
     [request setDelegate:self];
     [request startAsynchronous];

@@ -11,6 +11,7 @@
 
 @interface HNUtility : NSObject
 //-(void)addShadowToView:(UIView *) inView;
++ (NSMutableArray *)getDatesBetweenTwoDates:(NSDate *)startDate :(NSDate *)endDate;
 + (UIImage *)imageWithImage:(UIImage *)image convertToSize:(CGSize)size;
 +(BOOL)checkIfInternetIsAvailable;
 @end
