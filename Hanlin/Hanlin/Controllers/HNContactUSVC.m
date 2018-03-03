@@ -47,25 +47,26 @@
 
 -(void)prepareRequest
 {
-    [ASIHTTPRequest setShouldUpdateNetworkActivityIndicator:NO];
-    // Start request
-    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_CONTACTUS]];
-    
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-    //    [request setPostValue:self.tfFullname.text forKey:HN_REQ_NAME];
-    //    [request setPostValue:self.tfEmail.text forKey:HN_REQ_EMAIL];
-    //    [request setPostValue:self.tfContactNumber.text forKey:HN_REQ_PHONE];
-    //    [request setPostValue:self.tfPassword.text forKey:HN_REQ_PASSWORD];
-    
-    [request setPostValue:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:HN_REQ_USERID];
-    [request setPostValue:_descriptionTextView.text forKey:HN_REQ_MESSAGE];
-    [request setPostValue:_contactNumberTxtField.text forKey:HN_REQ_PHONE];
-    [request setPostValue:_companyNameTxtField.text forKey:HN_REQ_COMPANY];
-    [request setPostValue:_addressTextField.text forKey:HN_REQ_ADDRESS];
-    
-    
-    [request setDelegate:self];
-    [request startAsynchronous];
+    if([HNUtility checkIfInternetIsAvailable])
+    {
+        [ASIHTTPRequest setShouldUpdateNetworkActivityIndicator:NO];
+        // Start request
+        NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_CONTACTUS]];
+        
+        ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+        [request setPostValue:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:HN_REQ_USERID];
+        [request setPostValue:_descriptionTextView.text forKey:HN_REQ_MESSAGE];
+        [request setPostValue:_contactNumberTxtField.text forKey:HN_REQ_PHONE];
+        [request setPostValue:_companyNameTxtField.text forKey:HN_REQ_COMPANY];
+        [request setPostValue:_addressTextField.text forKey:HN_REQ_ADDRESS];
+        
+        [request setDelegate:self];
+        [request startAsynchronous];
+    }
+    else
+    {
+        [HNUtility showAlertWithTitle:HN_NO_INTERNET_TITLE andMessage:HN_NO_INTERNET_MSG inViewController:self cancelButtonTitle:HN_OK_TITLE];
+    }
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request
@@ -79,24 +80,12 @@
         NSString *resString = [request responseString];
         NSArray *responseArray = [resString JSONValue];
         NSDictionary *response = responseArray[0];
-        BOOL responseStatus = [[response valueForKey:@"success"] boolValue];
         NSString * message = [response valueForKey:@"msg"];
-        if(responseStatus == true)
-        {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hanlin App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-            [alert show];
-        }
-        else
-        {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hanlin App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-            [alert show];
-        }
-        NSLog(@"dictionary value: %@", response);
+        [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:message inViewController:self cancelButtonTitle:HN_OK_TITLE];
         //to do: present an alert to the user and navigate to the login or the home screen
     } else {
         NSLog(@"Unexpected error");
     }
-    
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request
@@ -106,12 +95,10 @@
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    
     if([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         return NO;
     }
-    
     return YES;
 }
 

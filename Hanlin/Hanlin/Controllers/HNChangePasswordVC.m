@@ -8,6 +8,7 @@
 
 #import "HNChangePasswordVC.h"
 #import "HNTextField.h"
+#import "HNUtility.h"
 
 @interface HNChangePasswordVC (){
     BOOL keyboardIsShown;
@@ -142,14 +143,12 @@
     
     if((_tfCurrentPassword.text.length==0)||(_tfPassword.text.length==0)||(_tfVerifyPassword.text.length==0))
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event App" message:@"Please enter valid password" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-        [alert show];
+        [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:@"Please enter valid password" inViewController:self cancelButtonTitle:HN_OK_TITLE];
         return;
     }
     else if(![_tfPassword.text isEqualToString:_tfVerifyPassword.text])
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hanlin App" message:@"New password and Confirm Password mismatch" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-        [alert show];
+        [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:@"New password and Confirm Password mismatch" inViewController:self cancelButtonTitle:HN_OK_TITLE];
         return;
     }
     
@@ -172,23 +171,17 @@
             NSString * message = [response valueForKey:@"msg"];
             if(responseStatus == true)
             {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hanlin App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-                [alert show];
-                
                 [self.navigationController popViewControllerAnimated:YES];
-                
-                
             }
-            else
-            {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hanlin App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-                [alert show];
-            }
+            request = nil;
+            [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:message inViewController:self cancelButtonTitle:HN_OK_TITLE];
         }
     }];
     [request setFailedBlock:^{
         NSError *error = [request error];
+        request = nil;
     }];
     [request startAsynchronous];
 }
+
 @end

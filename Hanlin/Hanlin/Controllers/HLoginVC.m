@@ -12,6 +12,7 @@
 #import <ASIHTTPRequest/ASIFormDataRequest.h>
 #import "JSON.h"
 #import "HNUtility.h"
+#import "HNServiceManager.h"
 
 @interface HLoginVC ()<UITextFieldDelegate>
 {
@@ -34,8 +35,6 @@
     self.navigationController.navigationBarHidden=YES;
     // Do any additional setup after loading the view.
     textFields = [[NSArray alloc] initWithObjects:self.tfUsername,self.tfPassword, nil];
-    [self prepareUIForLogin];
-    // Do any additional setup after loading the view.
     // register for keyboard notifications
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
@@ -46,10 +45,9 @@
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:self.view.window];
-    
     // For testing
-  //  _tfUsername.text= @"craja.btech@icloud.com";
-  //  _tfPassword.text = @"123456";
+    //  _tfUsername.text= @"craja.btech@icloud.com";
+    //  _tfPassword.text = @"123456";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,44 +60,44 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    if([segue.identifier isEqualToString: @"ShowMenuFromLogin"])
+    if([segue.identifier isEqualToString: HN_SEGUE_LOGIN_TO_MENU])
     {
         
     }
 }
 
-
 - (IBAction)onLoginClicked:(id)sender {
     if([self.tfUsername validate] & [self.tfPassword validate]){
-        //Success
         if([HNUtility checkIfInternetIsAvailable])
-       {
-            [self prepareRequest];
+        {
+            //[self prepareRequest];
+            [HNServiceManager loginWithUsername:self.tfUsername.text andPassword:self.tfPassword.text completionHandler:^(NSDictionary *response) {
+                BOOL responseStatus = [[response valueForKey:HN_RES_SUCCESS] boolValue];
+                NSString * message = [response valueForKey:HN_RES_MSG];
+                if(responseStatus == true)
+                {
+//                    [self saveLoginDetailsToPersistance:response];
+                    [HNUtility saveLoginDetailsToPersistance:response];
+                    [self performSegueWithIdentifier:HN_SEGUE_LOGIN_TO_MENU sender:self];
+                }
+                else
+                {
+                    [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:message inViewController:self cancelButtonTitle:HN_OK_TITLE];
+                }
+            }
+            ErrorHandler:^(NSError *error) {
+                   NSLog(@"Error : %@",error.localizedDescription);
+            }];
         }
         else
         {
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No Internet!!!"
-                                                           message:@"Unable to connect to the internet."
-                                                          delegate:nil
-                                                 cancelButtonTitle:@"OK"
-                                                 otherButtonTitles:nil, nil];
-            [alert show];
+            [HNUtility showAlertWithTitle:HN_NO_INTERNET_TITLE andMessage:HN_NO_INTERNET_MSG inViewController:self cancelButtonTitle:HN_OK_TITLE];
         }
     }
 }
 
 - (IBAction)onRegisterClicked:(id)sender {
-}
 
--(void)prepareUIForLogin
-{
-    //    [self.ivProfileImage addGestureRecognizer:self.tagGesture];
-    //    for(UITextField *field in textFields)
-    //    {
-    //        field.textContentType = UITextContentTypeEmailAddress;
-    //    }
 }
 
 #pragma mark- Textfield delegate methods
@@ -112,7 +110,7 @@
         [[textFields objectAtIndex:fieldIndex+1] becomeFirstResponder];
     }
     else
-    [textField resignFirstResponder];
+        [textField resignFirstResponder];
     return true;
 }
 
@@ -125,68 +123,6 @@
     
 }
 
-#pragma mark-Service call methods
--(void)prepareRequest
-{
-    [ASIHTTPRequest setShouldUpdateNetworkActivityIndicator:NO];
-    // Start request
-    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_LOGIN_USER]];
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-    [request setUseKeychainPersistence:YES];
-    [request setPostValue:self.tfUsername.text forKey:HN_USERNAME];
-    [request setPostValue:self.tfPassword.text forKey:HN_REQ_PASSWORD];
-//    [request setPostValue:@"sabareesh8@gmail.com" forKey:HN_USERNAME];
-//    [request setPostValue:@"123456" forKey:HN_REQ_PASSWORD];
-    [request setDelegate:self];
-    [request startAsynchronous];
-}
-
-- (void)requestFinished:(ASIHTTPRequest *)request
-{
-    //handle the request
-    if (request.responseStatusCode == 400) {
-        NSLog(@"Invalid code");
-    } else if (request.responseStatusCode == 403) {
-        NSLog(@"Code already used");
-    } else if (request.responseStatusCode == 200) {
-        NSString *resString = [request responseString];
-        NSArray *responseArray = [resString JSONValue];
-        NSDictionary *response = responseArray[0];
-        BOOL responseStatus = [[response valueForKey:@"success"] boolValue];
-        NSString * message = [response valueForKey:@"msg"];
-        if(responseStatus == true)
-        {
-            [self saveLoginDetailsToPersistance:response];
-            [self performSegueWithIdentifier:@"ShowMenuFromLogin" sender:self];
-        }
-        else
-        {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-            [alert show];
-        }        
-    } else {
-        NSLog(@"Unexpected error");
-    }
-    
-}
-
-- (void)requestFailed:(ASIHTTPRequest *)request
-{
-    NSError *error = [request error];
-    NSLog(@"Error : %@",error.localizedDescription);
-}
-
--(void) saveLoginDetailsToPersistance:(NSDictionary *)userDetails
-{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setValue:[userDetails valueForKey:HN_LOGIN_USERID] forKey:HN_LOGIN_USERID];
-    [defaults setValue:[userDetails valueForKey:HN_LOGIN_NAME] forKey:HN_LOGIN_NAME];
-    [defaults setValue:[userDetails valueForKey:HN_LOGIN_USERNAME] forKey:HN_LOGIN_USERNAME];
-    [defaults setValue:[userDetails valueForKey:HN_LOGIN_PHONE] forKey:HN_LOGIN_PHONE];
-    [defaults setValue:[userDetails valueForKey:HN_LOGIN_JOINDATE] forKey:HN_LOGIN_JOINDATE];
-    [defaults setValue:[userDetails valueForKey:HN_LOGIN_PROFILE_IMG] forKey:HN_LOGIN_PROFILE_IMG];
-    
-}
 #pragma mark- Keyboard notification methods
 - (void)keyboardWillHide:(NSNotification *)n
 {
@@ -228,4 +164,68 @@
     [UIView commitAnimations];
     keyboardIsShown = YES;
 }
+
+//#pragma mark-Service call methods
+//-(void)prepareRequest
+//{
+//    [ASIHTTPRequest setShouldUpdateNetworkActivityIndicator:NO];
+//    // Start request
+//    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_LOGIN_USER]];
+//    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+//    [request setUseKeychainPersistence:YES];
+//    [request setPostValue:self.tfUsername.text forKey:HN_USERNAME];
+//    [request setPostValue:self.tfPassword.text forKey:HN_REQ_PASSWORD];
+//    //    [request setPostValue:@"sabareesh8@gmail.com" forKey:HN_USERNAME];
+//    //    [request setPostValue:@"123456" forKey:HN_REQ_PASSWORD];
+//    [request setDelegate:self];
+//    [request startAsynchronous];
+//}
+
+//- (void)requestFinished:(ASIHTTPRequest *)request
+//{
+//    //handle the request
+//    if (request.responseStatusCode == 400) {
+//        NSLog(@"Invalid code");
+//    } else if (request.responseStatusCode == 403) {
+//        NSLog(@"Code already used");
+//    } else if (request.responseStatusCode == 200) {
+//        NSString *resString = [request responseString];
+//        NSArray *responseArray = [resString JSONValue];
+//        NSDictionary *response = responseArray[0];
+//        BOOL responseStatus = [[response valueForKey:HN_RES_SUCCESS] boolValue];
+//        NSString * message = [response valueForKey:HN_RES_MSG];
+//        if(responseStatus == true)
+//        {
+//            [self saveLoginDetailsToPersistance:response];
+//            [self performSegueWithIdentifier:@"ShowMenuFromLogin" sender:self];
+//        }
+//        else
+//        {
+//            [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:message inViewController:self cancelButtonTitle:HN_OK_TITLE];
+//        }
+//    } else {
+//        NSLog(@"Unexpected error");
+//    }
+//
+//}
+
+//- (void)requestFailed:(ASIHTTPRequest *)request
+//{
+//    NSError *error = [request error];
+//    NSLog(@"Error : %@",error.localizedDescription);
+//}
+
+//-(void) saveLoginDetailsToPersistance:(NSDictionary *)userDetails
+//{
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    [defaults setValue:[userDetails valueForKey:HN_LOGIN_USERID] forKey:HN_LOGIN_USERID];
+//    [defaults setValue:[userDetails valueForKey:HN_LOGIN_NAME] forKey:HN_LOGIN_NAME];
+//    [defaults setValue:[userDetails valueForKey:HN_LOGIN_USERNAME] forKey:HN_LOGIN_USERNAME];
+//    [defaults setValue:[userDetails valueForKey:HN_LOGIN_PHONE] forKey:HN_LOGIN_PHONE];
+//    [defaults setValue:[userDetails valueForKey:HN_LOGIN_JOINDATE] forKey:HN_LOGIN_JOINDATE];
+//    [defaults setValue:[userDetails valueForKey:HN_LOGIN_PROFILE_IMG] forKey:HN_LOGIN_PROFILE_IMG];
+//
+//}
+
+
 @end

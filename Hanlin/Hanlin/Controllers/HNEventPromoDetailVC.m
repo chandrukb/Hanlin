@@ -15,6 +15,7 @@
 #import "HNRoundedImageView.h"
 #import "HNSliderView.h"
 #import "HNUtility.h"
+#import "HNServiceManager.h"
 
 @interface HNEventPromoDetailVC ()<CSLazyLoadControllerDelegate, UIWebViewDelegate, HNSliderDelegate>
 {
@@ -66,13 +67,13 @@
     self.lazyLoadController = [[CSLazyLoadController alloc] init];
     self.lazyLoadController.delegate = self;
     
-    if ([self.selectedOption isEqualToString: @"events"]) {
-        [self grabEventDetailInBackground];
+    if ([self.selectedOption isEqualToString: kSTRING_EVENTS]) {
+        [self grabDetailsFor:kSTRING_EVENTS];
         self.title = @"Events";
     }
-    else if([self.selectedOption isEqualToString: @"promos"])
+    else if([self.selectedOption isEqualToString: kSTRING_PROMOS])
     {
-        [self grabPromotionDetailInBackground];
+        [self grabDetailsFor:kSTRING_PROMOS];
         self.title = @"Promotions";
     }
     
@@ -130,9 +131,6 @@
     self.lblDay.text = dateComponents[2];
     self.lblMonth.text = dateComponents[1];
     self.lblYear.text = dateComponents[0];
-    
-    
-    
 }
 
 -(void)prepareUIForPromotion
@@ -161,12 +159,10 @@
 
 -(void)loadJoinedUsers:(NSArray *)joinees
 {
-//    NSMutableArray *peoples = [[NSMutableArray alloc] init];
     self.peopleCarousel.contentSize = CGSizeMake([joinees count] * 52, 47);
     for(int i = 0; i < [joinees count]; i++)
     {
         NSDictionary *obj = [joinees objectAtIndex:i];
-//        [peoples addObject:[HN_ROOTURL stringByAppendingString:[obj valueForKey:@"profileimage"]]];
         UIImage *image = [self.lazyLoadController fastCacheImage:[CSURL URLWithString:[HN_ROOTURL stringByAppendingString:[obj valueForKey:@"profileimage"]]]];
         if (!image) {
             [self.lazyLoadController startDownload:[CSURL URLWithString:[HN_ROOTURL stringByAppendingString:[obj valueForKey:@"profileimage"]] parameters:nil method:CSHTTPMethodPOST]
@@ -178,14 +174,6 @@
         imageView.image = image;
         [self.peopleCarousel addSubview:imageView];
     }
-//    peopleSliderView = [[[NSBundle mainBundle] loadNibNamed:@"HNSliderView" owner:self options:nil] firstObject];
-//    peopleSliderView.delegate = self;
-//    [peopleSliderView hidePageIndicator:YES];
-//    [peopleSliderView initializeLazyLoader];
-//    peopleSliderView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//    [self.peopleCarousel addSubview:peopleSliderView];
-//    BOOL shouldScroll = ([peoples count] > 1) ? YES : NO;
-//    [peopleSliderView createSliderWithImages:peoples WithAutoScroll:shouldScroll inView:self.peopleCarousel];
 }
 
 #pragma mark- webview delegate method
@@ -226,10 +214,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if([self.selectedOption isEqualToString:@"promos"] && (indexPath.row == 2 || indexPath.row == 4 || indexPath.row == 5))//
+    if([self.selectedOption isEqualToString:kSTRING_PROMOS] && (indexPath.row == 2 || indexPath.row == 4 || indexPath.row == 5))//
         return 0; //set the hidden cell's height to 0
     
-    if([self.selectedOption isEqualToString:@"events"] && indexPath.row == 5)
+    if([self.selectedOption isEqualToString:kSTRING_EVENTS] && indexPath.row == 5)
         return 0; //set the hidden cell's height to 0
     
     
@@ -252,19 +240,10 @@
  // Pass the selected object to the new view controller.
  }
  */
-
-- (void)grabEventDetailInBackground
+-(void)grabDetailsFor:(NSString *)itemType
+//- (void)grabEventDetailInBackground
 {
-//    if([HNUtility checkIfInternetIsAvailable])
-//    {
-    
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-
-    
-        NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_ALL_EVENTS]];
-        __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-        [request setPostValue: self.eventId forKey:@"id"];
-        [request setPostValue: [defaults objectForKey:HN_LOGIN_USERID]  forKey:@"userid"];
     
 
         [request setCompletionBlock:^{
@@ -334,7 +313,7 @@
 {
     NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_JOIN_EVENT]];
     __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-    [request setPostValue:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:@"userid"];
+    [request setPostValue:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:HN_REQ_USERID];
     [request setPostValue:eventId forKey:@"eventid"];
     [request setCompletionBlock:^{
         if (request.responseStatusCode == 400) {
@@ -345,25 +324,24 @@
             NSString *resString = [request responseString];
             NSArray *responseArray = [resString JSONValue];
             NSDictionary *response = responseArray[0];
-            BOOL responseStatus = [[response valueForKey:@"success"] boolValue];
-            NSString * message = [response valueForKey:@"msg"];
+            BOOL responseStatus = [[response valueForKey:HN_RES_SUCCESS] boolValue];
+            NSString * message = [response valueForKey:HN_RES_MSG];
             if(responseStatus == true)
             {
-                [self grabEventDetailInBackground];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-                [alert show];
-                
-                
+                [self grabDetailsFor:kSTRING_EVENTS];
+                [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:message inViewController:self cancelButtonTitle:HN_OK_TITLE];
             }
             else
             {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event App" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-                [alert show];
+                [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:message inViewController:self cancelButtonTitle:HN_OK_TITLE];
             }
+            request = nil;
         }
     }];
     [request setFailedBlock:^{
         NSError *error = [request error];
+        NSLog(@"Error : %@",error.localizedDescription);
+        request = nil;
     }];
     [request startAsynchronous];
 }
@@ -440,7 +418,7 @@
 }
 
 - (IBAction)registerForEvent:(id)sender {
-    [self registerUserForEvent:[event valueForKey:@"id"]];
+    [self registerUserForEvent:[event valueForKey:HN_REQ_ID]];
 }
 
 - (IBAction)getPromotion:(id)sender {

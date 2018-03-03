@@ -31,6 +31,7 @@
 		ACEA4BB2202F3CE10080FBA9 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEA4BAB202F3CE10080FBA9 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ACEA4BB3202F3CE10080FBA9 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEA4BAD202F3CE10080FBA9 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ACEBCBCD20322AAC0087A6A3 /* HNTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEBCBC8203223290087A6A3 /* HNTextField.m */; };
+		ACF04E85204A4E0F000F0D15 /* HNServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF04E84204A4E0F000F0D15 /* HNServiceManager.m */; };
 		CC46C3F9201BDCC300E6775E /* HNMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC46C3F8201BDCC300E6775E /* HNMenuVC.m */; };
 		CCAEC5A4201BC8CC0053A70A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAEC5A3201BC8CC0053A70A /* Assets.xcassets */; };
 		CCAEC5AA201BC8CC0053A70A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAEC5A9201BC8CC0053A70A /* main.m */; };
@@ -105,6 +106,8 @@
 		ACEA4BAD202F3CE10080FBA9 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		ACEBCBC8203223290087A6A3 /* HNTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNTextField.m; sourceTree = "<group>"; };
 		ACEBCBC92032232A0087A6A3 /* HNTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNTextField.h; sourceTree = "<group>"; };
+		ACF04E83204A4E0F000F0D15 /* HNServiceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNServiceManager.h; sourceTree = "<group>"; };
+		ACF04E84204A4E0F000F0D15 /* HNServiceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNServiceManager.m; sourceTree = "<group>"; };
 		CC46C3F7201BDCC300E6775E /* HNMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNMenuVC.h; sourceTree = "<group>"; };
 		CC46C3F8201BDCC300E6775E /* HNMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNMenuVC.m; sourceTree = "<group>"; };
 		CCAEC597201BC8CC0053A70A /* Hanlin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanlin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,6 +271,8 @@
 				AC76AC232022467300DFD270 /* HNContentsTableViewCell.m */,
 				2CA488DE203DEAAD0044796D /* HNNotificationsCell.h */,
 				2CA488DF203DEAAD0044796D /* HNNotificationsCell.m */,
+				ACF04E83204A4E0F000F0D15 /* HNServiceManager.h */,
+				ACF04E84204A4E0F000F0D15 /* HNServiceManager.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				CCAEC5DB201BC9A40053A70A /* HNWebVC.m in Sources */,
 				830DF45B20414DC70094576A /* HNCalendarTableViewCell.m in Sources */,
 				CCAEC5DA201BC9A40053A70A /* HNProfileVC.m in Sources */,
+				ACF04E85204A4E0F000F0D15 /* HNServiceManager.m in Sources */,
 				830DF45C20414DC70094576A /* HNCalendarDetailVC.m in Sources */,
 				AC169ABD2020EBFE0027B562 /* HNEventPromotionCell.m in Sources */,
 				AC76AC242022467300DFD270 /* HNContentsTableViewCell.m in Sources */,
