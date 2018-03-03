@@ -276,9 +276,6 @@
                 NSString *resString = [request responseString];
                 NSArray *responseArray = [resString JSONValue];
                 event = [responseArray[0] valueForKey:@"events"];//[event valueForKey:@"startdate"],[event valueForKey:@"enddate"]
-                NSString *startDateStr = [event valueForKey:@"startdate"];
-                NSString *endDateStr = [event valueForKey:@"enddate"];
-                datePickerArray = [HNUtility getDatesBetweenTwoDates:[self convertDateFromString:startDateStr] :[self convertDateFromString:endDateStr]];
                 [self prepareUIForEvent];
             }
         }];
