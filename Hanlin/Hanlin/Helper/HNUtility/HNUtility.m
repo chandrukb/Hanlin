@@ -104,4 +104,19 @@
     
 }
 
++ (NSMutableArray *)getDatesBetweenTwoDates:(NSDate *)startDate :(NSDate *)endDate{
+    NSMutableArray *dates = [NSMutableArray array];
+    NSDate *curDate = startDate;
+    while([curDate timeIntervalSince1970] <= [endDate timeIntervalSince1970]) //you can also use the earlier-method
+    {
+        NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
+        [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+        NSString *dateString = [dateFormatter stringFromDate:curDate];
+        [dates addObject:dateString];
+        
+        curDate = [NSDate dateWithTimeInterval:86400 sinceDate:curDate]; //86400 = 60*60*24
+    }
+    return dates;
+}
+
 @end

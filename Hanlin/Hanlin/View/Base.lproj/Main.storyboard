@@ -1963,10 +1963,20 @@
                                                                 <action selector="chooseDateAction:" destination="U85-ZT-uAg" eventType="touchUpInside" id="e2X-3c-LkI"/>
                                                             </connections>
                                                         </button>
+                                                        <pickerView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Osk-2o-gKc">
+                                                            <rect key="frame" x="-20" y="0.0" width="320" height="210"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <connections>
+                                                                <outlet property="dataSource" destination="U85-ZT-uAg" id="hz7-xL-ZNL"/>
+                                                                <outlet property="delegate" destination="U85-ZT-uAg" id="ghM-pU-xRJ"/>
+                                                            </connections>
+                                                        </pickerView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="Osk-2o-gKc" firstAttribute="top" secondItem="Ebo-Js-jzR" secondAttribute="top" id="1Z9-q5-ilq"/>
                                                         <constraint firstItem="LPA-i1-I2l" firstAttribute="leading" secondItem="Ebo-Js-jzR" secondAttribute="leading" constant="35" id="51b-qi-Ubs"/>
+                                                        <constraint firstItem="Osk-2o-gKc" firstAttribute="leading" secondItem="Ebo-Js-jzR" secondAttribute="leading" constant="-20" id="Dze-N7-5ip"/>
                                                         <constraint firstItem="t9P-H7-cuF" firstAttribute="trailing" secondItem="jTK-Uw-ekR" secondAttribute="trailing" id="Erp-31-YGJ"/>
                                                         <constraint firstItem="XAk-Zm-a2c" firstAttribute="top" secondItem="8oL-IW-zNC" secondAttribute="bottom" constant="10" id="FUO-L2-had"/>
                                                         <constraint firstAttribute="trailing" secondItem="8oL-IW-zNC" secondAttribute="trailing" constant="8" id="JIG-1a-Ccm"/>
@@ -1975,6 +1985,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="hpG-qI-fLp" secondAttribute="trailing" constant="8" id="RWC-zo-nwM"/>
                                                         <constraint firstItem="8oL-IW-zNC" firstAttribute="leading" secondItem="Ebo-Js-jzR" secondAttribute="leading" constant="35" id="TNz-Ci-hs4"/>
                                                         <constraint firstItem="vO8-4g-jo1" firstAttribute="leading" secondItem="Ebo-Js-jzR" secondAttribute="leading" constant="35" id="U1g-y4-Rlu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Osk-2o-gKc" secondAttribute="trailing" id="Va8-x3-YLa"/>
                                                         <constraint firstItem="hpG-qI-fLp" firstAttribute="leading" secondItem="Ebo-Js-jzR" secondAttribute="leading" constant="35" id="bbm-2O-dDS"/>
                                                         <constraint firstItem="vO8-4g-jo1" firstAttribute="top" secondItem="8oL-IW-zNC" secondAttribute="bottom" constant="10" id="bz0-ep-9XD"/>
                                                         <constraint firstItem="8oL-IW-zNC" firstAttribute="top" secondItem="hpG-qI-fLp" secondAttribute="bottom" id="c9N-hN-Cav"/>
@@ -1983,6 +1994,7 @@
                                                         <constraint firstItem="hpG-qI-fLp" firstAttribute="top" secondItem="Ebo-Js-jzR" secondAttribute="top" constant="15" id="hRc-Zk-ZeA"/>
                                                         <constraint firstItem="t9P-H7-cuF" firstAttribute="top" secondItem="vO8-4g-jo1" secondAttribute="top" id="lNs-RL-uwi"/>
                                                         <constraint firstItem="jTK-Uw-ekR" firstAttribute="top" secondItem="8oL-IW-zNC" secondAttribute="bottom" constant="10" id="lRe-O7-tgp"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Osk-2o-gKc" secondAttribute="bottom" id="oxs-xB-RTl"/>
                                                         <constraint firstItem="t9P-H7-cuF" firstAttribute="leading" secondItem="vO8-4g-jo1" secondAttribute="leading" id="r2e-gd-jzN"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -2032,7 +2044,7 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg9-jV-IlL">
                                                             <rect key="frame" x="35" y="90" width="200" height="35"/>
-                                                            <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.32941176470588235" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="35" id="7Qj-yL-Xo3"/>
                                                                 <constraint firstAttribute="width" constant="200" id="nhN-8E-7rq"/>
@@ -2090,6 +2102,33 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="y96-eH-yFU">
+                                        <rect key="frame" x="0.0" y="765" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y96-eH-yFU" id="lfS-fd-kJ6">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s01-dQ-Nq8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.3294117647" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                                    <state key="normal" title="Cancel">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="cancelEventAction:" destination="U85-ZT-uAg" eventType="touchUpInside" id="0v6-cq-Sr0"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s01-dQ-Nq8" firstAttribute="leading" secondItem="lfS-fd-kJ6" secondAttribute="leading" id="JSc-lb-bHG"/>
+                                                <constraint firstItem="s01-dQ-Nq8" firstAttribute="top" secondItem="lfS-fd-kJ6" secondAttribute="top" id="iXr-IM-aX7"/>
+                                                <constraint firstAttribute="trailing" secondItem="s01-dQ-Nq8" secondAttribute="trailing" id="qu9-sd-avz"/>
+                                                <constraint firstAttribute="bottom" secondItem="s01-dQ-Nq8" secondAttribute="bottom" id="yVw-0v-Pxa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -2110,6 +2149,7 @@
                         <outlet property="lblPeopleCount" destination="e9I-uc-DoL" id="ThS-Ph-Mx4"/>
                         <outlet property="lblYear" destination="jTK-Uw-ekR" id="4WN-GL-KJC"/>
                         <outlet property="peopleCarousel" destination="JWt-1b-cyk" id="5jT-eY-JIc"/>
+                        <outlet property="pickerView" destination="Osk-2o-gKc" id="v3r-A7-dTX"/>
                         <outlet property="webView" destination="ppF-Ka-Moa" id="3BR-5f-lMC"/>
                     </connections>
                 </tableViewController>

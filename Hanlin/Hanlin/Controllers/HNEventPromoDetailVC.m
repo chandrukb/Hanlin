@@ -39,11 +39,12 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIView *carouselView;
 @property (weak, nonatomic) IBOutlet UIScrollView *peopleCarousel;
-@property (weak, nonatomic)  UIPickerView *pickerView;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
 - (IBAction)registerForEvent:(id)sender;
 - (IBAction)getPromotion:(id)sender;
 - (IBAction)chooseDateAction:(id)sender;
+- (IBAction)cancelEventAction:(id)sender;
 @end
 
 @implementation HNEventPromoDetailVC
@@ -76,29 +77,8 @@
         [self grabDetailsFor:kSTRING_PROMOS];
         self.title = @"Promotions";
     }
-    
-    datePickerArray = [[NSMutableArray alloc] init];
-    _pickerView.backgroundColor = [UIColor redColor];
-    _pickerView = [[UIPickerView alloc] initWithFrame:CGRectZero];
-    CGSize pickerSize = [_pickerView sizeThatFits:CGSizeZero];
-    _pickerView.frame = [self pickerFrameWithSize:pickerSize];
-    
-    _pickerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    _pickerView.delegate = (id)self;
-    _pickerView.showsSelectionIndicator = YES; 
-    // note this is default to NO
-    
-    [self.view addSubview:_pickerView];
-}
-
-- (CGRect)pickerFrameWithSize: (CGSize)size
-{
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGRect pickerRect = CGRectMake(    0.0,
-                                   screenRect.size.height - 44.0 - size.height,
-                                   screenRect.size.width,
-                                   100);
-    return pickerRect;
+    _pickerView.showsSelectionIndicator = YES;
+    [_pickerView setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -131,6 +111,8 @@
     self.lblDay.text = dateComponents[2];
     self.lblMonth.text = dateComponents[1];
     self.lblYear.text = dateComponents[0];
+    
+    [_pickerView reloadAllComponents];
 }
 
 -(void)prepareUIForPromotion
@@ -209,7 +191,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 6;
+    return 7;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -217,14 +199,15 @@
     if([self.selectedOption isEqualToString:kSTRING_PROMOS] && (indexPath.row == 2 || indexPath.row == 4 || indexPath.row == 5))//
         return 0; //set the hidden cell's height to 0
     
-    if([self.selectedOption isEqualToString:kSTRING_EVENTS] && indexPath.row == 5)
+    if([self.selectedOption isEqualToString:kSTRING_EVENTS] && (indexPath.row == 5))
         return 0; //set the hidden cell's height to 0
     
-    
-    
-    if(([[event valueForKey:@"isregistered"]intValue]==1) && (indexPath.row ==  4 || indexPath.row == 5))
+    if(([[event valueForKey:@"isregistered"]intValue]==1) && (indexPath.row == 5))
         return 0; //set the hidden cell's height to 0
     
+     if(([[event valueForKey:@"isregistered"]intValue]==0) && (indexPath.row ==  6))
+        return 0;
+        
     if(indexPath.row == 3)
         return contentHeight;
     return [super tableView:tableView heightForRowAtIndexPath:indexPath];
@@ -245,68 +228,40 @@
 {
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     
-
-        [request setCompletionBlock:^{
-            if (request.responseStatusCode == 400) {
-                NSLog(@"Invalid code");
-            } else if (request.responseStatusCode == 403) {
-                NSLog(@"Code already used");
-            } else if (request.responseStatusCode == 200) {
-                NSString *resString = [request responseString];
-                NSArray *responseArray = [resString JSONValue];
-                event = [responseArray[0] valueForKey:@"events"];//[event valueForKey:@"startdate"],[event valueForKey:@"enddate"]
-                [self prepareUIForEvent];
-            }
-        }];
-        [request setFailedBlock:^{
-            NSError *error = [request error];
-        }];
-        [request startAsynchronous];
-//    }
-//    else
-//    {
-//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No Internet!!!"
-//                                                       message:@"Unable to connect to the internet."
-//                                                      delegate:nil
-//                                             cancelButtonTitle:@"OK"
-//                                             otherButtonTitles:nil, nil];
-//        [alert show];
-//    }
-}
-
-- (void)grabPromotionDetailInBackground
-{
-//    if([HNUtility checkIfInternetIsAvailable])
-//    {
-        NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_GET_ALL_PROMOTIONS]];
-        __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-        [request setPostValue: self.promoId forKey:@"id"];
-        [request setCompletionBlock:^{
-            if (request.responseStatusCode == 400) {
-                NSLog(@"Invalid code");
-            } else if (request.responseStatusCode == 403) {
-                NSLog(@"Code already used");
-            } else if (request.responseStatusCode == 200) {
-                NSString *resString = [request responseString];
-                NSArray *responseArray = [resString JSONValue];
-                event = [responseArray[0] valueForKey:@"promotions"];
-                [self prepareUIForPromotion];
-            }
-        }];
-        [request setFailedBlock:^{
-            NSError *error = [request error];
-        }];
-        [request startAsynchronous];
-//    }
-//    else
-//    {
-//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No Internet!!!"
-//                                                       message:@"Unable to connect to the internet."
-//                                                      delegate:nil
-//                                             cancelButtonTitle:@"OK"
-//                                             otherButtonTitles:nil, nil];
-//        [alert show];
-//    }
+    if([HNUtility checkIfInternetIsAvailable])
+    {
+        if([itemType isEqualToString:kSTRING_EVENTS])
+        {
+            NSDictionary *payload = [[NSDictionary alloc] initWithObjects:@[self.eventId, [defaults objectForKey:HN_LOGIN_USERID]] forKeys:@[HN_REQ_ID, HN_REQ_USERID]];
+            [HNServiceManager executeRequestWithUrl:HN_GET_ALL_EVENTS completionHandler:^(NSArray *responseArray) {
+                event = [responseArray[0] valueForKey:kSTRING_EVENTS];
+                
+                //Todo needs to be optimize
+                NSString *startDateStr = [event valueForKey:@"startdate"];
+                NSString *endDateStr = [event valueForKey:@"enddate"];
+                datePickerArray = [HNUtility getDatesBetweenTwoDates:[self convertDateFromString:startDateStr] :[self convertDateFromString:endDateStr]];
+                //
+                
+                [self performSelectorOnMainThread:@selector(prepareUIForEvent) withObject:nil waitUntilDone:YES];
+            } ErrorHandler:^(NSError *error) {
+                NSLog(@"Error : %@",error.localizedDescription);
+            } payLoadDictionary:payload];
+        }
+        else
+        {
+            NSDictionary *payload = [[NSDictionary alloc] initWithObjects:@[self.promoId] forKeys:@[HN_REQ_ID]];
+            [HNServiceManager executeRequestWithUrl:HN_GET_ALL_PROMOTIONS completionHandler:^(NSArray *responseArray) {
+                event = [responseArray[0] valueForKey:kSTRING_PROMOTIONS];
+                [self performSelectorOnMainThread:@selector(prepareUIForPromotion) withObject:nil waitUntilDone:YES];
+            } ErrorHandler:^(NSError *error) {
+                NSLog(@"Error : %@",error.localizedDescription);
+            } payLoadDictionary:payload];
+        }
+    }
+    else
+    {
+        [HNUtility showAlertWithTitle:HN_NO_INTERNET_TITLE andMessage:HN_NO_INTERNET_MSG inViewController:self cancelButtonTitle:HN_OK_TITLE];
+    }
 }
 
 -(void)registerUserForEvent:(NSString *)eventId
@@ -315,6 +270,47 @@
     __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setPostValue:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:HN_REQ_USERID];
     [request setPostValue:eventId forKey:@"eventid"];
+    NSString *joinDateStr = [NSString stringWithFormat:@"%@",[datePickerArray objectAtIndex:0]];
+    [request setPostValue:joinDateStr forKey:@"joindate"];
+    
+    [request setCompletionBlock:^{
+        if (request.responseStatusCode == 400) {
+            NSLog(@"Invalid code");
+        } else if (request.responseStatusCode == 403) {
+            NSLog(@"Code already used");
+        } else if (request.responseStatusCode == 200) {
+            NSString *resString = [request responseString];
+            NSArray *responseArray = [resString JSONValue];
+            NSDictionary *response = responseArray[0];
+            BOOL responseStatus = [[response valueForKey:HN_RES_SUCCESS] boolValue];
+            NSString * message = [response valueForKey:HN_RES_MSG];
+            if(responseStatus == true)
+            {
+                [self grabDetailsFor:kSTRING_EVENTS];
+                [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:message inViewController:self cancelButtonTitle:HN_OK_TITLE];
+            }
+            else
+            {
+                [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:message inViewController:self cancelButtonTitle:HN_OK_TITLE];
+            }
+            request = nil;
+        }
+    }];
+    [request setFailedBlock:^{
+        NSError *error = [request error];
+        NSLog(@"Error : %@",error.localizedDescription);
+        request = nil;
+    }];
+    [request startAsynchronous];
+}
+
+-(void)cancelUserForEvent:(NSString *)eventId
+{
+    NSURL *url = [NSURL URLWithString:[HN_ROOTURL stringByAppendingString:HN_CANCEL_EVENT]];
+    __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:HN_REQ_USERID];
+    [request setPostValue:eventId forKey:@"eventid"];
+    [request setPostValue:@"del" forKey:@"action"];
     [request setCompletionBlock:^{
         if (request.responseStatusCode == 400) {
             NSLog(@"Invalid code");
@@ -360,62 +356,31 @@
                  indexPath:(NSIndexPath *)indexPath {
 }
 
-#pragma mark - CSLazyLoadControllerDelegate
-// returns the number of 'columns' to display.
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+#pragma mark -
+#pragma mark PickerView delegate methods
+
+- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
     return 1;
 }
 
-// returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return 4;
+    return [datePickerArray count];
 }
 
-/*//Customize Pickerview for multiple selection
-- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
-    UITableViewCell *cell = (UITableViewCell *)view;
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-        [cell setBackgroundColor:[UIColor clearColor]];
-        [cell setBounds:CGRectMake(0, 0, cell.frame.size.width - 20, 44)];
-        //cell.tab = row;
-        UITapGestureRecognizer * singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleSelection:)];
-        singleTapGestureRecognizer.numberOfTapsRequired = 1;
-        [cell addGestureRecognizer:singleTapGestureRecognizer];
-    }
-    if ([selectedItems indexOfObject:[NSNumber numberWithInt:row]] != NSNotFound) {
-        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-    } else { [cell setAccessoryType:UITableViewCellAccessoryNone];
-    } cell.textLabel.text = [datasource objectAtIndex:row];
-    return cell;
-}
-
-
-- (void)toggleSelection:(UITapGestureRecognizer *)recognizer {
-    NSNumber *row = [NSNumber numberWithInt:recognizer.view.tag];
-    NSUInteger index = [selectedItems indexOfObject:row];
-    if (index != NSNotFound) {
-        //[selectedItems removeObjectAtIndex:index];
-        [(UITableViewCell *)(recognizer.view) setAccessoryType:UITableViewCellAccessoryNone];
-    } else { //[selectedItems addObject:row];
-        [(UITableViewCell *)(recognizer.view) setAccessoryType:UITableViewCellAccessoryCheckmark];
-    }
-}*/
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return @"date str";//[dataArray objectAtIndex:row];
+    return [NSString stringWithFormat:@"%@",[datePickerArray objectAtIndex:row]];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-//    UIView *rowView = [self.pickerView viewForRow:row forComponent:0];
-//    if([rowView isKindOfClass:[YouCustomView class]])
-//    {
-//        [(YouCustomView*)rowView toggleCheck];
-//        [self.pickerView reloadAllComponents];
-//    }
+
 }
+
+#pragma mark -
+#pragma mark Button Action  methods
 
 - (IBAction)registerForEvent:(id)sender {
     [self registerUserForEvent:[event valueForKey:HN_REQ_ID]];
@@ -426,6 +391,13 @@
 
 - (IBAction)chooseDateAction:(id)sender {
     NSLog(@"Choose Date Action Called");
+//    [_pickerView setHidden:NO];
+//    [self.tableView reloadData];
+//    [_pickerView reloadAllComponents];
+}
+
+- (IBAction)cancelEventAction:(id)sender {
+    [self cancelUserForEvent:[event valueForKey:HN_REQ_ID]];
 }
 
 @end

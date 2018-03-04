@@ -26,6 +26,7 @@
 #define HN_GET_ALL_EVENTS @"app/events.php"
 #define HN_GET_ALL_BANNERS @"app/banners.php"
 #define HN_JOIN_EVENT @"app/joinedusers.php"
+#define HN_CANCEL_EVENT @"app/joinedusers.php"
 #define HN_GET_ALL_NOTIFICATIONS @"/app/newsletter.php"
 #define HN_GET_ALL_ATTACHMENTS @"app/event-file.php"
 
