@@ -11,6 +11,8 @@
 		2CF852A1201C60A300D1F01F /* HNNotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF852A0201C60A300D1F01F /* HNNotificationVC.m */; };
 		644B69482984654CD5B427B2 /* libPods-Hanlin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E09A84CB086C314C671B8824 /* libPods-Hanlin.a */; };
 		8309C444204504220057672D /* GCNetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8309C442204504220057672D /* GCNetworkReachability.m */; };
+		830CC9D5204CE80F00D16223 /* ALPickerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 830CC9D1204CE80F00D16223 /* ALPickerViewCell.m */; };
+		830CC9D6204CE80F00D16223 /* ALPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 830CC9D4204CE80F00D16223 /* ALPickerView.m */; };
 		830DF45B20414DC70094576A /* HNCalendarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DF45720414DC70094576A /* HNCalendarTableViewCell.m */; };
 		830DF45C20414DC70094576A /* HNCalendarDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 830DF45820414DC70094576A /* HNCalendarDetailVC.m */; };
 		83C53B952043AC7A0035D8C4 /* HNChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C53B942043AC790035D8C4 /* HNChangePasswordVC.m */; };
@@ -66,6 +68,10 @@
 		4CDCA7D6FA23F88D3BE24A23 /* Pods-Hanlin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hanlin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hanlin/Pods-Hanlin.release.xcconfig"; sourceTree = "<group>"; };
 		8309C442204504220057672D /* GCNetworkReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCNetworkReachability.m; sourceTree = "<group>"; };
 		8309C443204504220057672D /* GCNetworkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCNetworkReachability.h; sourceTree = "<group>"; };
+		830CC9D1204CE80F00D16223 /* ALPickerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPickerViewCell.m; sourceTree = "<group>"; };
+		830CC9D2204CE80F00D16223 /* ALPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPickerView.h; sourceTree = "<group>"; };
+		830CC9D3204CE80F00D16223 /* ALPickerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPickerViewCell.h; sourceTree = "<group>"; };
+		830CC9D4204CE80F00D16223 /* ALPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPickerView.m; sourceTree = "<group>"; };
 		830DF45720414DC70094576A /* HNCalendarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNCalendarTableViewCell.m; sourceTree = "<group>"; };
 		830DF45820414DC70094576A /* HNCalendarDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNCalendarDetailVC.m; sourceTree = "<group>"; };
 		830DF45920414DC70094576A /* HNCalendarDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNCalendarDetailVC.h; sourceTree = "<group>"; };
@@ -174,6 +180,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		830CC9D0204CE7AB00D16223 /* MultiSelectPicker */ = {
+			isa = PBXGroup;
+			children = (
+				830CC9D2204CE80F00D16223 /* ALPickerView.h */,
+				830CC9D4204CE80F00D16223 /* ALPickerView.m */,
+				830CC9D3204CE80F00D16223 /* ALPickerViewCell.h */,
+				830CC9D1204CE80F00D16223 /* ALPickerViewCell.m */,
+			);
+			path = MultiSelectPicker;
+			sourceTree = "<group>";
+		};
 		ACEA4BA0202F3CE10080FBA9 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +297,7 @@
 		CCAEC5BC201BC9A40053A70A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				830CC9D0204CE7AB00D16223 /* MultiSelectPicker */,
 				ACEA4BA0202F3CE10080FBA9 /* JSON */,
 				CCAEC5BD201BC9A40053A70A /* HNConstants */,
 				CCAEC5BF201BC9A40053A70A /* HNUtility */,
@@ -511,6 +529,7 @@
 			files = (
 				CCAEC5DB201BC9A40053A70A /* HNWebVC.m in Sources */,
 				830DF45B20414DC70094576A /* HNCalendarTableViewCell.m in Sources */,
+				830CC9D6204CE80F00D16223 /* ALPickerView.m in Sources */,
 				CCAEC5DA201BC9A40053A70A /* HNProfileVC.m in Sources */,
 				ACF04E85204A4E0F000F0D15 /* HNServiceManager.m in Sources */,
 				830DF45C20414DC70094576A /* HNCalendarDetailVC.m in Sources */,
@@ -522,6 +541,7 @@
 				83C53B952043AC7A0035D8C4 /* HNChangePasswordVC.m in Sources */,
 				AC76AC212022431600DFD270 /* HNFilesVC.m in Sources */,
 				CCAEC5DC201BC9A40053A70A /* HRegisterVC.m in Sources */,
+				830CC9D5204CE80F00D16223 /* ALPickerViewCell.m in Sources */,
 				ACEA4BB1202F3CE10080FBA9 /* SBJsonBase.m in Sources */,
 				CCAEC5DF201BC9A40053A70A /* AppDelegate.m in Sources */,
 				ACEA4BB0202F3CE10080FBA9 /* SBJSON.m in Sources */,
@@ -681,9 +701,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2BF244257D784FFCE4EC0304 /* Pods-Hanlin.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_ENTITLEMENTS = Hanlin/Hanlin.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = E442Y28P53;
 				INFOPLIST_FILE = Hanlin/Info.plist;
@@ -691,9 +711,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pcode.eventapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3bd8d2d0-b238-45cb-8b5f-32c71773a695";
-				PROVISIONING_PROFILE_SPECIFIER = "Event App Distribution";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "78b83270-25fa-4ab6-bd91-d6322fb7ff53";
+				PROVISIONING_PROFILE_SPECIFIER = "EventApp Development";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -701,7 +721,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4CDCA7D6FA23F88D3BE24A23 /* Pods-Hanlin.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_ENTITLEMENTS = Hanlin/Hanlin.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -713,7 +733,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3bd8d2d0-b238-45cb-8b5f-32c71773a695";
 				PROVISIONING_PROFILE_SPECIFIER = "Event App Distribution";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

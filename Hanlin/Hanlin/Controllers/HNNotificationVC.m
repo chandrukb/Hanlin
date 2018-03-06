@@ -38,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"Notifications";
+    self.navigationItem.title = @"通知";
     notificationsArray = [[NSMutableArray alloc]init];
     [self grabNotificationsInBackground];
 }

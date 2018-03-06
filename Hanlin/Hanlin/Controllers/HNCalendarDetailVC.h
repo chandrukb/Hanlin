@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface HNCalendarDetailVC : UIViewController
+{
+    IBOutlet UIButton *Submitbutton;
+    UIButton *Deletebutton;
+    UIToolbar *CheckBoxtoolbar1;
+}
 @property (weak, nonatomic) IBOutlet UITextField *eventnameTf;
 @property (weak, nonatomic) IBOutlet UITextField *timeTf;
 

@@ -209,7 +209,7 @@
     [payload setObject:self.tfFullname.text forKey:HN_REQ_NAME];
     [payload setObject:self.tfEmail.text forKey:HN_REQ_EMAIL];
     [payload setObject:self.tfContactNumber.text forKey:HN_REQ_PHONE];
-    [payload setObject:UIImagePNGRepresentation(selectedImage) forKey:HN_REQ_USERFILE];
+    [payload setObject:selectedImage forKey:HN_REQ_USERFILE];
     if (_isFromProfile) {
         [payload setObject:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:HN_REQ_USERID];
         [HNServiceManager updateUserWithAction:HN_UPDATE_USER completionHandler:^(NSDictionary *response) {
@@ -218,6 +218,9 @@
             if(responseStatus == true)
             {
                 [HNUtility saveLoginDetailsToPersistance:response];
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                
+                [defaults setValue:[response valueForKey:@"email"] forKey:HN_LOGIN_USERNAME];
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
             [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:message inViewController:self cancelButtonTitle:HN_OK_TITLE];

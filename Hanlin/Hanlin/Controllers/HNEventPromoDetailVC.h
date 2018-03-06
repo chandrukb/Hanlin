@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ALPickerView.h"
 
-@interface HNEventPromoDetailVC : UITableViewController
+
+@interface HNEventPromoDetailVC : UITableViewController<ALPickerViewDelegate>
+{
+    ALPickerView *CheckBoxpickerView;
+    NSMutableDictionary *selectionStates;
+    UIToolbar *CheckBoxtoolbar1;
+    IBOutlet UIView *FooterView;
+    NSString *JoiningDates;
+}
 @property(nonatomic) NSString *selectedOption;
 //@property(nonatomic) NSDictionary *event;
 @property(nonatomic, strong) UIImage *imgEventPromo;

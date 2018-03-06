@@ -136,13 +136,13 @@
 
 -(void)updateUIForFiles
 {
-    self.navigationItem.title = @"Files";
+    self.navigationItem.title = @"档案";
    // self.ivFilesVideo.image = [UIImage imageNamed:@"EventImage.png"];
 }
 
 -(void)updateUIForVideos
 {
-    self.navigationItem.title = @"Video Links";
+    self.navigationItem.title = @"视频链接";
    // self.ivFilesVideo.image = [UIImage imageNamed:@"PromoImage.png"];
 }
 

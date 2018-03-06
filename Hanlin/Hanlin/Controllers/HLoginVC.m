@@ -78,6 +78,10 @@
                 {
 //                    [self saveLoginDetailsToPersistance:response];
                     [HNUtility saveLoginDetailsToPersistance:response];
+                    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+                    [defaults setValue:[response valueForKey:@"username"] forKey:HN_LOGIN_USERNAME];
+
                     [self performSegueWithIdentifier:HN_SEGUE_LOGIN_TO_MENU sender:self];
                 }
                 else

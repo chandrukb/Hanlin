@@ -8,6 +8,10 @@
 
 #ifndef HNConstants_h
 #define HNConstants_h
+
+#define SCREEN_WIDTH (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_HEIGHT (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
+
 //root url and action urls
 #define HN_ROOTURL @"http://eventapp.platinumcode.net/"
 #define HN_ROOTURL_APP @"http://eventapp.platinumcode.net/app/"
@@ -49,7 +53,7 @@
 
 //Login Response
 #define HN_LOGIN_NAME @"name"
-#define HN_LOGIN_USERNAME @"username"
+#define HN_LOGIN_USERNAME @"email"
 #define HN_LOGIN_USERID @"userid"
 #define HN_LOGIN_PHONE @"phone"
 #define HN_LOGIN_JOINDATE @"joindate"

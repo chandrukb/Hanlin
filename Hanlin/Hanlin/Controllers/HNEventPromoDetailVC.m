@@ -79,6 +79,34 @@
     }
     _pickerView.showsSelectionIndicator = YES;
     [_pickerView setHidden:YES];
+    
+    
+    
+    selectionStates = [[NSMutableDictionary alloc] init];
+    
+    
+    // Init picker and add it to view
+    CheckBoxpickerView = [[ALPickerView alloc] initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH, 300)];
+    CheckBoxpickerView.delegate = self;
+    [FooterView addSubview:CheckBoxpickerView];
+    
+    CheckBoxtoolbar1 = [[UIToolbar alloc] init];
+    CheckBoxtoolbar1.frame=CGRectMake(0,0,SCREEN_WIDTH,40);
+    // toolbar.barStyle = UIBarStyleBlackTranslucent;
+    UIBarButtonItem *flexibleSpaceLeft = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    
+    UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+                                                                   style:UIBarButtonItemStyleDone target:self
+                                                                  action:@selector(doneClicked)];
+    
+    
+    [CheckBoxtoolbar1 setItems:[NSArray arrayWithObjects:flexibleSpaceLeft, doneButton, nil]];
+    
+    [FooterView addSubview:CheckBoxtoolbar1];
+    
+    CheckBoxpickerView.hidden=YES;
+    CheckBoxtoolbar1.hidden=YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -236,10 +264,27 @@
             [HNServiceManager executeRequestWithUrl:HN_GET_ALL_EVENTS completionHandler:^(NSArray *responseArray) {
                 event = [responseArray[0] valueForKey:kSTRING_EVENTS];
                 
+                
                 //Todo needs to be optimize
                 NSString *startDateStr = [event valueForKey:@"startdate"];
                 NSString *endDateStr = [event valueForKey:@"enddate"];
                 datePickerArray = [HNUtility getDatesBetweenTwoDates:[self convertDateFromString:startDateStr] :[self convertDateFromString:endDateStr]];
+                
+                NSString *AlreadyJoinedDates=@"";
+                if([[event valueForKey:@"isregistered"]intValue]==1)
+                {
+                    AlreadyJoinedDates=[[[event valueForKey:@"joined_dates"]objectAtIndex:0] objectForKey:@"joined_date"];
+                    
+                }
+                
+                for (NSString *key in datePickerArray)
+                {
+                    if([AlreadyJoinedDates containsString:key])
+                        [selectionStates setObject:[NSNumber numberWithBool:YES] forKey:key];
+                    else
+                        [selectionStates setObject:[NSNumber numberWithBool:NO] forKey:key];
+
+                }
                 //
                 
                 [self performSelectorOnMainThread:@selector(prepareUIForEvent) withObject:nil waitUntilDone:YES];
@@ -270,8 +315,12 @@
     __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setPostValue:[[NSUserDefaults standardUserDefaults] valueForKey:HN_LOGIN_USERID] forKey:HN_REQ_USERID];
     [request setPostValue:eventId forKey:@"eventid"];
-    NSString *joinDateStr = [NSString stringWithFormat:@"%@",[datePickerArray objectAtIndex:0]];
-    [request setPostValue:joinDateStr forKey:@"joindate"];
+   // NSString *joinDateStr = [NSString stringWithFormat:@"%@",[datePickerArray objectAtIndex:0]];
+    [request setPostValue:JoiningDates forKey:@"joindate"];
+    
+    
+    
+   
     
     [request setCompletionBlock:^{
         if (request.responseStatusCode == 400) {
@@ -359,41 +408,83 @@
 #pragma mark -
 #pragma mark PickerView delegate methods
 
-- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 1;
-}
+#pragma mark ALPickerView delegate methods
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+- (NSInteger)numberOfRowsForPickerView:(ALPickerView *)pickerView {
     return [datePickerArray count];
 }
 
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return [NSString stringWithFormat:@"%@",[datePickerArray objectAtIndex:row]];
+- (NSString *)pickerView:(ALPickerView *)pickerView textForRow:(NSInteger)row {
+    return [datePickerArray objectAtIndex:row];
 }
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
+- (BOOL)pickerView:(ALPickerView *)pickerView selectionStateForRow:(NSInteger)row {
+    return [[selectionStates objectForKey:[datePickerArray objectAtIndex:row]] boolValue];
+}
 
+- (void)pickerView:(ALPickerView *)pickerView didCheckRow:(NSInteger)row {
+    // Check whether all rows are checked or only one
+    if (row == -1)
+        for (id key in [selectionStates allKeys])
+            [selectionStates setObject:[NSNumber numberWithBool:YES] forKey:key];
+    else
+        [selectionStates setObject:[NSNumber numberWithBool:YES] forKey:[datePickerArray objectAtIndex:row]];
+    
+    
+   
 }
 
 #pragma mark -
 #pragma mark Button Action  methods
 
 - (IBAction)registerForEvent:(id)sender {
-    [self registerUserForEvent:[event valueForKey:HN_REQ_ID]];
+    
+    NSMutableArray *TmpWorks=[[NSMutableArray alloc]init];
+    
+    for(int i=0;i<[selectionStates allValues].count;i++)
+    {
+        if([[selectionStates allValues][i] boolValue]==YES)
+        {
+                [TmpWorks addObject:[selectionStates allKeys][i]];
+        }
+    }
+    
+    if(TmpWorks.count==0)
+    {
+        [HNUtility showAlertWithTitle:HN_APP_NAME andMessage:@"Please select date" inViewController:self cancelButtonTitle:HN_OK_TITLE];
+        return;
+    }
+    else
+    {
+        JoiningDates=[TmpWorks componentsJoinedByString:@","];
+        JoiningDates=[JoiningDates stringByReplacingOccurrencesOfString:@"," withString:@"||"];
+        [self registerUserForEvent:[event valueForKey:HN_REQ_ID]];
+
+    }
+    
 }
 
 - (IBAction)getPromotion:(id)sender {
 }
 
 - (IBAction)chooseDateAction:(id)sender {
+    /*
     NSLog(@"Choose Date Action Called");
-//    [_pickerView setHidden:NO];
+    [_pickerView setHidden:NO];
 //    [self.tableView reloadData];
-//    [_pickerView reloadAllComponents];
+    [_pickerView reloadAllComponents];
+     */
+    CheckBoxtoolbar1.hidden=NO;
+    CheckBoxpickerView.hidden=NO;
+    //[FooterView bringSubviewToFront:CheckBoxpickerView];
+    [CheckBoxpickerView reloadAllComponents];
+}
+
+-(void)doneClicked
+{
+    
+    CheckBoxpickerView.hidden=YES;
+    CheckBoxtoolbar1.hidden=YES;
 }
 
 - (IBAction)cancelEventAction:(id)sender {
