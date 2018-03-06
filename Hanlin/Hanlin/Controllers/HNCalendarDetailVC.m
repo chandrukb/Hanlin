@@ -39,6 +39,7 @@
     
     self.startdate.backgroundColor = [UIColor whiteColor];
     self.startdate.hidden = YES;
+    
     _HeaderDateLbl.text = GetSelecteddate;
     
     if(GetEvents)
